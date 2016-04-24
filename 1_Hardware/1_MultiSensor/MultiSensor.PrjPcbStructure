@@ -1,0 +1,5 @@
+Record=TopLevelDocument|FileName=MultiSensor.SchDoc
+Record=SheetSymbol|SourceDocument=MultiSensor.SchDoc|Designator=PowerSupply|SchDesignator=PowerSupply|FileName=PowerSupply.SchDoc|SymbolType=Normal|RawFileName=PowerSupply.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=MultiSensor.SchDoc|Designator=Processor|SchDesignator=Processor|FileName=Processor.SchDoc|SymbolType=Normal|RawFileName=Processor.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=MultiSensor.SchDoc|Designator=RS485|SchDesignator=RS485|FileName=RS485.SchDoc|SymbolType=Normal|RawFileName=RS485.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=MultiSensor.SchDoc|Designator=Sensors|SchDesignator=Sensors|FileName=Sensors.SchDoc|SymbolType=Normal|RawFileName=Sensors.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
