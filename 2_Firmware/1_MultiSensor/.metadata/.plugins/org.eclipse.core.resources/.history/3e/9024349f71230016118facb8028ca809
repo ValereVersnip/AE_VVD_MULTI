@@ -1,0 +1,277 @@
+ /*            #                                                   
+             #@#@                                                   
+          @@@#@@@                                                   
+          @ `@@                                                     
+          @@                                                        
+          @@@                                                       
+      .    @@                                                       
+     @@@@. @@    @@          @@        @@,@;       @@  :@@@@@@@     
+    @@@@@@@'@   @@@          #@`      '@  @@       @@  :@   .@@@.   
+    @@@@@@@ @:  @@@           @@      @@  @@      `@:  :@`     @@   
+    @@@@@@@@@@@@@@@           @@      @+  .@'     @@   :@`      @@  
+    @@@@@@@@@@@@@@@           +@`    +@    @@     @@   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @@    @@    `@.   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @'     @#   @@    :@`      #@  
+    @@@@@@@@@@@@@@@,           ;@.  +@      @@   @@    :@`      @@  
+   @@@@@@@@@@@@@@@@@            @@  @@      #@  `@`    :@`      @@  
+   @@@@@@@@@@@@@@@@@@           @@  @:       @# @@     :@`      @@  
+  '@@@@@@@@@@@@@@@@@@           ,@,+@        @@ @@     :@`     ;@+  
+  '@@@@+@@@@@@@@@@@@@            @@@@        +@`@      :@`    ,@@   
+   @@@  @@@@@@ @@@@@#            @@@.         @@@      :@@@@@@@@    
+        @@@@@@  :+:              `@@          @@+      `@@@@@@      
+        @@@@@@                                                      
+        @@@@@@                                                      
+ */
+
+/**
+ * Valere Versnip Design 
+ *
+ * @project MultiSensor_bsp
+ * @file lowleveldriversconfig.h
+ * @author TimB
+ * @date 16-mei-2016
+ * @brief	Configuration parameters for all lowleveldriver structs.
+ *
+ */
+
+#ifndef DEF_lowleveldriversconfig_H
+#define DEF_lowleveldriversconfig_H
+
+/* ***********************************************************************************************************************************************
+ * Include Files
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Defines
+ * ***********************************************************************************************************************************************
+ */
+
+/*
+ * SYSTICK low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_SYSTICK_RATE						1000							/**< systemtick counter increments every ms (1/1000) DO NOT CHANGE THIS!!!*/
+//#define LOWLEVELDRIVERSCONFIG_SYSTICK_INTR_FUNCTION			HIGHLEVELDRIVERS_Heartbeat		/**< name of the void function(void) user function which will be called by systick timer, uncomment if used */
+
+/* do not modify under this line */
+/* ******************************************************************************* */
+#ifdef LOWLEVELDRIVERSCONFIG_SYSTICK_INTR_FUNCTION
+extern void LOWLEVELDRIVERSCONFIG_SYSTICK_INTR_FUNCTION(void);
+#define LOWLEVELDRIVERSCONFIG_SYSTICK_INTRHANDLER			&LOWLEVELDRIVERSCONFIG_SYSTICK_INTR_FUNCTION		/**< Pointer to the high level Systick handler */
+#else
+#define LOWLEVELDRIVERSCONFIG_SYSTICK_INTRHANDLER			NULL
+#endif
+/* do not modify above this line */
+/* ******************************************************************************* */
+
+
+/*
+ * MRT low level startup values
+ * ***********************************************************
+ */
+/*
+ * mrt0 low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_MRT_0_ENABLE					true							/**< this timer is enabled */
+#define LOWLEVELDRIVERSCONFIG_MRT_0_ENABLEINTERRUPT			true							/**< interrupts enabled for this timer */
+#define LOWLEVELDRIVERSCONFIG_MRT_0_INTERRUPTFREQ			20000000						/**< 20000000 --> 50uS (freqsetting in mHz!)*/
+//#define LOWLEVELDRIVERSCONFIG_MRT_0_INTR_FUNCTION			HIGHLEVELDRIVERS_Test			/**< Define if higherlevel interrupt handler should be specified */
+
+/* do not modify under this line */
+/* ******************************************************************************* */
+#ifdef LOWLEVELDRIVERSCONFIG_MRT_0_INTR_FUNCTION
+extern void LOWLEVELDRIVERSCONFIG_MRT_0_INTR_FUNCTION(void);
+#define LOWLEVELDRIVERSCONFIG_MRT_0_INTRHANDLER			&LOWLEVELDRIVERSCONFIG_MRT_0_INTR_FUNCTION		/**< Pointer to the high level TIMER16_0 handler */
+#else
+#define LOWLEVELDRIVERSCONFIG_MRT_0_INTRHANDLER			NULL
+#endif
+/* do not modify above this line */
+/* ******************************************************************************* */
+
+/*
+ * mrt1 low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_MRT_1_ENABLE					true							/**< this timer is enabled */
+#define LOWLEVELDRIVERSCONFIG_MRT_1_ENABLEINTERRUPT			true							/**< interrupts enabled for this timer */
+#define LOWLEVELDRIVERSCONFIG_MRT_1_INTERRUPTFREQ			5000							/**< 5000 --> 200mS (freqsetting in mHz!)*/
+#define LOWLEVELDRIVERSCONFIG_MRT_1_INTR_FUNCTION			LOWLEVELDRIVERS_MRT1_HANDLER	/**< Define if higherlevel interrupt handler should be specified */
+
+/* do not modify under this line */
+/* ******************************************************************************* */
+#ifdef LOWLEVELDRIVERSCONFIG_MRT_1_INTR_FUNCTION
+extern void LOWLEVELDRIVERSCONFIG_MRT_1_INTR_FUNCTION(void);
+#define LOWLEVELDRIVERSCONFIG_MRT_1_INTRHANDLER			&LOWLEVELDRIVERSCONFIG_MRT_1_INTR_FUNCTION		/**< Pointer to the high level TIMER16_0 handler */
+#else
+#define LOWLEVELDRIVERSCONFIG_MRT_1_INTRHANDLER			NULL
+#endif
+/* do not modify above this line */
+/* ******************************************************************************* */
+
+/*
+ * mrt2 low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_MRT_2_ENABLE					true							/**< this timer is enabled */
+#define LOWLEVELDRIVERSCONFIG_MRT_2_ENABLEINTERRUPT			false							/**< interrupts enabled for this timer */
+#define LOWLEVELDRIVERSCONFIG_MRT_2_INTERRUPTFREQ			100000000						/**< 200000000 --> 10uS (freqsetting in mHz!)*/
+#define LOWLEVELDRIVERSCONFIG_MRT_2_INTR_FUNCTION			HIGHLEVELRIVERS_Mrt2_Handler	/**< Define if higherlevel interrupt handler should be specified */
+
+/* do not modify under this line */
+/* ******************************************************************************* */
+#ifdef LOWLEVELDRIVERSCONFIG_MRT_2_INTR_FUNCTION
+extern void LOWLEVELDRIVERSCONFIG_MRT_2_INTR_FUNCTION(void);
+#define LOWLEVELDRIVERSCONFIG_MRT_2_INTRHANDLER			&LOWLEVELDRIVERSCONFIG_MRT_2_INTR_FUNCTION		/**< Pointer to the high level TIMER16_0 handler */
+#else
+#define LOWLEVELDRIVERSCONFIG_MRT_2_INTRHANDLER			NULL
+#endif
+/* do not modify above this line */
+/* ******************************************************************************* */
+
+/*
+ * mrt3 low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_MRT_3_ENABLE					false							/**< this timer is disabled */
+#define LOWLEVELDRIVERSCONFIG_MRT_3_ENABLEINTERRUPT			false							/**< interrupts disabled for this timer */
+#define LOWLEVELDRIVERSCONFIG_MRT_3_INTERRUPTFREQ			20000							/**< 20000 --> 50uS */
+//#define LOWLEVELDRIVERSCONFIG_MRT_3_INTR_FUNCTION											/**< Define if higherlevel interrupt handler should be specified */
+
+/* do not modify under this line */
+/* ******************************************************************************* */
+#ifdef LOWLEVELDRIVERSCONFIG_MRT_3_INTR_FUNCTION
+extern void LOWLEVELDRIVERSCONFIG_MRT_3_INTR_FUNCTION(void);
+#define LOWLEVELDRIVERSCONFIG_MRT_3_INTRHANDLER			&LOWLEVELDRIVERSCONFIG_MRT_3_INTR_FUNCTION		/**< Pointer to the high level TIMER16_0 handler */
+#else
+#define LOWLEVELDRIVERSCONFIG_MRT_3_INTRHANDLER			NULL
+#endif
+/* do not modify above this line */
+/* ******************************************************************************* */
+
+
+/*
+ * mrt2 low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_GPIO_PARAMS			{\
+													{ .port = 0, .pin = 13, 	.dir = input,		.interrupt = { .enable = true, 	.channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = &HIGHLEVELRIVERS_DHT22_Pin_Handler },\
+													{ .port = 0, .pin = 4, 		.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 28, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 24,		.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 15,		.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 14, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 23, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 22, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 21, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 20, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 19, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 18, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													{ .port = 0, .pin = 17, 	.dir = input 		.interrupt = { .enable = false, .channel = 0, .level_edge = false,	.level = false, .edge = gpio_edge_falling	.p_handler = NULL },\
+													}												/**< startup direction for gpio pins, and value if output */
+
+
+
+
+
+/*
+ * I2C low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_I2C0_BITRATE					400000									/**< 400kHz Bitrate */
+
+
+/*
+ * USART low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_USART0_USE															/**< uncomment if usart0 is used */
+#define LOWLEVELDRIVERSCONFIG_USART1_USE															/**< uncomment if usart1 is used */
+//#define LOWLEVELDRIVERSCONFIG_USART2_USE															/**< uncomment if usart2 is used */
+
+#ifdef LOWLEVELDRIVERSCONFIG_USART0_USE
+#define LOWLEVELDRIVERSCONFIG_USART0_BAUDRATE				115200									/**< BAUDRATE OF THE UART */
+#define LOWLEVELDRIVERSCONFIG_USART0_DATABITS				8										/**< Amount of databits */
+#define LOWLEVELDRIVERSCONFIG_USART0_PARITY					usart_parity_none						/**< no parity */
+#define LOWLEVELDRIVERSCONFIG_USART0_STOPBITS				1										/**< one stop bits */
+#define LOWLEVELDRIVERSCONFIG_USART0_HANDLER				NULL									/**< No handler needed */
+#define LOWLEVELDRIVERSCONFIG_USART0_RX_BUFFERSIZE			128										/**< RX BUFFER SIZE */
+#define LOWLEVELDRIVERSCONFIG_USART0_TX_BUFFERSIZE			64										/**< TX BUFFER SIZE */
+#endif
+
+#ifdef LOWLEVELDRIVERSCONFIG_USART1_USE
+#define LOWLEVELDRIVERSCONFIG_USART1_BAUDRATE				115200									/**< BAUDRATE OF THE UART */
+#define LOWLEVELDRIVERSCONFIG_USART1_DATABITS				8										/**< Amount of databits */
+#define LOWLEVELDRIVERSCONFIG_USART1_PARITY					usart_parity_none						/**< no parity */
+#define LOWLEVELDRIVERSCONFIG_USART1_STOPBITS				2										/**< two stop bits */
+#define LOWLEVELDRIVERSCONFIG_USART1_HANDLER				NULL									/**< No handler needed */
+#define LOWLEVELDRIVERSCONFIG_USART1_RX_BUFFERSIZE			128										/**< RX BUFFER SIZE */
+#define LOWLEVELDRIVERSCONFIG_USART1_TX_BUFFERSIZE			64										/**< TX BUFFER SIZE */
+#endif
+
+#ifdef LOWLEVELDRIVERSCONFIG_USART2_USE
+#define LOWLEVELDRIVERSCONFIG_USART2_BAUDRATE				115200									/**< BAUDRATE OF THE UART */
+#define LOWLEVELDRIVERSCONFIG_USART2_DATABITS				8										/**< Amount of databits */
+#define LOWLEVELDRIVERSCONFIG_USART2_PARITY					usart_parity_none						/**< no parity */
+#define LOWLEVELDRIVERSCONFIG_USART2_STOPBITS				2										/**< two stop bits */
+#define LOWLEVELDRIVERSCONFIG_USART2_HANDLER				NULL									/**< No handler needed */
+#define LOWLEVELDRIVERSCONFIG_USART2_RX_BUFFERSIZE			128										/**< RX BUFFER SIZE */
+#define LOWLEVELDRIVERSCONFIG_USART2_TX_BUFFERSIZE			64										/**< TX BUFFER SIZE */
+#endif
+
+
+/*
+ * PWM low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_PWM_FREQUENCY	1000					/**< standard frequency for PWM  is 1kHz */
+#define LOWLEVELDRIVERSCONFIG_PWM_DUTYCYCLE	50						/**< standard dutycycle for PWM  is 50% */
+#define LOWLEVELDRIVERSCONFIG_PWM_USECHANNEL	{\
+												true,\
+												true,\
+												true,\
+												true,\
+												false,\
+												false,\
+												}					/**< true: usechannel, false: don't use pwm channel */
+
+
+
+
+/*
+ * ADC low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_ADC0_USE			true				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC1_USE			true				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC2_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC3_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC4_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC5_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC6_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC7_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC8_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC9_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC10_USE			false				/**< true: use this adc channel, false: don't use */
+#define LOWLEVELDRIVERSCONFIG_ADC11_USE			false				/**< true: use this adc channel, false: don't use */
+
+/*
+ * ***********************************************************************************************************************************************
+ * Typedefs and enumerations
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Public Function Prototypes
+ * ***********************************************************************************************************************************************
+ */
+
+
+
+#endif
+/* End of file lowleveldriversconfig.h */

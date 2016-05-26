@@ -1,0 +1,153 @@
+ /*            #                                                   
+             #@#@                                                   
+          @@@#@@@                                                   
+          @ `@@                                                     
+          @@                                                        
+          @@@                                                       
+      .    @@                                                       
+     @@@@. @@    @@          @@        @@,@;       @@  :@@@@@@@     
+    @@@@@@@'@   @@@          #@`      '@  @@       @@  :@   .@@@.   
+    @@@@@@@ @:  @@@           @@      @@  @@      `@:  :@`     @@   
+    @@@@@@@@@@@@@@@           @@      @+  .@'     @@   :@`      @@  
+    @@@@@@@@@@@@@@@           +@`    +@    @@     @@   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @@    @@    `@.   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @'     @#   @@    :@`      #@  
+    @@@@@@@@@@@@@@@,           ;@.  +@      @@   @@    :@`      @@  
+   @@@@@@@@@@@@@@@@@            @@  @@      #@  `@`    :@`      @@  
+   @@@@@@@@@@@@@@@@@@           @@  @:       @# @@     :@`      @@  
+  '@@@@@@@@@@@@@@@@@@           ,@,+@        @@ @@     :@`     ;@+  
+  '@@@@+@@@@@@@@@@@@@            @@@@        +@`@      :@`    ,@@   
+   @@@  @@@@@@ @@@@@#            @@@.         @@@      :@@@@@@@@    
+        @@@@@@  :+:              `@@          @@+      `@@@@@@      
+        @@@@@@                                                      
+        @@@@@@                                                      
+ */
+
+/**
+ * Valere Versnip Design 
+ *
+ * @project MultiSensor_bsp
+ * @file highleveldrivers.c
+ * @author TimB
+ * @date 21-mei-2016
+ * @brief	Brief.
+ *
+ * Description
+ */
+
+/* ***********************************************************************************************************************************************
+ * Include Files
+ * ***********************************************************************************************************************************************
+ */
+#include "highleveldrivers.h"
+
+/*
+ * ***********************************************************************************************************************************************
+ * Defines
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Local Members
+ * ***********************************************************************************************************************************************
+ */
+
+/* rgbled devices */
+rgbled_t RgbLed_d2;					/**< RGBLED D2 */
+
+/*
+ * ***********************************************************************************************************************************************
+ * Private Function Prototypes
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Private Functions
+ * ***********************************************************************************************************************************************
+ */
+
+
+/**
+ * Initialize the rgbled.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t initialize_rgbled()
+{
+	status_t status = status_ok;
+	rgbled_config_t config;
+
+	config.id	          =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_ID;
+	config.p_pwm          =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_PWM;
+	config.red_channel    =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_REDCHANNEL;
+	config.green_channel  =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_GREENCHANNEL;
+	config.blue_channel   =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_BLUECHANNEL;
+	config.ledout         =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_LEDOUT;
+	config.blinkontime    =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_BLINKONTIME;
+	config.blinkofftime   =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_BLINKOFFTIME;
+	config.glow_dim_min   =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_GLOWDIMMIN;
+	config.glow_dim_max   =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_GLOWDIMMAX;
+	config.glowinterval   =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_GLOWINTERVAL;
+	config.glowstep       =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_GLOWSTEP;
+	config.color          =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_COLOR;
+	config.dim            =   HIGHLEVELDRIVERSCONFIG_RGBLED_D2_DIM;
+
+
+	status = ADC_Init(&Adc, &config);
+
+	return status;
+}
+
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Public Functions
+ * ***********************************************************************************************************************************************
+ */
+
+/**
+ * Initialize all highlevel drivers.
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t HIGHLEVELDRIVERS_Init()
+{
+	status_t status = status_ok;
+
+	/* Initialize RGB leds */
+	if(status == status_ok)
+	{
+		status = initialize_rgbled();
+	}
+
+
+	return status;
+}
+
+
+/**
+ * highleveldrivers Run0 Function.
+ *
+ * @note This function should be called periodically by higher level routines.
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t HIGHLEVELDRIVERS_Run0()
+{
+	status_t status = status_ok;
+
+	/* rgbled Run0 */
+	if(status == status_ok)
+	{
+		status = RGBLED_Run0(&RgbLed_d2);
+	}
+	return status;
+}
+
+
+
+
+/* End of file highleveldrivers.c */

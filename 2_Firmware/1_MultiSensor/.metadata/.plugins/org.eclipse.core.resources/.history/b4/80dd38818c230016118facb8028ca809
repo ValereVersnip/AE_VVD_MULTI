@@ -1,0 +1,145 @@
+ /*            #
+             #@#@                                                   
+          @@@#@@@                                                   
+          @ `@@                                                     
+          @@                                                        
+          @@@                                                       
+      .    @@                                                       
+     @@@@. @@    @@          @@        @@,@;       @@  :@@@@@@@     
+    @@@@@@@'@   @@@          #@`      '@  @@       @@  :@   .@@@.   
+    @@@@@@@ @:  @@@           @@      @@  @@      `@:  :@`     @@   
+    @@@@@@@@@@@@@@@           @@      @+  .@'     @@   :@`      @@  
+    @@@@@@@@@@@@@@@           +@`    +@    @@     @@   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @@    @@    `@.   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @'     @#   @@    :@`      #@  
+    @@@@@@@@@@@@@@@,           ;@.  +@      @@   @@    :@`      @@  
+   @@@@@@@@@@@@@@@@@            @@  @@      #@  `@`    :@`      @@  
+   @@@@@@@@@@@@@@@@@@           @@  @:       @# @@     :@`      @@  
+  '@@@@@@@@@@@@@@@@@@           ,@,+@        @@ @@     :@`     ;@+  
+  '@@@@+@@@@@@@@@@@@@            @@@@        +@`@      :@`    ,@@   
+   @@@  @@@@@@ @@@@@#            @@@.         @@@      :@@@@@@@@    
+        @@@@@@  :+:              `@@          @@+      `@@@@@@      
+        @@@@@@                                                      
+        @@@@@@
+ */
+
+/**
+ * Valere Versnip Design 
+ *
+ * @project MultiSensor_bsp
+ * @file status.h
+ * @author TimB
+ * @date 25-apr.-2016
+ * @brief	This is the header file containing all status codes.
+ *
+ */
+
+#ifndef DEF_status_H
+#define DEF_status_H
+
+/* ***********************************************************************************************************************************************
+ * Include Files
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Defines
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Typedefs and enumerations
+ * ***********************************************************************************************************************************************
+ */
+
+/**
+ * Statuscode return values.
+ *
+ *  Statuscodes are a 32-bit value with :
+ *      - The 16 MSB contains the peripheral code number
+ *      - The 16 LSB contains an error code number associated to that peripheral
+ */
+typedef enum
+{
+	/*
+	 * ***********************************************************************************************************************************************
+	 * Low Level Status Codes
+	 * ***********************************************************************************************************************************************
+	 */
+
+	/* global codes */
+	status_ok,									/**< global status ok */
+	status_nok,									/**< global status NOT ok */
+
+	/* GPIO related codes */
+
+	/* SYSTICK related codes */
+	systick_initfailed,							/**< systick initialization failed */
+
+	/* pwm related codes */
+	pwm_dutycycle,								/**< out of bounds pwm dutycycle specified */
+
+	/* CDC related codes */
+	cdc_usbinit_failure,						/**< the USB initialization failed */
+	cdc_vcominit_failure,						/**< the VCOM initializtion failed */
+	cdc_overflow,								/**< an overflow has occured */
+	cdc_txringbuffer_overflow,					/**< the tx ringbuffer flows over */
+	cdc_transmiterror,							/**< an error occured during transmitting */
+
+	/* USART related codes */
+	usart_busy,									/**< usart busy */
+	usart_databits,								/**< wrong databits amount */
+	usart_stopbits,								/**< wrong stopbits amount */
+	usart_txoverflow,							/**< usart tx overflow */
+	usart_lengthMisMatch,						/**< length mismatch for send or receive */
+	usart_fifoError,							/**< fifo error */
+	usart_baudrate,								/**< wrong baud rate */
+
+
+	/* I2C related codes */
+	i2c_wrongbase,								/**< wrong i2c base */
+	i2c_sanityerror,							/**< i2c sanity error */
+	i2c_handlesetup,							/**< handle setup error */
+	i2c_bitrate,								/**< i2c bitrate error */
+	i2c_transfer,								/**< transfer error */
+	i2c_overflow,								/**< buffer overflow */
+
+
+	/* ADC related codes */
+	adc_channelnotenabled,						/**< the adc channel is not enabled */
+	adc_datanotvalid,							/**< althoug sequencer is completed, data is not valid */
+	adc_seqArunning,							/**< we request a new seqA conversin, but previous is not yet completed */
+
+
+	/*
+	 * ***********************************************************************************************************************************************
+	 * High Level Status Codes
+	 * ***********************************************************************************************************************************************
+	 */
+
+	/* rgbled related codes */
+	rgbled_dimvalue,							/**< specified dimvalue not between 0 and 100 */
+
+	/* humidity_dht22 related codes */
+	humidity_dht22_running,						/**< the sensor is already ready and cannot be started now */
+	humidity_dht22_toofast,						/**< the timeout between two conversions is not respected */
+	humidity_dht22_timeout,						/**< the conversion has timed out */
+	humicity_dht22_crc,							/**< wrong crc */
+
+
+
+}status_t;
+/*
+ * ***********************************************************************************************************************************************
+ * Public Function Prototypes
+ * ***********************************************************************************************************************************************
+ */
+
+
+
+#endif
+/* End of file status.h */

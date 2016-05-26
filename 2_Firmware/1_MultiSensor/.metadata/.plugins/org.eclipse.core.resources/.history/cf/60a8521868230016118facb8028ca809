@@ -1,0 +1,178 @@
+ /*            #                                                   
+             #@#@                                                   
+          @@@#@@@                                                   
+          @ `@@                                                     
+          @@                                                        
+          @@@                                                       
+      .    @@                                                       
+     @@@@. @@    @@          @@        @@,@;       @@  :@@@@@@@     
+    @@@@@@@'@   @@@          #@`      '@  @@       @@  :@   .@@@.   
+    @@@@@@@ @:  @@@           @@      @@  @@      `@:  :@`     @@   
+    @@@@@@@@@@@@@@@           @@      @+  .@'     @@   :@`      @@  
+    @@@@@@@@@@@@@@@           +@`    +@    @@     @@   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @@    @@    `@.   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @'     @#   @@    :@`      #@  
+    @@@@@@@@@@@@@@@,           ;@.  +@      @@   @@    :@`      @@  
+   @@@@@@@@@@@@@@@@@            @@  @@      #@  `@`    :@`      @@  
+   @@@@@@@@@@@@@@@@@@           @@  @:       @# @@     :@`      @@  
+  '@@@@@@@@@@@@@@@@@@           ,@,+@        @@ @@     :@`     ;@+  
+  '@@@@+@@@@@@@@@@@@@            @@@@        +@`@      :@`    ,@@   
+   @@@  @@@@@@ @@@@@#            @@@.         @@@      :@@@@@@@@    
+        @@@@@@  :+:              `@@          @@+      `@@@@@@      
+        @@@@@@                                                      
+        @@@@@@                                                      
+ */
+
+/**
+ * Valere Versnip Design 
+ *
+ * @project MultiSensor_bsp
+ * @file gpio.h
+ * @author TimB
+ * @date 16-mei-2016
+ * @brief	Header file for gpio.c
+ *
+ */
+
+#ifndef DEF_gpio_H
+#define DEF_gpio_H
+
+/* ***********************************************************************************************************************************************
+ * Include Files
+ * ***********************************************************************************************************************************************
+ */
+#include "chip.h"
+#include "status.h"
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Defines
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Typedefs and enumerations
+ * ***********************************************************************************************************************************************
+ */
+/**
+ * Enumeration for gpio direction.
+ */
+typedef enum
+{
+	input,			                    /**<  input */
+	outputhigh,		                    /**<  output, pin is high @startup */
+	outputlow							/**<  output, pin is low @startup */
+}gpio_direction_t;
+
+
+/**
+ * Enumeration for gpio edge or level.
+ */
+typedef enum
+{
+	gpio_edge_rising,					/**< interrupt at rising edge */
+	gpio_edge_falling,					/**< interrupt at falling edge */
+	gpio_edge_both						/**< interrupt at both edges */
+}gpio_edge_t;
+
+
+
+/**
+ * Struct for grouping gpio interrupt parameters
+ */
+typedef struct gpio_interrupt_t
+{
+	bool enable;						/**< enable this gpio interrupt */
+	uint8_t channel;					/**< pin */
+	gpio_direction_t dir;				/**< input or output */
+	bool level_edge;					/**< true: level , false: edge */
+	bool level;							/**< true: interrupt @ high level, false: @ low level */
+	gpio_edge_t edge;					/**< edge interrupt */
+}gpio_interrupt_t;
+
+
+
+/**
+ * Struct for grouping gpio pin parameters
+ */
+typedef struct gpio_pin_t
+{
+	uint8_t port;						/**< port */
+	uint8_t pin;						/**< pin */
+	gpio_direction_t dir;				/**< input or output */
+	gpio_interrupt_t interrupt;			/**< interrupt parameters */
+}gpio_pin_t;
+
+/*
+ * ***********************************************************************************************************************************************
+ * Public Function Prototypes
+ * ***********************************************************************************************************************************************
+ */
+
+/**
+ * Initialize all Gpio pins.
+ *
+ * If a pin is not in this define, it will be configured as input.
+ * @param gpioParams array with gpio params
+ * @param gpioParamsLen length of the gpioparams array
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t GPIO_Init(const gpio_pin_t gpioParams[], uint8_t gpioParamsLen);
+
+
+/**
+ * DeInitialize the GPIO.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t GPIO_DeInit();
+
+
+
+/**
+ * Toggle GPIO pin.
+ *
+ * @param port GPIO port
+ * @param pin GPIO pin
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t GPIO_Toggle_Pin(uint8_t port, uint8_t pin);
+
+
+/**
+ * Set GPIO pin.
+ *
+ * @param port GPIO port
+ * @param pin GPIO pin
+ * @param set true: high, false: low
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t GPIO_Set_Pin(uint8_t port, uint8_t pin, bool set);
+
+
+/**
+ * Get GPIO Pin.
+ *
+ * @param port GPIO port
+ * @param pin GPIO pin
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t GPIO_Get_Pin(uint8_t port, uint8_t pin, bool *p_result);
+
+
+/**
+ * Set GPIO Pin Direction.
+ *
+ * If output: this function will also set the appropriate level.
+ * @param port GPIO port
+ * @param pin GPIO pin
+ * @param dir true: output,
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t GPIO_Set_PinDir(uint8_t port, uint8_t pin, gpio_direction_t dir);
+
+#endif
+/* End of file gpio.h */

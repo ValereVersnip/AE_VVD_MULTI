@@ -1,0 +1,302 @@
+ /*            #                                                   
+             #@#@                                                   
+          @@@#@@@                                                   
+          @ `@@                                                     
+          @@                                                        
+          @@@                                                       
+      .    @@                                                       
+     @@@@. @@    @@          @@        @@,@;       @@  :@@@@@@@     
+    @@@@@@@'@   @@@          #@`      '@  @@       @@  :@   .@@@.   
+    @@@@@@@ @:  @@@           @@      @@  @@      `@:  :@`     @@   
+    @@@@@@@@@@@@@@@           @@      @+  .@'     @@   :@`      @@  
+    @@@@@@@@@@@@@@@           +@`    +@    @@     @@   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @@    @@    `@.   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @'     @#   @@    :@`      #@  
+    @@@@@@@@@@@@@@@,           ;@.  +@      @@   @@    :@`      @@  
+   @@@@@@@@@@@@@@@@@            @@  @@      #@  `@`    :@`      @@  
+   @@@@@@@@@@@@@@@@@@           @@  @:       @# @@     :@`      @@  
+  '@@@@@@@@@@@@@@@@@@           ,@,+@        @@ @@     :@`     ;@+  
+  '@@@@+@@@@@@@@@@@@@            @@@@        +@`@      :@`    ,@@   
+   @@@  @@@@@@ @@@@@#            @@@.         @@@      :@@@@@@@@    
+        @@@@@@  :+:              `@@          @@+      `@@@@@@      
+        @@@@@@                                                      
+        @@@@@@                                                      
+ */
+
+/**
+ * Valere Versnip Design 
+ *
+ * @project MultiSensor_bsp
+ * @file lowleveldrivers.c
+ * @author TimB
+ * @date 16-mei-2016
+ * @brief	Lowleveldrivers device collection, initialization and run functions.
+ *
+ * All low level drivers device structs are declared here.
+ * These are initialized here.
+ * All low level drivers run functions are grouped here, into 1 lowleveldrivers run function, which should be called periodically by higher level routines.
+ */
+
+/* ***********************************************************************************************************************************************
+ * Include Files
+ * ***********************************************************************************************************************************************
+ */
+#include "lowleveldrivers.h"
+#include "lowleveldriversconfig.h"
+
+/*
+ * ***********************************************************************************************************************************************
+ * Defines
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Local Members
+ * ***********************************************************************************************************************************************
+ */
+
+/* i2c devices */
+
+//i2c_t I2C0;					/**< I2C 0 Device */
+//i2c_t I2C1;					/**< I2C 1 Device */
+//i2c_t I2C2;					/**< I2C 2 Device */
+//i2c_t I2C3;					/**< I2C 3 Device */
+
+/*
+ * ***********************************************************************************************************************************************
+ * Private Function Prototypes
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Private Functions
+ * ***********************************************************************************************************************************************
+ */
+
+/**
+ * Initialize the Systick Timer.
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_systick()
+{
+	status_t status = status_ok;
+	systick_config_t sysTickConfig;
+	sysTickConfig.p_handler = LOWLEVELDRIVERSCONFIG_SYSTICK_INTRHANDLER;
+	sysTickConfig.rate = LOWLEVELDRIVERSCONFIG_SYSTICK_RATE;
+	status = SYSTICK_Init(&sysTickConfig);
+
+	return status;
+}
+
+/**
+ * Initialize the mrttimer.
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_mrt()
+{
+	status_t status = status_ok;
+	mrt_config_t mrtConfig;
+	mrtConfig.enable[0] 					= LOWLEVELDRIVERSCONFIG_MRT_0_ENABLE;
+	mrtConfig.enable[1] 					= LOWLEVELDRIVERSCONFIG_MRT_1_ENABLE;
+	mrtConfig.enable[2] 					= LOWLEVELDRIVERSCONFIG_MRT_2_ENABLE;
+	mrtConfig.enable[3] 					= LOWLEVELDRIVERSCONFIG_MRT_3_ENABLE;
+
+	mrtConfig.enablematchinterrupt[0] 		= LOWLEVELDRIVERSCONFIG_MRT_0_ENABLEINTERRUPT;
+	mrtConfig.enablematchinterrupt[1] 		= LOWLEVELDRIVERSCONFIG_MRT_1_ENABLEINTERRUPT;
+	mrtConfig.enablematchinterrupt[2] 		= LOWLEVELDRIVERSCONFIG_MRT_2_ENABLEINTERRUPT;
+	mrtConfig.enablematchinterrupt[3] 		= LOWLEVELDRIVERSCONFIG_MRT_3_ENABLEINTERRUPT;
+
+	mrtConfig.interruptfreq[0] 				= LOWLEVELDRIVERSCONFIG_MRT_0_INTERRUPTFREQ;
+	mrtConfig.interruptfreq[1] 				= LOWLEVELDRIVERSCONFIG_MRT_1_INTERRUPTFREQ;
+	mrtConfig.interruptfreq[2] 				= LOWLEVELDRIVERSCONFIG_MRT_2_INTERRUPTFREQ;
+	mrtConfig.interruptfreq[3] 				= LOWLEVELDRIVERSCONFIG_MRT_3_INTERRUPTFREQ;
+
+	mrtConfig.p_handler[0] 					= LOWLEVELDRIVERSCONFIG_MRT_0_INTRHANDLER;
+	mrtConfig.p_handler[1] 					= LOWLEVELDRIVERSCONFIG_MRT_1_INTRHANDLER;
+	mrtConfig.p_handler[2] 					= LOWLEVELDRIVERSCONFIG_MRT_2_INTRHANDLER;
+	mrtConfig.p_handler[3] 					= LOWLEVELDRIVERSCONFIG_MRT_3_INTRHANDLER;
+
+
+	status = MRT_Init(&mrtConfig);
+
+	return status;
+}
+
+///**
+// * Initialize the GPIO.
+// *
+// * @return status: lowleveldrivers_ok if succeed
+// */
+//static status_t initialize_gpio()
+//{
+//	status_t status = lowleveldrivers_ok;
+//
+//	const gpio_pin_t GpioParams[] = LOWLEVELDRIVERSCONFIG_GPIO_PARAMS;							/**< array with gpio initialization data (direction of pins) */
+//	uint8_t gpioParamsLen = sizeof(GpioParams)/sizeof(GpioParams[0]);
+//	status = GPIO_Init(GpioParams, gpioParamsLen);
+//	if(status == gpio_ok)
+//	{
+//		status = lowleveldrivers_ok;
+//	}
+//	return status;
+//}
+
+///**
+// * Initialize the usart.
+// * @return lowleveldrivers_ok if succeeded
+// */
+//static status_t initialize_usart()
+//{
+//	status_t status = lowleveldrivers_ok;
+//	usart_config_t usartConfig;
+//
+//	usartConfig.enable[0] 		= false;
+//	usartConfig.enable[1] 		= false;
+//	usartConfig.enable[2] 		= false;
+//
+//#ifdef LOWLEVELDRIVERSCONFIG_USART0_USE
+//	usartConfig.enable[0] 		= true;
+//	usartConfig.baud[0]			= LOWLEVELDRIVERSCONFIG_USART0_BAUDRATE;
+//	usartConfig.parity[0]		= LOWLEVELDRIVERSCONFIG_USART0_PARITY;
+//	usartConfig.databits[0]		= LOWLEVELDRIVERSCONFIG_USART0_DATABITS;
+//	usartConfig.stopbits[0]		= LOWLEVELDRIVERSCONFIG_USART0_STOPBITS;
+//#endif
+//#ifdef LOWLEVELDRIVERSCONFIG_USART1_USE
+//	usartConfig.enable[1] 		= true;
+//	usartConfig.baud[1]			= LOWLEVELDRIVERSCONFIG_USART1_BAUDRATE;
+//	usartConfig.parity[1]		= LOWLEVELDRIVERSCONFIG_USART1_PARITY;
+//	usartConfig.databits[1]		= LOWLEVELDRIVERSCONFIG_USART1_DATABITS;
+//	usartConfig.stopbits[1]		= LOWLEVELDRIVERSCONFIG_USART1_STOPBITS;
+//#endif
+//#ifdef LOWLEVELDRIVERSCONFIG_USART2_USE
+//	usartConfig.enable[2] 		= true;
+//	usartConfig.baud[2]			= LOWLEVELDRIVERSCONFIG_USART2_BAUDRATE;
+//	usartConfig.parity[2]		= LOWLEVELDRIVERSCONFIG_USART2_PARITY;
+//	usartConfig.databits[2]		= LOWLEVELDRIVERSCONFIG_USART2_DATABITS;
+//	usartConfig.stopbits[2]		= LOWLEVELDRIVERSCONFIG_USART2_STOPBITS;
+//#endif
+//
+//
+//	status = USART_Init(&usartConfig);
+//	if(status == usart_ok)
+//	{
+//		status = lowleveldrivers_ok;
+//	}
+//	return status;
+//}
+
+
+
+
+///**
+// * Initialize the I2C.
+// *
+// * @return status: lowleveldrivers_ok if succeed
+// */
+//static status_t initialize_i2c()
+//{
+//	status_t status = lowleveldrivers_ok;
+//	i2c_config_t i2cConfig;
+//
+//	i2cConfig.i2c	  = i2c_0;
+//	i2cConfig.bitrate = LOWLEVELDRIVERSCONFIG_I2C0_BITRATE;
+//	status = I2C_Init(&I2C0, &i2cConfig);
+//
+//	if(status == i2c_ok)
+//	{
+//		i2cConfig.i2c	  = i2c_1;
+//		i2cConfig.bitrate = LOWLEVELDRIVERSCONFIG_I2C1_BITRATE;
+//		status = I2C_Init(&I2C1, &i2cConfig);
+//	}
+//	if(status == i2c_ok)
+//	{
+//		i2cConfig.i2c	  = i2c_2;
+//		i2cConfig.bitrate = LOWLEVELDRIVERSCONFIG_I2C2_BITRATE;
+//		status = I2C_Init(&I2C2, &i2cConfig);
+//	}
+//	if(status == i2c_ok)
+//	{
+//		i2cConfig.i2c	  = i2c_3;
+//		i2cConfig.bitrate = LOWLEVELDRIVERSCONFIG_I2C3_BITRATE;
+//		status = I2C_Init(&I2C3, &i2cConfig);
+//	}
+//	if(status == i2c_ok)
+//	{
+//		status = lowleveldrivers_ok;
+//	}
+//	return status;
+//}
+
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Public Functions
+ * ***********************************************************************************************************************************************
+ */
+
+/**
+ * Initialize all lowlevel drivers.
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t LOWLEVELDRIVERS_Init()
+{
+	status_t status = status_ok;
+
+	/* before any, Initialize the PINMUXER */
+	PINMUX_Init();
+
+	/* Initialize Systick Timer */
+	if(status == status_ok)
+	{
+		status = initialize_systick();
+	}
+
+	/* Initialize mrt */
+	if(status == status_ok)
+	{
+		status = initialize_mrt();
+	}
+
+//	/* Initialize GPIO */
+//	if(status == status_ok)
+//	{
+//		status = initialize_gpio();
+//	}
+
+//	/* Initialize USART */
+//	if(status == status_ok)
+//	{
+//		status = initialize_usart();
+//	}
+//
+//	/* Initialize I2C */
+//	if(status == status_ok)
+//	{
+//		status = initialize_i2c();
+//	}
+
+	return status;
+}
+
+
+/**
+ * lowleveldrivers Run0 Function.
+ *
+ * This function should be called periodically by higher level routines.
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t LOWLEVELDRIVERS_Run0()
+{
+	status_t status = status_ok;
+	return status;
+}
+
+
+
+
+/* End of file lowleveldrivers.c */

@@ -1,0 +1,121 @@
+ /*            #                                                   
+             #@#@                                                   
+          @@@#@@@                                                   
+          @ `@@                                                     
+          @@                                                        
+          @@@                                                       
+      .    @@                                                       
+     @@@@. @@    @@          @@        @@,@;       @@  :@@@@@@@     
+    @@@@@@@'@   @@@          #@`      '@  @@       @@  :@   .@@@.   
+    @@@@@@@ @:  @@@           @@      @@  @@      `@:  :@`     @@   
+    @@@@@@@@@@@@@@@           @@      @+  .@'     @@   :@`      @@  
+    @@@@@@@@@@@@@@@           +@`    +@    @@     @@   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @@    @@    `@.   :@`      @@  
+    @@@@@@@@@@@@@@@            @@    @'     @#   @@    :@`      #@  
+    @@@@@@@@@@@@@@@,           ;@.  +@      @@   @@    :@`      @@  
+   @@@@@@@@@@@@@@@@@            @@  @@      #@  `@`    :@`      @@  
+   @@@@@@@@@@@@@@@@@@           @@  @:       @# @@     :@`      @@  
+  '@@@@@@@@@@@@@@@@@@           ,@,+@        @@ @@     :@`     ;@+  
+  '@@@@+@@@@@@@@@@@@@            @@@@        +@`@      :@`    ,@@   
+   @@@  @@@@@@ @@@@@#            @@@.         @@@      :@@@@@@@@    
+        @@@@@@  :+:              `@@          @@+      `@@@@@@      
+        @@@@@@                                                      
+        @@@@@@                                                      
+ */
+
+/**
+ * Valere Versnip Design 
+ *
+ * @project MultiSensor_bsp
+ * @file rgbled.h
+ * @author TimB
+ * @date 21-mei-2016
+ * @brief	Header file for rgbled.c
+ *
+ */
+
+#ifndef DEF_rgbled_H
+#define DEF_rgbled_H
+
+/* ***********************************************************************************************************************************************
+ * Include Files
+ * ***********************************************************************************************************************************************
+ */
+#include "../low_level_drivers/lowleveldrivers.h"
+
+/*
+ * ***********************************************************************************************************************************************
+ * Defines
+ * ***********************************************************************************************************************************************
+ */
+
+
+/*
+ * ***********************************************************************************************************************************************
+ * Typedefs and enumerations
+ * ***********************************************************************************************************************************************
+ */
+
+/**
+ * enum for rgbled ledout state
+ */
+typedef enum
+{
+	rgbled_off,										/**< rgbled off */
+	rgbled_on,										/**< rgbled on */
+	rgbled_glow,									/**< rgbled glowing */
+	rgbled_blink,									/**< rgbled blinking */
+}rgbled_ledout_t;
+
+/**
+ * rgb led configuration struct.
+ */
+typedef struct rgbled_config_t
+{
+	uint8_t id;										/**< Id for this rgbled */
+	uint8_t gpio_port;								/**< Gpio port */
+	uint8_t red_pin;								/**< Gpio pin for RED led */
+	uint8_t green_pin;								/**< Gpio pin for GREEN led */
+	uint8_t blue_pin;								/**< Gpio pin for BLUE led */
+	rgbled_ledout_t ledout;							/**< startup ledout value */
+	uint16_t blinkontime;							/**< blinking on time (in ms) */
+	uint16_t blinkofftime;							/**< blinking off time (in ms) */
+	uint8_t glow_dim_min;							/**< minimum glow pwm dim value (in percent 0 - 100) */
+	uint8_t glow_dim_max;							/**< maximum glow pwm dim value (in percent 0 - 100)*/
+	uint16_t glowtime;								/**< time to go from min to max, and max to min glow time (in ms)*/
+	uint32_t color;									/**< startup color for led */
+	uint8_t dim;									/**< global dimming value (for blinking and just on) (in percent 0 - 100) */
+}rgbled_config_t;
+
+
+/**
+ * rgbled device.
+ */
+typedef struct rgbled_t
+{
+	uint8_t id;										/**< Id for this rgbled */
+	uint8_t gpio_port;								/**< Gpio port */
+	uint8_t red_pin;								/**< Gpio pin for RED led */
+	uint8_t green_pin;								/**< Gpio pin for GREEN led */
+	uint8_t blue_pin;								/**< Gpio pin for BLUE led */
+	rgbled_ledout_t ledout;							/**< startup ledout value */
+	uint16_t blinkontime;							/**< blinking on time (in ms) */
+	uint16_t blinkofftime;							/**< blinking off time (in ms) */
+	uint8_t glow_dim_min;							/**< minimum glow pwm dim value (in percent 0 - 100) */
+	uint8_t glow_dim_max;							/**< maximum glow pwm dim value (in percent 0 - 100)*/
+	uint16_t glowtime;								/**< time to go from min to max, and max to min glow time (in ms)*/
+	uint32_t color;									/**< startup color for led */
+	uint8_t dim;									/**< global dimming value (for blinking and just on) (in percent 0 - 100) */
+	uint32_t timestamp[2];							/**< timestamparray for various timing functions */
+}rgbled_t;
+
+/*
+ * ***********************************************************************************************************************************************
+ * Public Function Prototypes
+ * ***********************************************************************************************************************************************
+ */
+
+
+
+#endif
+/* End of file rgbled.h */
