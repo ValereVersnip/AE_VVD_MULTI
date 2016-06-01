@@ -136,6 +136,9 @@ typedef enum
 	pressure_bmp280_init,						/**< initialization error */
 	pressure_bmp280_readout,					/**< readout error */
 
+	/* lum tsl2561 related codes */
+	lum_tsl2561_saturated,						/**< the sensor is saturated */
+
 
 }status_t;
 /*

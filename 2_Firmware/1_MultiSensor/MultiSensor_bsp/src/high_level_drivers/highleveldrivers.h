@@ -81,6 +81,9 @@ extern humidity_dht22_t HumidityDht22_U5;	/**< Humidity DHT22 senor U5 */
 /* pressure bmp280 device */
 extern pressure_bmp280_t PressureBmp280_M5;	/**< Pressure BMP280 sensor M5 */
 
+/* lum tsl2561 device */
+extern lum_tsl2561_t LumTsl2561_M4;			/**< Illumination TSL2561 sensor M4 */
+
 /*
  * ***********************************************************************************************************************************************
  * Typedefs and enumerations

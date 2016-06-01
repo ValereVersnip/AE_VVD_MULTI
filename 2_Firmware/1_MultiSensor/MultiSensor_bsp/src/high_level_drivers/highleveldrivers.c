@@ -69,6 +69,9 @@ humidity_dht22_t HumidityDht22_U5;		/**< Humidity DHT22 sensor U5 */
 /* pressure bmp280 device */
 pressure_bmp280_t PressureBmp280_M5;	/**< Pressure BMP280 sensor M5 */
 
+/* lum tsl2561 device */
+lum_tsl2561_t LumTsl2561_M4;			/**< Illumination TSL2561 sensor M4 */
+
 /*
  * ***********************************************************************************************************************************************
  * Private Function Prototypes
@@ -188,6 +191,28 @@ static status_t initialize_pressure_bmp280()
 	return status;
 }
 
+
+/**
+ * Initialize the illumination tsl2561 sensors.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_lum_tsl2561()
+{
+	status_t status = status_ok;
+	lum_tsl2561_config_t config;
+
+	config.id					=	HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_ID;
+	config.p_i2c				=	HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_I2C;
+	config.address				=	HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_ADDRESS;
+	config.integration_time		=	HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_INTEGRATIONTIME;
+	config.gain					=	HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_GAIN;
+
+	status = LUM_TSL2561_Init(&LumTsl2561_M4, &config);
+
+	return status;
+}
+
 /*
  * ***********************************************************************************************************************************************
  * Public Functions
@@ -225,6 +250,12 @@ status_t HIGHLEVELDRIVERS_Init()
 	if(status == status_ok)
 	{
 		status = initialize_pressure_bmp280();
+	}
+
+	/* Initialize Illumination tsl2561 */
+	if(status == status_ok)
+	{
+		status = initialize_lum_tsl2561();
 	}
 
 	return status;

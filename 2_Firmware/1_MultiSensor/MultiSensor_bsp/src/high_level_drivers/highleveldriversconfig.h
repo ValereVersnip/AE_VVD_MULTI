@@ -106,6 +106,15 @@
 #define HIGHLEVELDRIVERSCONFIG_PRESSUREBMP280_M5_ADDRESS			0x76				/**< 7-bit i2c address (MSB is not used) */
 
 
+/*
+ * ILLUMINATION TSL2561 startup values
+ * ***********************************************************
+ */
+#define HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_ID						0									/**< id */
+#define HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_I2C					&I2C0								/**< i2c bus to which this device is connected */
+#define HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_ADDRESS				0x39								/**< 7-bit i2c address (MSB is not used) */
+#define HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_INTEGRATIONTIME		LUM_TSL2561_INTEGRATIONTIME_101MS	/**< integration time */
+#define HIGHLEVELDRIVERSCONFIG_LUMTSL2561_M4_GAIN					LUM_TSL2561_GAIN_1X					/**< gain */
 
 
 /*

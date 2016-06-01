@@ -68,13 +68,6 @@ typedef struct pressure_bmp280_config_t
 	uint8_t id;													/**< id for this device */
 	i2c_t *p_i2c;												/**< i2c bus to which this device is connected */
 	uint8_t address;											/**< 7-bit i2c address (MSB is not used) */
-
-
-
-
-
-
-
 }pressure_bmp280_config_t;
 
 
@@ -93,7 +86,6 @@ typedef struct pressure_bmp280_t
 	int32_t uncomp_press;										/**< umcomensated pressure result */
 	int32_t comp_temp;											/**< compensated temperature result */
 	uint32_t comp_press;										/**< comensated pressure result */
-
 }pressure_bmp280_t;
 
 /*

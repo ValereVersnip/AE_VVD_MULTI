@@ -103,6 +103,8 @@ int main(void) {
 
 	while(1)
 	{
+		RGBLED_LedOff(&RgbLed_D2);
+		stat = LUM_TSL2561_SenseLight(&LumTsl2561_M4, NULL, NULL, NULL, false);
 		stat = PRESSURE_BMP280_GetResult(&PressureBmp280_M5, NULL, NULL, NULL, NULL);
 	}
 

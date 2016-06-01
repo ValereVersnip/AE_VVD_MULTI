@@ -1,44 +1,6 @@
-20:10:08 **** Incremental Build of configuration Debug for project MultiSensor_bsp ****
+23:36:39 **** Incremental Build of configuration Debug for project MultiSensor_bsp ****
 make -r all 
-Building file: ../src/high_level_drivers/pressure_bmp280.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/pressure_bmp280.d" -MT"src/high_level_drivers/pressure_bmp280.o" -MT"src/high_level_drivers/pressure_bmp280.d" -o "src/high_level_drivers/pressure_bmp280.o" "../src/high_level_drivers/pressure_bmp280.c"
-Finished building: ../src/high_level_drivers/pressure_bmp280.c
- 
-Building target: libMultiSensor_bsp.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libMultiSensor_bsp.a"  ./src/low_level_drivers/adc.o ./src/low_level_drivers/boardconfig.o ./src/low_level_drivers/gpio.o ./src/low_level_drivers/i2c.o ./src/low_level_drivers/lowleveldrivers.o ./src/low_level_drivers/mrt.o ./src/low_level_drivers/pinmux.o ./src/low_level_drivers/pwm.o ./src/low_level_drivers/systick.o ./src/low_level_drivers/usart.o  ./src/library/utilities.o  ./src/high_level_drivers/BMP280_driver/bmp280.o  ./src/high_level_drivers/address.o ./src/high_level_drivers/buzzer.o ./src/high_level_drivers/gas_mq2.o ./src/high_level_drivers/highleveldrivers.o ./src/high_level_drivers/humidity_dht22.o ./src/high_level_drivers/lum_tsl2561.o ./src/high_level_drivers/microphone.o ./src/high_level_drivers/pir_hcsr501.o ./src/high_level_drivers/pressure_bmp280.o ./src/high_level_drivers/rgbled.o ./src/high_level_drivers/temp_ds18b20.o   
-c:\nxp\LPCXpresso_8.1.4_606\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libMultiSensor_bsp.a
-Finished building target: libMultiSensor_bsp.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libMultiSensor_bsp.a" ; # arm-none-eabi-objdump -h -S "libMultiSensor_bsp.a" >"libMultiSensor_bsp.lss"
-   text	   data	    bss	    dec	    hex	filename
-   1428	      0	    169	   1597	    63d	adc.o (ex libMultiSensor_bsp.a)
-    120	      0	      0	    120	     78	boardconfig.o (ex libMultiSensor_bsp.a)
-   2616	     32	     29	   2677	    a75	gpio.o (ex libMultiSensor_bsp.a)
-    720	      0	      0	    720	    2d0	i2c.o (ex libMultiSensor_bsp.a)
-   1110	      0	    332	   1442	    5a2	lowleveldrivers.o (ex libMultiSensor_bsp.a)
-   1252	      0	     32	   1284	    504	mrt.o (ex libMultiSensor_bsp.a)
-    364	      0	      0	    364	    16c	pinmux.o (ex libMultiSensor_bsp.a)
-    676	      0	      0	    676	    2a4	pwm.o (ex libMultiSensor_bsp.a)
-    472	      0	      8	    480	    1e0	systick.o (ex libMultiSensor_bsp.a)
-   1964	      0	    464	   2428	    97c	usart.o (ex libMultiSensor_bsp.a)
-     64	      0	      0	     64	     40	utilities.o (ex libMultiSensor_bsp.a)
-   6460	      0	      4	   6464	   1940	bmp280.o (ex libMultiSensor_bsp.a)
-    272	      0	      0	    272	    110	address.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	buzzer.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	gas_mq2.o (ex libMultiSensor_bsp.a)
-    672	      0	    325	    997	    3e5	highleveldrivers.o (ex libMultiSensor_bsp.a)
-   1520	      0	      0	   1520	    5f0	humidity_dht22.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	lum_tsl2561.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	microphone.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	pir_hcsr501.o (ex libMultiSensor_bsp.a)
-    940	      0	      4	    944	    3b0	pressure_bmp280.o (ex libMultiSensor_bsp.a)
-   1472	      0	      0	   1472	    5c0	rgbled.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	temp_ds18b20.o (ex libMultiSensor_bsp.a)
- 
+make: Nothing to be done for `all'.
 
-20:10:08 Build Finished (took 473ms)
+23:36:39 Build Finished (took 76ms)
 
