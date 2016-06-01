@@ -15,6 +15,16 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="bmp280_get_forced_uncomp_pressure_temperature"/>
+			<item value="delay_msec"/>
+			<item value="BMP280_MDELAY_DATA_TYPE"/>
+			<item value="BMP280_ONE_U8X"/>
+			<item value="BMP280_STANDBY_TIME_1_MS"/>
+			<item value="bmp280_set_standby_durn"/>
+			<item value="v_standby_time_u8"/>
+			<item value="bmp280_set_power_mode"/>
+			<item value="bmp280_init"/>
+			<item value="BMP280_INIT_VALUE"/>
 			<item value="seqA_running"/>
 		</list>
 	</section>

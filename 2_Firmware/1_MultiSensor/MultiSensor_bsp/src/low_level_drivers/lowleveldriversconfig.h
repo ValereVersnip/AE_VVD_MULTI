@@ -309,7 +309,7 @@ extern void LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_7(void);
 #define LOWLEVELDRIVERSCONFIG_PWM_FREQUENCY	1000					/**< standard frequency for PWM  is 1kHz */
 #define LOWLEVELDRIVERSCONFIG_PWM_DUTYCYCLE	50						/**< standard dutycycle for PWM  is 50% */
 #define LOWLEVELDRIVERSCONFIG_PWM_USECHANNEL	{\
-												true,\
+												false,\
 												true,\
 												true,\
 												true,\

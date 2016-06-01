@@ -78,14 +78,42 @@ int main(void) {
 
 	/* Initialization of drivers */
 
-	LOWLEVELDRIVERS_Init();
-	HIGHLEVELDRIVERS_Init();
+	stat = LOWLEVELDRIVERS_Init();
+	if(stat != status_ok)
+	{
+		while(1)
+		{
+			stat = stat;
+		}
+	}
+
+	stat = HIGHLEVELDRIVERS_Init();
+	if(stat != status_ok)
+	{
+		RGBLED_LedOn(&RgbLed_D2, COLOR_RGB_RED, 20);
+		while(1)
+		{
+			stat = stat;
+		}
+	}
 
 
 //	RGBLED_LedGlow(&RgbLed_d2, -1, -1, -1, -1, -1);
 	RGBLED_LedBlink(&RgbLed_D2, -1, -1, -1, -1);
 
+	while(1)
+	{
+		stat = PRESSURE_BMP280_GetResult(&PressureBmp280_M5, NULL, NULL, NULL, NULL);
+	}
+
+
+
 	SYSTICK_DelayMs(2000);
+
+
+
+
+
 
 		do
 		{

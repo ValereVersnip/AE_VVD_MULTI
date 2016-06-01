@@ -58,14 +58,16 @@
  */
 
 /* rgbled devices */
-rgbled_t RgbLed_D2;					/**< RGBLED D2 */
+rgbled_t RgbLed_D2;						/**< RGBLED D2 */
 
 /* address device */
-address_t Address;					/**< Address */
+address_t Address;						/**< Address */
 
 /* humidity dht22 device */
-humidity_dht22_t HumidityDht22_U5;	/**< Humidity DHT22 senor U5 */
+humidity_dht22_t HumidityDht22_U5;		/**< Humidity DHT22 sensor U5 */
 
+/* pressure bmp280 device */
+pressure_bmp280_t PressureBmp280_M5;	/**< Pressure BMP280 sensor M5 */
 
 /*
  * ***********************************************************************************************************************************************
@@ -166,6 +168,26 @@ static status_t initialize_humidity_dht22()
 	return status;
 }
 
+
+/**
+ * Initialize the pressure bmp280 sensors.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_pressure_bmp280()
+{
+	status_t status = status_ok;
+	pressure_bmp280_config_t config;
+
+	config.id				=	HIGHLEVELDRIVERSCONFIG_PRESSUREBMP280_M5_ID;
+	config.p_i2c			=	HIGHLEVELDRIVERSCONFIG_PRESSUREBMP280_M5_I2C;
+	config.address			=	HIGHLEVELDRIVERSCONFIG_PRESSUREBMP280_M5_ADDRESS;
+
+	status = PRESSURE_BMP280_Init(&PressureBmp280_M5, &config);
+
+	return status;
+}
+
 /*
  * ***********************************************************************************************************************************************
  * Public Functions
@@ -197,6 +219,12 @@ status_t HIGHLEVELDRIVERS_Init()
 	if(status == status_ok)
 	{
 		status = initialize_humidity_dht22();
+	}
+
+	/* Initialize Pressure bmp280 */
+	if(status == status_ok)
+	{
+		status = initialize_pressure_bmp280();
 	}
 
 	return status;

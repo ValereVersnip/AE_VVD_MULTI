@@ -132,6 +132,11 @@ typedef enum
 	humidity_dht22_notready,					/**< no conversion results are ready */
 
 
+	/* pressure bmp280 related codes */
+	pressure_bmp280_init,						/**< initialization error */
+	pressure_bmp280_readout,					/**< readout error */
+
+
 }status_t;
 /*
  * ***********************************************************************************************************************************************

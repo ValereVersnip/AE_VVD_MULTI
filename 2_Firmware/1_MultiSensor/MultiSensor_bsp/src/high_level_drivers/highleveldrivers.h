@@ -78,6 +78,9 @@ extern address_t Address;					/**< Address */
 /* humidity dht22 device */
 extern humidity_dht22_t HumidityDht22_U5;	/**< Humidity DHT22 senor U5 */
 
+/* pressure bmp280 device */
+extern pressure_bmp280_t PressureBmp280_M5;	/**< Pressure BMP280 sensor M5 */
+
 /*
  * ***********************************************************************************************************************************************
  * Typedefs and enumerations

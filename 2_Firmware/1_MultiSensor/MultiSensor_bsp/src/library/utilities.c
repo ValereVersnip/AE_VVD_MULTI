@@ -94,8 +94,9 @@ uint16_t UTILITIES_ShiftInRightBit_16bit(uint16_t value_16bit, bool bit)
 	{
 		return (value_16bit << 1) & 0xFFFE;
 	}
-
 }
+
+
 
 
 /* End of file utilities.c */

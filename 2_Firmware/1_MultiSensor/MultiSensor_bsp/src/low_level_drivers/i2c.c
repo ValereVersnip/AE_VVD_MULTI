@@ -229,7 +229,7 @@ status_t I2C_Transfer_Blocking(i2c_t *p_i2cDevice, uint8_t addr, uint8_t *p_txDa
 			p_i2cDevice->buffer[index] = (addr << 1) | 0x01;			/* shift left, and set the last bit (read bit) */
 
 			/* here set the params for the I2C ROM API */
-			param.num_bytes_rec     = rxLen + 1;							/* rx length, apparaently we don't need to add 1 for the addressbyte: refer to AN11249 NXP. */
+			param.num_bytes_rec     = rxLen + 1;						/* rx length, apparaently we don't need to add 1 for the addressbyte: refer to AN11249 NXP. */
 			param.buffer_ptr_rec	= &p_i2cDevice->buffer[index];		/* rx data begins at the first free byte in the buffer */
 		}
 

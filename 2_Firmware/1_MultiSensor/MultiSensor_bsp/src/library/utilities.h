@@ -52,6 +52,9 @@
  */
 
 
+#define UTILITIES_StoreInPointer(pointer, value) 				if(pointer != NULL) {*pointer = value;}
+
+
 /*
  * ***********************************************************************************************************************************************
  * Typedefs and enumerations
