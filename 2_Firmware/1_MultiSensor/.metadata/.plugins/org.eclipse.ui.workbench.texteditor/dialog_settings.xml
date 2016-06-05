@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="tsl2561_read8" key="selection"/>
+		<item value="status_ok" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="buzzer_ok"/>
 			<item value="tsl2561_read8"/>
 			<item value="bmp280_compensate_temperature_int32"/>
 			<item value="BOARDCONFIG"/>
@@ -15,6 +16,7 @@
 			<item value="BMP280_INIT_VALUE"/>
 		</list>
 		<list key="replacehistory">
+			<item value="status_ok"/>
 			<item value="LOWLEVELDRIVERSCONFIG"/>
 		</list>
 	</section>

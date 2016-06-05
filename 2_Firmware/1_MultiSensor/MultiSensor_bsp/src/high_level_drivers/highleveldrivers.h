@@ -84,6 +84,18 @@ extern pressure_bmp280_t PressureBmp280_M5;	/**< Pressure BMP280 sensor M5 */
 /* lum tsl2561 device */
 extern lum_tsl2561_t LumTsl2561_M4;			/**< Illumination TSL2561 sensor M4 */
 
+/* buzzer device */
+extern buzzer_t Buzzer_SPK1;				/**< Buzzer SPK1 */
+
+/* PIR hcsr501 device */
+extern pir_hcsr501_t PirHcsr501_M1;			/**< PIR Hcsr501 sensor M1 */
+
+/* microphone device */
+extern microphone_t Microphone_M6;			/**< Microphone M6 */
+
+/* gas mq2 device */
+extern gas_mq2_t GasMq2_M2;					/**< Gas mq2 sensor M2 */
+
 /*
  * ***********************************************************************************************************************************************
  * Typedefs and enumerations

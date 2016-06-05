@@ -92,6 +92,9 @@ void PINMUX_Init()
 	Chip_SWM_FixedPinEnable(SWM_FIXED_XTALIN, false);
 	Chip_SWM_FixedPinEnable(SWM_FIXED_XTALOUT, false);
 
+	/* connect the fixed reset_n pin to P0.5 */
+	Chip_SWM_EnableFixedPin(SWM_FIXED_RST);
+
 	/* Connect the I2C_SDA0 and I2C_SCL0 signals to port pins(P0.10, P0.11) */
 	/* these are fixed location pins */
 	Chip_SWM_EnableFixedPin(SWM_FIXED_I2C0_SDA);
@@ -111,9 +114,6 @@ void PINMUX_Init()
 	/* these are movable location pins */
 	Chip_SWM_MovablePinAssign(SWM_U1_RXD_I, 25);
 
-	/* Connect the SCT OUTPUT 0 (PWM)  signal to port pin(P0.0) --> this is the buzzer*/
-	/* these are movable location pins */
-	Chip_SWM_MovablePinAssign(SWM_SCT_OUT0_O, 0);
 
 	/* Connect the SCT OUTPUT 1,2,3 (PWM : RGB)  signal to port pin(P0.1, P0.9, P0.8) --> this is the RGB led*/
 	/* these are movable location pins */

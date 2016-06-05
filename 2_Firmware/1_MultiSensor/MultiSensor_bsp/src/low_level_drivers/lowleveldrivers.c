@@ -341,6 +341,11 @@ status_t LOWLEVELDRIVERS_Run0()
 	if(status == status_ok)
 	{
 		status = ADC_Run0(&Adc);
+		/* sometimes (once in 20 minutes or so...) the adc reports data non valid, then we don't copy it to the struct, but we proceed anyway */
+		if(status == adc_datanotvalid)
+		{
+			status = status_ok;
+		}
 	}
 	return status;
 }

@@ -15,6 +15,7 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="PWM_setdutycycle"/>
 			<item value="tsl2561_read8"/>
 			<item value="TSL2561_LUX_B1T"/>
 			<item value="TSL2561_VISIBLE"/>

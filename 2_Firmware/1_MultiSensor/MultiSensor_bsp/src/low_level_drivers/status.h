@@ -82,6 +82,7 @@ typedef enum
 
 	/* pwm related codes */
 	pwm_dutycycle,								/**< out of bounds pwm dutycycle specified */
+	pwm_frequency,								/**< wrong pwm frequency */
 
 	/* CDC related codes */
 	cdc_usbinit_failure,						/**< the USB initialization failed */
@@ -138,6 +139,13 @@ typedef enum
 
 	/* lum tsl2561 related codes */
 	lum_tsl2561_saturated,						/**< the sensor is saturated */
+
+	/* buzzer related codes */
+	buzzer_frequencyerror,						/**< wrong frequency */
+
+	/* microphone related codes */
+	microphone_bufferoverflow,					/**< one of the buffers has overflowed, this should never happen! */
+	microphone_pop,								/**< there was a pop error */
 
 
 }status_t;

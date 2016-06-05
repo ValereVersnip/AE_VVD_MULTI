@@ -98,7 +98,7 @@ extern void LOWLEVELDRIVERSCONFIG_MRT_0_INTR_FUNCTION(void);
  */
 #define LOWLEVELDRIVERSCONFIG_MRT_1_ENABLE					true							/**< this timer is enabled */
 #define LOWLEVELDRIVERSCONFIG_MRT_1_ENABLEINTERRUPT			true							/**< interrupts enabled for this timer */
-#define LOWLEVELDRIVERSCONFIG_MRT_1_INTERRUPTFREQ			5000							/**< 5000 --> 200mS (freqsetting in mHz!)*/
+#define LOWLEVELDRIVERSCONFIG_MRT_1_INTERRUPTFREQ			10000							/**< 10000 --> 100MS (freqsetting in mHz!)*/
 #define LOWLEVELDRIVERSCONFIG_MRT_1_INTR_FUNCTION			LOWLEVELDRIVERS_MRT1_HANDLER	/**< Define if higherlevel interrupt handler should be specified */
 
 /* do not modify under this line */
@@ -162,7 +162,7 @@ extern void LOWLEVELDRIVERSCONFIG_MRT_3_INTR_FUNCTION(void);
 													{ .port = 0, .pin = 4, 		.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 28, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 24,		.dir = input, 		.irq = none, 		.irqchannel = 0},\
-													{ .port = 0, .pin = 15,		.dir = input, 		.irq = none, 		.irqchannel = 0},\
+													{ .port = 0, .pin = 15,		.dir = input, 		.irq = edgehigh,	.irqchannel = 1},\
 													{ .port = 0, .pin = 14, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 23, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 22, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
@@ -171,13 +171,14 @@ extern void LOWLEVELDRIVERSCONFIG_MRT_3_INTR_FUNCTION(void);
 													{ .port = 0, .pin = 19, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 18, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 17, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
+													{ .port = 0, .pin = 0, 		.dir = outputlow,	.irq = none, 		.irqchannel = 0},\
 													}												/**< startup direction for gpio pins, and value if output */
 
 
 /* Pininterrupt user functions */
 
 #define LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_0			HIGHLEVELRIVERS_DHT22_Pin_Handler		/**< name of the void function(void) user function which will be called by PinInterrupt 0, uncomment if used */
-//#define LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_1			test		/**< name of the void function(void) user function which will be called by PinInterrupt 1, uncomment if used */
+#define LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_1			HIGHLEVELRIVERS_PIR_Pin_Handler			/**< name of the void function(void) user function which will be called by PinInterrupt 1, uncomment if used */
 //#define LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_2			test		/**< name of the void function(void) user function which will be called by PinInterrupt 2, uncomment if used */
 //#define LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_3			test		/**< name of the void function(void) user function which will be called by PinInterrupt 3, uncomment if used */
 //#define LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_4			test		/**< name of the void function(void) user function which will be called by PinInterrupt 4, uncomment if used */

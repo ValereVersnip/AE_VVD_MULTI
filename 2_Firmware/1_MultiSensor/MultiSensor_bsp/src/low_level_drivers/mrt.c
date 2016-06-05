@@ -84,41 +84,41 @@ void MRT_IRQHandler(void)
 	/* Get interrupt pending status for all timers */
 	int_pend = Chip_MRT_GetIntPending();
 	Chip_MRT_ClearIntPending(int_pend);
-
-	switch(int_pend)
+	/* mrt 0 */
+	if(int_pend & 0x01)
 	{
-		/* mrt 0 */
-		case 0x01:
-			if(p_MrtIntrHandler[0] != NULL)
-			{
-				(*p_MrtIntrHandler[0])();
-			}
-			MrtTicks[0]++;
-			break;
-		/* mrt 1 */
-		case 0x02:
-			if(p_MrtIntrHandler[1] != NULL)
-			{
-				(*p_MrtIntrHandler[1])();
-			}
-			MrtTicks[1]++;
-			break;
-		/* mrt 2 */
-		case 0x04:
-			if(p_MrtIntrHandler[2] != NULL)
-			{
-				(*p_MrtIntrHandler[2])();
-			}
-			MrtTicks[2]++;
-		break;
-		/* mrt 3 */
-		case 0x08:
-			if(p_MrtIntrHandler[3] != NULL)
-			{
-				(*p_MrtIntrHandler[3])();
-			}
-			MrtTicks[3]++;
-			break;
+		if(p_MrtIntrHandler[0] != NULL)
+		{
+			(*p_MrtIntrHandler[0])();
+		}
+		MrtTicks[0]++;
+	}
+	/* mrt 1 */
+	if(int_pend & 0x02)
+	{
+		if(p_MrtIntrHandler[1] != NULL)
+		{
+			(*p_MrtIntrHandler[1])();
+		}
+		MrtTicks[1]++;
+	}
+	/* mrt 2 */
+	if(int_pend & 0x04)
+	{
+		if(p_MrtIntrHandler[2] != NULL)
+		{
+			(*p_MrtIntrHandler[2])();
+		}
+		MrtTicks[2]++;
+	}
+	/* mrt 3 */
+	if(int_pend & 0x08)
+	{
+		if(p_MrtIntrHandler[3] != NULL)
+		{
+			(*p_MrtIntrHandler[3])();
+		}
+		MrtTicks[3]++;
 	}
 }
 

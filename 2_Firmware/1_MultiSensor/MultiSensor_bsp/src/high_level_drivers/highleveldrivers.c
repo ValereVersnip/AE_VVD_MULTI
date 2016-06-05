@@ -72,6 +72,18 @@ pressure_bmp280_t PressureBmp280_M5;	/**< Pressure BMP280 sensor M5 */
 /* lum tsl2561 device */
 lum_tsl2561_t LumTsl2561_M4;			/**< Illumination TSL2561 sensor M4 */
 
+/* buzzer device */
+buzzer_t Buzzer_SPK1;					/**< Buzzer SPK1 */
+
+/* PIR hcsr501 device */
+pir_hcsr501_t PirHcsr501_M1;			/**< PIR Hcsr501 sensor M1 */
+
+/* microphone device */
+microphone_t Microphone_M6;				/**< Microphone M6 */
+
+/* gas mq2 device */
+gas_mq2_t GasMq2_M2;					/**< Gas mq2 sensor M2 */
+
 /*
  * ***********************************************************************************************************************************************
  * Private Function Prototypes
@@ -213,6 +225,93 @@ static status_t initialize_lum_tsl2561()
 	return status;
 }
 
+
+/**
+ * Initialize the buzzer.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_buzzer()
+{
+	status_t status = status_ok;
+	buzzer_config_t buzzerConfig;
+	buzzerConfig.id			= HIGHLEVELCONFIG_BUZZER_SPK1_ID;
+	buzzerConfig.port	  	= HIGHLEVELCONFIG_BUZZER_SPK1_PORT;
+	buzzerConfig.pin		= HIGHLEVELCONFIG_BUZZER_SPK1_PIN;
+	status = BUZZER_Init(&Buzzer_SPK1, &buzzerConfig);
+
+	return status;
+}
+
+
+/**
+ * Initialize the PIR hcsr501.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_pir_hcsr501()
+{
+	status_t status = status_ok;
+	pir_hcsr501_config_t config;
+
+	config.id		= HIGHLEVELCONFIG_PIRHCSR501_ID;
+	config.port		= HIGHLEVELCONFIG_PIRHCSR501_PORT;
+	config.pin		= HIGHLEVELCONFIG_PIRHCSR501_PIN;
+
+	status = PIR_HCSR501_Init(&PirHcsr501_M1, &config);
+
+	return status;
+}
+
+
+
+/**
+ * Initialize the Microphone.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_microphone()
+{
+	status_t status = status_ok;
+	microphone_config_t config;
+
+	config.id					= HIGHLEVELCONFIG_MICROPHONE_M6_ID;
+	config.p_adc				= HIGHLEVELCONFIG_MICROPHONE_M6_ADC;
+	config.adcchannel			= HIGHLEVELCONFIG_MICROPHONE_M6_ADCCHANNEL;
+	config.adcperiod			= HIGHLEVELCONFIG_MICROPHONE_M6_ADCPERIOD;
+	config.treshold				= HIGHLEVELCONFIG_MICROPHONE_M6_TRESHOLD;
+	config.tresholdtime			= HIGHLEVELCONFIG_MICROPHONE_M6_TRESHOLDTIME;
+	config.maxtimebetweenclaps	= HIGHLEVELCONFIG_MICROPHONE_M6_MAXTIMECLAPS;
+	config.claptresh			= HIGHLEVELCONFIG_MICROPHONE_M6_CLAPTRESH;
+	config.clapamount			= HIGHLEVELCONFIG_MICROPHONE_M6_CLAPAMOUNT;
+
+	status = MICROPHONE_Init(&Microphone_M6, &config);
+
+	return status;
+}
+
+
+/**
+ * Initialize the gas mq2 sensors.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_gas_mq2()
+{
+	status_t status = status_ok;
+	gas_mq2_config_t config;
+
+	config.id					= HIGHLEVELCONFIG_GASMQ2_M2_ID;
+	config.p_adc				= HIGHLEVELCONFIG_GASMQ2_M2_ADC;
+	config.adcchannel			= HIGHLEVELCONFIG_GASMQ2_M2_ADCCHANNEL;
+	config.alarmtreshold		= HIGHLEVELCONFIG_GASMQ2_M2_ALARMTERSHOLD;
+
+	status = GAS_MQ2_Init(&GasMq2_M2, &config);
+
+	return status;
+}
+
+
 /*
  * ***********************************************************************************************************************************************
  * Public Functions
@@ -227,6 +326,12 @@ static status_t initialize_lum_tsl2561()
 status_t HIGHLEVELDRIVERS_Init()
 {
 	status_t status = status_ok;
+
+	/* Initialize Buzzer */
+	if(status == status_ok)
+	{
+		status = initialize_buzzer();
+	}
 
 	/* Initialize RGB leds */
 	if(status == status_ok)
@@ -258,6 +363,25 @@ status_t HIGHLEVELDRIVERS_Init()
 		status = initialize_lum_tsl2561();
 	}
 
+	/* Initialize Pir hcsr501 */
+	if(status == status_ok)
+	{
+		status = initialize_pir_hcsr501();
+	}
+
+	/* Initialize Microphone */
+	if(status == status_ok)
+	{
+		status = initialize_microphone();
+	}
+
+	/* Initialize Gas mq2 */
+	if(status == status_ok)
+	{
+		status = initialize_gas_mq2();
+	}
+
+
 	return status;
 }
 
@@ -284,13 +408,22 @@ status_t HIGHLEVELDRIVERS_Run0()
 		status = HUMIDITY_DHT22_Run0(&HumidityDht22_U5);
 	}
 
-	if(status != status_ok)
+	/* Buzzer Run0 */
+	if(status == status_ok)
 	{
-		RGBLED_LedOn(&RgbLed_D2, COLOR_RGB_RED, 10);
-		while(1)
-		{
-			status = status;
-		}
+		status = BUZZER_Run0(&Buzzer_SPK1);
+	}
+
+	/* Microphone Run0 */
+	if(status == status_ok)
+	{
+		status = MICROPHONE_Run0(&Microphone_M6);
+	}
+
+	/* Gas mq2 Run0 */
+	if(status == status_ok)
+	{
+		status = GAS_MQ2_Run0(&GasMq2_M2);
 	}
 
 	return status;
@@ -306,6 +439,20 @@ status_t HIGHLEVELDRIVERS_Run0()
  */
 void HIGHLEVELRIVERS_DHT22_Pin_Handler()
 {
+	HUMIDITY_DHT22_FallingEdgeRoutine(&HumidityDht22_U5);
+}
+
+/**
+ * interrupt routine for PIR rising edge handler.
+ *
+ * This function will be called when the data pin goes high, and we will get the 1s ticks.
+ *
+ * @note: this handler will be given to low level driver gpio pin interrupt routine in lowleveldrivers config file.
+ */
+void HIGHLEVELRIVERS_PIR_Pin_Handler()
+{
+	PIR_HCSR501_RisingEdgeRoutine(&PirHcsr501_M1);
+
 	HUMIDITY_DHT22_FallingEdgeRoutine(&HumidityDht22_U5);
 }
 

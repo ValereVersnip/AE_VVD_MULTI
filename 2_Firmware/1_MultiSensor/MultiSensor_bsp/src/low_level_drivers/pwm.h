@@ -131,5 +131,53 @@ status_t PWM_Init(pwm_t* p_pwm, pwm_config_t *p_pwmConfig);
 status_t PWM_setdutycycle(pwm_t* p_pwm, pwm_channel_t channel, uint8_t dutycycle);
 
 
+/**
+ * function that will change the frequency of the SCT.
+ *
+ * this function will stop the SCT output, first, set the frequency, and startup the sct again
+ * @param p_pwm		the low level driver struct for the PWM that needs to be changed
+ * @param frequency	the wanted frequency in Hz (0 - MAX_FREQUENCY)
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t PWM_SetFrequency(pwm_t* p_pwm, uint32_t frequency);
+
+
+/**
+ * this function starts the SCT.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t PWM_Start();
+
+
+/**
+ * this function is the same as PWM_SetDutyCycle.
+ *
+ * @param p_pwm the pwm low level driver struct for the pwm that needs to be changed
+ * @param dutycycle the wanted dutycycle (0-100) in percent
+ * @param channel 	the channel of which you want to change the dutycycle
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t PWM_StartChannel(pwm_t* p_pwm, uint8_t dutycycle, pwm_channel_t channel);
+
+
+/**
+ * this function stops a given channel.
+ *
+ * This will actually just put the dutycycle to 0
+ * @param p_pwm the pwm low level driver struct for the pwm that needs to be stopped
+ * @param channel 	the channel which you want to stop
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t PWM_StopChannel(pwm_t* p_pwm, pwm_channel_t channel);
+
+
+/**
+ * this function stops the SCT.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t PWM_Stop();
+
 #endif
 /* End of file pwm.h */
