@@ -118,7 +118,7 @@ extern void LOWLEVELDRIVERSCONFIG_MRT_1_INTR_FUNCTION(void);
  */
 #define LOWLEVELDRIVERSCONFIG_MRT_2_ENABLE					true							/**< this timer is enabled */
 #define LOWLEVELDRIVERSCONFIG_MRT_2_ENABLEINTERRUPT			false							/**< interrupts enabled for this timer */
-#define LOWLEVELDRIVERSCONFIG_MRT_2_INTERRUPTFREQ			100000000						/**< 200000000 --> 10uS (freqsetting in mHz!)*/
+#define LOWLEVELDRIVERSCONFIG_MRT_2_INTERRUPTFREQ			150000000						/**< 200000000 --> 10uS (freqsetting in mHz!)*/
 //#define LOWLEVELDRIVERSCONFIG_MRT_2_INTR_FUNCTION											/**< Define if higherlevel interrupt handler should be specified */
 
 /* do not modify under this line */
@@ -172,6 +172,7 @@ extern void LOWLEVELDRIVERSCONFIG_MRT_3_INTR_FUNCTION(void);
 													{ .port = 0, .pin = 18, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 17, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 0, 		.dir = outputlow,	.irq = none, 		.irqchannel = 0},\
+													{ .port = 0, .pin = 27, 	.dir = outputlow,	.irq = none, 		.irqchannel = 0},\
 													}												/**< startup direction for gpio pins, and value if output */
 
 
@@ -269,7 +270,7 @@ extern void LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_7(void);
  * ***********************************************************
  */
 #define LOWLEVELDRIVERSCONFIG_USART0_USE															/**< uncomment if usart0 is used */
-#define LOWLEVELDRIVERSCONFIG_USART1_USE															/**< uncomment if usart1 is used */
+//#define LOWLEVELDRIVERSCONFIG_USART1_USE															/**< uncomment if usart1 is used */
 //#define LOWLEVELDRIVERSCONFIG_USART2_USE															/**< uncomment if usart2 is used */
 
 #ifdef LOWLEVELDRIVERSCONFIG_USART0_USE
@@ -278,7 +279,7 @@ extern void LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_7(void);
 #define LOWLEVELDRIVERSCONFIG_USART0_PARITY					usart_parity_none						/**< no parity */
 #define LOWLEVELDRIVERSCONFIG_USART0_STOPBITS				1										/**< one stop bits */
 #define LOWLEVELDRIVERSCONFIG_USART0_HANDLER				NULL									/**< No handler needed */
-#define LOWLEVELDRIVERSCONFIG_USART0_RX_BUFFERSIZE			128										/**< RX BUFFER SIZE */
+#define LOWLEVELDRIVERSCONFIG_USART0_RX_BUFFERSIZE			64										/**< RX BUFFER SIZE */
 #define LOWLEVELDRIVERSCONFIG_USART0_TX_BUFFERSIZE			64										/**< TX BUFFER SIZE */
 #endif
 

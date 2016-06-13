@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="status_ok" key="selection"/>
+		<item value="timestamp" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="timestamp"/>
 			<item value="buzzer_ok"/>
 			<item value="tsl2561_read8"/>
 			<item value="bmp280_compensate_temperature_int32"/>

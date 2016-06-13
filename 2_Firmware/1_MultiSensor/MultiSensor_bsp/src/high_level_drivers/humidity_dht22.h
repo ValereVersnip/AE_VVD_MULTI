@@ -51,9 +51,9 @@
 
 #define HUMIDITY_DHT22_SAMPLEBUFFERSIZE				42				/**< we have 42 falling edges in one dht22 data transfer */
 #define HUMIDITY_DHT22_TIME_STARTPULSE				2				/**< the startpulse width (in ms) */
-#define HUMIDITY_DHT22_WAIT_TIME					2000			/**< wait time between two conversions (in ms) */
-#define HUMIDITY_DHT22_TIME_OUT						100				/**< timeout after conversion is started (in ms) */
-#define HUMIDITY_DHT22_BITPERIOD_TH					9				/**< The threshold for determining 1 or 0 by bit period (in multiples of 10us) */
+#define HUMIDITY_DHT22_WAIT_TIME					2500			/**< wait time between two conversions (in ms) */
+#define HUMIDITY_DHT22_TIME_OUT						10				/**< timeout after conversion is started (in ms) */
+#define HUMIDITY_DHT22_BITPERIOD_TH					17				/**< The threshold for determining 1 or 0 by bit period (in multiples of 10us) */
 
 
 

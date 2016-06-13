@@ -1,155 +1,155 @@
-13:10:48 **** Clean-only build of configuration Debug for project lpc_chip_82x ****
+00:53:40 **** Clean-only build of configuration Release for project lpc_chip_82x ****
 make -r clean 
 rm -rf  ./src/acmp_8xx.o ./src/adc_8xx.o ./src/chip_8xx.o ./src/clock_8xx.o ./src/crc_8xx.o ./src/dma_8xx.o ./src/gpio_8xx.o ./src/i2c_common_8xx.o ./src/i2cm_8xx.o ./src/i2cs_8xx.o ./src/iap.o ./src/iocon_8xx.o ./src/irc_8xx.o ./src/pinint_8xx.o ./src/pmu_8xx.o ./src/ring_buffer.o ./src/sct_8xx.o ./src/sct_pwm_8xx.o ./src/spi_8xx.o ./src/spim_8xx.o ./src/spis_8xx.o ./src/stopwatch_8xx.o ./src/swm_8xx.o ./src/syscon_8xx.o ./src/sysinit_8xx.o ./src/uart_8xx.o ./src/wkt_8xx.o ./src/wwdt_8xx.o  ./src/acmp_8xx.d ./src/adc_8xx.d ./src/chip_8xx.d ./src/clock_8xx.d ./src/crc_8xx.d ./src/dma_8xx.d ./src/gpio_8xx.d ./src/i2c_common_8xx.d ./src/i2cm_8xx.d ./src/i2cs_8xx.d ./src/iap.d ./src/iocon_8xx.d ./src/irc_8xx.d ./src/pinint_8xx.d ./src/pmu_8xx.d ./src/ring_buffer.d ./src/sct_8xx.d ./src/sct_pwm_8xx.d ./src/spi_8xx.d ./src/spim_8xx.d ./src/spis_8xx.d ./src/stopwatch_8xx.d ./src/swm_8xx.d ./src/syscon_8xx.d ./src/sysinit_8xx.d ./src/uart_8xx.d ./src/wkt_8xx.d ./src/wwdt_8xx.d  liblpc_chip_82x.a
  
-13:10:48 **** Clean-only build of configuration Debug for project MultiSensor_bsp ****
+00:53:40 **** Clean-only build of configuration Release for project MultiSensor_bsp ****
 make -r clean 
 rm -rf  ./src/low_level_drivers/adc.o ./src/low_level_drivers/boardconfig.o ./src/low_level_drivers/gpio.o ./src/low_level_drivers/i2c.o ./src/low_level_drivers/lowleveldrivers.o ./src/low_level_drivers/mrt.o ./src/low_level_drivers/pinmux.o ./src/low_level_drivers/pwm.o ./src/low_level_drivers/systick.o ./src/low_level_drivers/usart.o  ./src/library/utilities.o  ./src/high_level_drivers/BMP280_driver/bmp280.o  ./src/high_level_drivers/address.o ./src/high_level_drivers/buzzer.o ./src/high_level_drivers/gas_mq2.o ./src/high_level_drivers/highleveldrivers.o ./src/high_level_drivers/humidity_dht22.o ./src/high_level_drivers/lum_tsl2561.o ./src/high_level_drivers/microphone.o ./src/high_level_drivers/pir_hcsr501.o ./src/high_level_drivers/pressure_bmp280.o ./src/high_level_drivers/rgbled.o ./src/high_level_drivers/temp_ds18b20.o  ./src/low_level_drivers/adc.d ./src/low_level_drivers/boardconfig.d ./src/low_level_drivers/gpio.d ./src/low_level_drivers/i2c.d ./src/low_level_drivers/lowleveldrivers.d ./src/low_level_drivers/mrt.d ./src/low_level_drivers/pinmux.d ./src/low_level_drivers/pwm.d ./src/low_level_drivers/systick.d ./src/low_level_drivers/usart.d  ./src/library/utilities.d  ./src/high_level_drivers/BMP280_driver/bmp280.d  ./src/high_level_drivers/address.d ./src/high_level_drivers/buzzer.d ./src/high_level_drivers/gas_mq2.d ./src/high_level_drivers/highleveldrivers.d ./src/high_level_drivers/humidity_dht22.d ./src/high_level_drivers/lum_tsl2561.d ./src/high_level_drivers/microphone.d ./src/high_level_drivers/pir_hcsr501.d ./src/high_level_drivers/pressure_bmp280.d ./src/high_level_drivers/rgbled.d ./src/high_level_drivers/temp_ds18b20.d  libMultiSensor_bsp.a
  
-13:10:48 **** Clean-only build of configuration Debug for project MultiSensor ****
+00:53:41 **** Clean-only build of configuration Release for project MultiSensor ****
 make -r clean 
-rm -rf  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o  ./src/MultiSensor.d ./src/cr_startup_lpc82x.d ./src/crp.d ./src/mtb.d ./src/sysinit.d  MultiSensor.axf
+rm -rf  ./src/userapp/userfunctions/modbusslave.o  ./src/userapp/userapp.o  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o  ./src/userapp/userfunctions/modbusslave.d  ./src/userapp/userapp.d  ./src/MultiSensor.d ./src/cr_startup_lpc82x.d ./src/crp.d ./src/mtb.d ./src/sysinit.d  MultiSensor.axf
  
-13:10:49 **** Build of configuration Debug for project lpc_chip_82x ****
+00:53:42 **** Build of configuration Release for project lpc_chip_82x ****
 make -r all 
 Building file: ../src/acmp_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/acmp_8xx.d" -MT"src/acmp_8xx.o" -MT"src/acmp_8xx.d" -o "src/acmp_8xx.o" "../src/acmp_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/acmp_8xx.d" -MT"src/acmp_8xx.o" -MT"src/acmp_8xx.d" -o "src/acmp_8xx.o" "../src/acmp_8xx.c"
 Finished building: ../src/acmp_8xx.c
  
 Building file: ../src/adc_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_8xx.d" -MT"src/adc_8xx.o" -MT"src/adc_8xx.d" -o "src/adc_8xx.o" "../src/adc_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_8xx.d" -MT"src/adc_8xx.o" -MT"src/adc_8xx.d" -o "src/adc_8xx.o" "../src/adc_8xx.c"
 Finished building: ../src/adc_8xx.c
  
 Building file: ../src/chip_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/chip_8xx.d" -MT"src/chip_8xx.o" -MT"src/chip_8xx.d" -o "src/chip_8xx.o" "../src/chip_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/chip_8xx.d" -MT"src/chip_8xx.o" -MT"src/chip_8xx.d" -o "src/chip_8xx.o" "../src/chip_8xx.c"
 Finished building: ../src/chip_8xx.c
  
 Building file: ../src/clock_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/clock_8xx.d" -MT"src/clock_8xx.o" -MT"src/clock_8xx.d" -o "src/clock_8xx.o" "../src/clock_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/clock_8xx.d" -MT"src/clock_8xx.o" -MT"src/clock_8xx.d" -o "src/clock_8xx.o" "../src/clock_8xx.c"
 Finished building: ../src/clock_8xx.c
  
 Building file: ../src/crc_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crc_8xx.d" -MT"src/crc_8xx.o" -MT"src/crc_8xx.d" -o "src/crc_8xx.o" "../src/crc_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crc_8xx.d" -MT"src/crc_8xx.o" -MT"src/crc_8xx.d" -o "src/crc_8xx.o" "../src/crc_8xx.c"
 Finished building: ../src/crc_8xx.c
  
 Building file: ../src/dma_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/dma_8xx.d" -MT"src/dma_8xx.o" -MT"src/dma_8xx.d" -o "src/dma_8xx.o" "../src/dma_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/dma_8xx.d" -MT"src/dma_8xx.o" -MT"src/dma_8xx.d" -o "src/dma_8xx.o" "../src/dma_8xx.c"
 Finished building: ../src/dma_8xx.c
  
 Building file: ../src/gpio_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio_8xx.d" -MT"src/gpio_8xx.o" -MT"src/gpio_8xx.d" -o "src/gpio_8xx.o" "../src/gpio_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio_8xx.d" -MT"src/gpio_8xx.o" -MT"src/gpio_8xx.d" -o "src/gpio_8xx.o" "../src/gpio_8xx.c"
 Finished building: ../src/gpio_8xx.c
  
 Building file: ../src/i2c_common_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2c_common_8xx.d" -MT"src/i2c_common_8xx.o" -MT"src/i2c_common_8xx.d" -o "src/i2c_common_8xx.o" "../src/i2c_common_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2c_common_8xx.d" -MT"src/i2c_common_8xx.o" -MT"src/i2c_common_8xx.d" -o "src/i2c_common_8xx.o" "../src/i2c_common_8xx.c"
 Finished building: ../src/i2c_common_8xx.c
  
 Building file: ../src/i2cm_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2cm_8xx.d" -MT"src/i2cm_8xx.o" -MT"src/i2cm_8xx.d" -o "src/i2cm_8xx.o" "../src/i2cm_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2cm_8xx.d" -MT"src/i2cm_8xx.o" -MT"src/i2cm_8xx.d" -o "src/i2cm_8xx.o" "../src/i2cm_8xx.c"
 Finished building: ../src/i2cm_8xx.c
  
 Building file: ../src/i2cs_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2cs_8xx.d" -MT"src/i2cs_8xx.o" -MT"src/i2cs_8xx.d" -o "src/i2cs_8xx.o" "../src/i2cs_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2cs_8xx.d" -MT"src/i2cs_8xx.o" -MT"src/i2cs_8xx.d" -o "src/i2cs_8xx.o" "../src/i2cs_8xx.c"
 Finished building: ../src/i2cs_8xx.c
  
 Building file: ../src/iap.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iap.d" -MT"src/iap.o" -MT"src/iap.d" -o "src/iap.o" "../src/iap.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iap.d" -MT"src/iap.o" -MT"src/iap.d" -o "src/iap.o" "../src/iap.c"
 Finished building: ../src/iap.c
  
 Building file: ../src/iocon_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iocon_8xx.d" -MT"src/iocon_8xx.o" -MT"src/iocon_8xx.d" -o "src/iocon_8xx.o" "../src/iocon_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iocon_8xx.d" -MT"src/iocon_8xx.o" -MT"src/iocon_8xx.d" -o "src/iocon_8xx.o" "../src/iocon_8xx.c"
 Finished building: ../src/iocon_8xx.c
  
 Building file: ../src/irc_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/irc_8xx.d" -MT"src/irc_8xx.o" -MT"src/irc_8xx.d" -o "src/irc_8xx.o" "../src/irc_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/irc_8xx.d" -MT"src/irc_8xx.o" -MT"src/irc_8xx.d" -o "src/irc_8xx.o" "../src/irc_8xx.c"
 Finished building: ../src/irc_8xx.c
  
 Building file: ../src/pinint_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pinint_8xx.d" -MT"src/pinint_8xx.o" -MT"src/pinint_8xx.d" -o "src/pinint_8xx.o" "../src/pinint_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pinint_8xx.d" -MT"src/pinint_8xx.o" -MT"src/pinint_8xx.d" -o "src/pinint_8xx.o" "../src/pinint_8xx.c"
 Finished building: ../src/pinint_8xx.c
  
 Building file: ../src/pmu_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pmu_8xx.d" -MT"src/pmu_8xx.o" -MT"src/pmu_8xx.d" -o "src/pmu_8xx.o" "../src/pmu_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pmu_8xx.d" -MT"src/pmu_8xx.o" -MT"src/pmu_8xx.d" -o "src/pmu_8xx.o" "../src/pmu_8xx.c"
 Finished building: ../src/pmu_8xx.c
  
 Building file: ../src/ring_buffer.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.o" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.o" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
 Finished building: ../src/ring_buffer.c
  
 Building file: ../src/sct_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_8xx.d" -MT"src/sct_8xx.o" -MT"src/sct_8xx.d" -o "src/sct_8xx.o" "../src/sct_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_8xx.d" -MT"src/sct_8xx.o" -MT"src/sct_8xx.d" -o "src/sct_8xx.o" "../src/sct_8xx.c"
 Finished building: ../src/sct_8xx.c
  
 Building file: ../src/sct_pwm_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_pwm_8xx.d" -MT"src/sct_pwm_8xx.o" -MT"src/sct_pwm_8xx.d" -o "src/sct_pwm_8xx.o" "../src/sct_pwm_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_pwm_8xx.d" -MT"src/sct_pwm_8xx.o" -MT"src/sct_pwm_8xx.d" -o "src/sct_pwm_8xx.o" "../src/sct_pwm_8xx.c"
 Finished building: ../src/sct_pwm_8xx.c
  
 Building file: ../src/spi_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spi_8xx.d" -MT"src/spi_8xx.o" -MT"src/spi_8xx.d" -o "src/spi_8xx.o" "../src/spi_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spi_8xx.d" -MT"src/spi_8xx.o" -MT"src/spi_8xx.d" -o "src/spi_8xx.o" "../src/spi_8xx.c"
 Finished building: ../src/spi_8xx.c
  
 Building file: ../src/spim_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spim_8xx.d" -MT"src/spim_8xx.o" -MT"src/spim_8xx.d" -o "src/spim_8xx.o" "../src/spim_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spim_8xx.d" -MT"src/spim_8xx.o" -MT"src/spim_8xx.d" -o "src/spim_8xx.o" "../src/spim_8xx.c"
 Finished building: ../src/spim_8xx.c
  
 Building file: ../src/spis_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spis_8xx.d" -MT"src/spis_8xx.o" -MT"src/spis_8xx.d" -o "src/spis_8xx.o" "../src/spis_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spis_8xx.d" -MT"src/spis_8xx.o" -MT"src/spis_8xx.d" -o "src/spis_8xx.o" "../src/spis_8xx.c"
 Finished building: ../src/spis_8xx.c
  
 Building file: ../src/stopwatch_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/stopwatch_8xx.d" -MT"src/stopwatch_8xx.o" -MT"src/stopwatch_8xx.d" -o "src/stopwatch_8xx.o" "../src/stopwatch_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/stopwatch_8xx.d" -MT"src/stopwatch_8xx.o" -MT"src/stopwatch_8xx.d" -o "src/stopwatch_8xx.o" "../src/stopwatch_8xx.c"
 Finished building: ../src/stopwatch_8xx.c
  
 Building file: ../src/swm_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/swm_8xx.d" -MT"src/swm_8xx.o" -MT"src/swm_8xx.d" -o "src/swm_8xx.o" "../src/swm_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/swm_8xx.d" -MT"src/swm_8xx.o" -MT"src/swm_8xx.d" -o "src/swm_8xx.o" "../src/swm_8xx.c"
 Finished building: ../src/swm_8xx.c
  
 Building file: ../src/syscon_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/syscon_8xx.d" -MT"src/syscon_8xx.o" -MT"src/syscon_8xx.d" -o "src/syscon_8xx.o" "../src/syscon_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/syscon_8xx.d" -MT"src/syscon_8xx.o" -MT"src/syscon_8xx.d" -o "src/syscon_8xx.o" "../src/syscon_8xx.c"
 Finished building: ../src/syscon_8xx.c
  
 Building file: ../src/sysinit_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit_8xx.d" -MT"src/sysinit_8xx.o" -MT"src/sysinit_8xx.d" -o "src/sysinit_8xx.o" "../src/sysinit_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit_8xx.d" -MT"src/sysinit_8xx.o" -MT"src/sysinit_8xx.d" -o "src/sysinit_8xx.o" "../src/sysinit_8xx.c"
 Finished building: ../src/sysinit_8xx.c
  
 Building file: ../src/uart_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart_8xx.d" -MT"src/uart_8xx.o" -MT"src/uart_8xx.d" -o "src/uart_8xx.o" "../src/uart_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart_8xx.d" -MT"src/uart_8xx.o" -MT"src/uart_8xx.d" -o "src/uart_8xx.o" "../src/uart_8xx.c"
 Finished building: ../src/uart_8xx.c
  
 Building file: ../src/wkt_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wkt_8xx.d" -MT"src/wkt_8xx.o" -MT"src/wkt_8xx.d" -o "src/wkt_8xx.o" "../src/wkt_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wkt_8xx.d" -MT"src/wkt_8xx.o" -MT"src/wkt_8xx.d" -o "src/wkt_8xx.o" "../src/wkt_8xx.c"
 Finished building: ../src/wkt_8xx.c
  
 Building file: ../src/wwdt_8xx.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wwdt_8xx.d" -MT"src/wwdt_8xx.o" -MT"src/wwdt_8xx.d" -o "src/wwdt_8xx.o" "../src/wwdt_8xx.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wwdt_8xx.d" -MT"src/wwdt_8xx.o" -MT"src/wwdt_8xx.d" -o "src/wwdt_8xx.o" "../src/wwdt_8xx.c"
 Finished building: ../src/wwdt_8xx.c
  
 Building target: liblpc_chip_82x.a
@@ -162,150 +162,150 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "liblpc_chip_82x.a" ; # arm-none-eabi-objdump -h -S "liblpc_chip_82x.a" >"liblpc_chip_82x.lss"
    text	   data	    bss	    dec	    hex	filename
-    580	      0	      0	    580	    244	acmp_8xx.o (ex liblpc_chip_82x.a)
-    380	      0	      0	    380	    17c	adc_8xx.o (ex liblpc_chip_82x.a)
-     24	      0	      0	     24	     18	chip_8xx.o (ex liblpc_chip_82x.a)
-   1452	      0	      0	   1452	    5ac	clock_8xx.o (ex liblpc_chip_82x.a)
-    576	      0	      0	    576	    240	crc_8xx.o (ex liblpc_chip_82x.a)
+    216	      0	      0	    216	     d8	acmp_8xx.o (ex liblpc_chip_82x.a)
+    148	      0	      0	    148	     94	adc_8xx.o (ex liblpc_chip_82x.a)
+     16	      0	      0	     16	     10	chip_8xx.o (ex liblpc_chip_82x.a)
+    596	      0	      0	    596	    254	clock_8xx.o (ex liblpc_chip_82x.a)
+    186	      0	      0	    186	     ba	crc_8xx.o (ex liblpc_chip_82x.a)
       0	      0	      0	      0	      0	dma_8xx.o (ex liblpc_chip_82x.a)
-    168	      0	      0	    168	     a8	gpio_8xx.o (ex liblpc_chip_82x.a)
-    488	      0	      0	    488	    1e8	i2c_common_8xx.o (ex liblpc_chip_82x.a)
-    996	      0	      0	    996	    3e4	i2cm_8xx.o (ex liblpc_chip_82x.a)
-    500	      0	      0	    500	    1f4	i2cs_8xx.o (ex liblpc_chip_82x.a)
-    756	      0	      0	    756	    2f4	iap.o (ex liblpc_chip_82x.a)
-    920	      0	      0	    920	    398	iocon_8xx.o (ex liblpc_chip_82x.a)
-   1530	      0	      2	   1532	    5fc	irc_8xx.o (ex liblpc_chip_82x.a)
-    244	      0	      0	    244	     f4	pinint_8xx.o (ex liblpc_chip_82x.a)
-    256	      0	      0	    256	    100	pmu_8xx.o (ex liblpc_chip_82x.a)
-    960	      0	      0	    960	    3c0	ring_buffer.o (ex liblpc_chip_82x.a)
-    548	      0	      0	    548	    224	sct_8xx.o (ex liblpc_chip_82x.a)
-    500	      0	      0	    500	    1f4	sct_pwm_8xx.o (ex liblpc_chip_82x.a)
-   1444	      0	      0	   1444	    5a4	spi_8xx.o (ex liblpc_chip_82x.a)
-   1076	      0	      1	   1077	    435	spim_8xx.o (ex liblpc_chip_82x.a)
-    736	      0	      1	    737	    2e1	spis_8xx.o (ex liblpc_chip_82x.a)
-    656	      0	     12	    668	    29c	stopwatch_8xx.o (ex liblpc_chip_82x.a)
-    276	      0	      0	    276	    114	swm_8xx.o (ex liblpc_chip_82x.a)
-    224	      0	      0	    224	     e0	syscon_8xx.o (ex liblpc_chip_82x.a)
-    292	      0	      0	    292	    124	sysinit_8xx.o (ex liblpc_chip_82x.a)
-   1348	      0	      0	   1348	    544	uart_8xx.o (ex liblpc_chip_82x.a)
-    180	      0	      0	    180	     b4	wkt_8xx.o (ex liblpc_chip_82x.a)
-    264	      0	      0	    264	    108	wwdt_8xx.o (ex liblpc_chip_82x.a)
+     44	      0	      0	     44	     2c	gpio_8xx.o (ex liblpc_chip_82x.a)
+    192	      0	      0	    192	     c0	i2c_common_8xx.o (ex liblpc_chip_82x.a)
+    294	      0	      0	    294	    126	i2cm_8xx.o (ex liblpc_chip_82x.a)
+    114	      0	      0	    114	     72	i2cs_8xx.o (ex liblpc_chip_82x.a)
+    352	      0	      0	    352	    160	iap.o (ex liblpc_chip_82x.a)
+    196	      0	      0	    196	     c4	iocon_8xx.o (ex liblpc_chip_82x.a)
+   1136	      0	      2	   1138	    472	irc_8xx.o (ex liblpc_chip_82x.a)
+     76	      0	      0	     76	     4c	pinint_8xx.o (ex liblpc_chip_82x.a)
+    146	      0	      0	    146	     92	pmu_8xx.o (ex liblpc_chip_82x.a)
+    352	      0	      0	    352	    160	ring_buffer.o (ex liblpc_chip_82x.a)
+    136	      0	      0	    136	     88	sct_8xx.o (ex liblpc_chip_82x.a)
+    168	      0	      0	    168	     a8	sct_pwm_8xx.o (ex liblpc_chip_82x.a)
+    640	      0	      0	    640	    280	spi_8xx.o (ex liblpc_chip_82x.a)
+    480	      0	      1	    481	    1e1	spim_8xx.o (ex liblpc_chip_82x.a)
+    272	      0	      1	    273	    111	spis_8xx.o (ex liblpc_chip_82x.a)
+    220	      0	     12	    232	     e8	stopwatch_8xx.o (ex liblpc_chip_82x.a)
+     80	      0	      0	     80	     50	swm_8xx.o (ex liblpc_chip_82x.a)
+    120	      0	      0	    120	     78	syscon_8xx.o (ex liblpc_chip_82x.a)
+    104	      0	      0	    104	     68	sysinit_8xx.o (ex liblpc_chip_82x.a)
+    510	      0	      0	    510	    1fe	uart_8xx.o (ex liblpc_chip_82x.a)
+     58	      0	      0	     58	     3a	wkt_8xx.o (ex liblpc_chip_82x.a)
+    104	      0	      0	    104	     68	wwdt_8xx.o (ex liblpc_chip_82x.a)
  
-13:10:56 **** Build of configuration Debug for project MultiSensor_bsp ****
+00:53:48 **** Build of configuration Release for project MultiSensor_bsp ****
 make -r all 
 Building file: ../src/low_level_drivers/adc.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/adc.d" -MT"src/low_level_drivers/adc.o" -MT"src/low_level_drivers/adc.d" -o "src/low_level_drivers/adc.o" "../src/low_level_drivers/adc.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/adc.d" -MT"src/low_level_drivers/adc.o" -MT"src/low_level_drivers/adc.d" -o "src/low_level_drivers/adc.o" "../src/low_level_drivers/adc.c"
 Finished building: ../src/low_level_drivers/adc.c
  
 Building file: ../src/low_level_drivers/boardconfig.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/boardconfig.d" -MT"src/low_level_drivers/boardconfig.o" -MT"src/low_level_drivers/boardconfig.d" -o "src/low_level_drivers/boardconfig.o" "../src/low_level_drivers/boardconfig.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/boardconfig.d" -MT"src/low_level_drivers/boardconfig.o" -MT"src/low_level_drivers/boardconfig.d" -o "src/low_level_drivers/boardconfig.o" "../src/low_level_drivers/boardconfig.c"
 Finished building: ../src/low_level_drivers/boardconfig.c
  
 Building file: ../src/low_level_drivers/gpio.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/gpio.d" -MT"src/low_level_drivers/gpio.o" -MT"src/low_level_drivers/gpio.d" -o "src/low_level_drivers/gpio.o" "../src/low_level_drivers/gpio.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/gpio.d" -MT"src/low_level_drivers/gpio.o" -MT"src/low_level_drivers/gpio.d" -o "src/low_level_drivers/gpio.o" "../src/low_level_drivers/gpio.c"
 Finished building: ../src/low_level_drivers/gpio.c
  
 Building file: ../src/low_level_drivers/i2c.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/i2c.d" -MT"src/low_level_drivers/i2c.o" -MT"src/low_level_drivers/i2c.d" -o "src/low_level_drivers/i2c.o" "../src/low_level_drivers/i2c.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/i2c.d" -MT"src/low_level_drivers/i2c.o" -MT"src/low_level_drivers/i2c.d" -o "src/low_level_drivers/i2c.o" "../src/low_level_drivers/i2c.c"
 Finished building: ../src/low_level_drivers/i2c.c
  
 Building file: ../src/low_level_drivers/lowleveldrivers.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/lowleveldrivers.d" -MT"src/low_level_drivers/lowleveldrivers.o" -MT"src/low_level_drivers/lowleveldrivers.d" -o "src/low_level_drivers/lowleveldrivers.o" "../src/low_level_drivers/lowleveldrivers.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/lowleveldrivers.d" -MT"src/low_level_drivers/lowleveldrivers.o" -MT"src/low_level_drivers/lowleveldrivers.d" -o "src/low_level_drivers/lowleveldrivers.o" "../src/low_level_drivers/lowleveldrivers.c"
 Finished building: ../src/low_level_drivers/lowleveldrivers.c
  
 Building file: ../src/low_level_drivers/mrt.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/mrt.d" -MT"src/low_level_drivers/mrt.o" -MT"src/low_level_drivers/mrt.d" -o "src/low_level_drivers/mrt.o" "../src/low_level_drivers/mrt.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/mrt.d" -MT"src/low_level_drivers/mrt.o" -MT"src/low_level_drivers/mrt.d" -o "src/low_level_drivers/mrt.o" "../src/low_level_drivers/mrt.c"
 Finished building: ../src/low_level_drivers/mrt.c
  
 Building file: ../src/low_level_drivers/pinmux.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/pinmux.d" -MT"src/low_level_drivers/pinmux.o" -MT"src/low_level_drivers/pinmux.d" -o "src/low_level_drivers/pinmux.o" "../src/low_level_drivers/pinmux.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/pinmux.d" -MT"src/low_level_drivers/pinmux.o" -MT"src/low_level_drivers/pinmux.d" -o "src/low_level_drivers/pinmux.o" "../src/low_level_drivers/pinmux.c"
 Finished building: ../src/low_level_drivers/pinmux.c
  
 Building file: ../src/low_level_drivers/pwm.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/pwm.d" -MT"src/low_level_drivers/pwm.o" -MT"src/low_level_drivers/pwm.d" -o "src/low_level_drivers/pwm.o" "../src/low_level_drivers/pwm.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/pwm.d" -MT"src/low_level_drivers/pwm.o" -MT"src/low_level_drivers/pwm.d" -o "src/low_level_drivers/pwm.o" "../src/low_level_drivers/pwm.c"
 Finished building: ../src/low_level_drivers/pwm.c
  
 Building file: ../src/low_level_drivers/systick.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/systick.d" -MT"src/low_level_drivers/systick.o" -MT"src/low_level_drivers/systick.d" -o "src/low_level_drivers/systick.o" "../src/low_level_drivers/systick.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/systick.d" -MT"src/low_level_drivers/systick.o" -MT"src/low_level_drivers/systick.d" -o "src/low_level_drivers/systick.o" "../src/low_level_drivers/systick.c"
 Finished building: ../src/low_level_drivers/systick.c
  
 Building file: ../src/low_level_drivers/usart.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/usart.d" -MT"src/low_level_drivers/usart.o" -MT"src/low_level_drivers/usart.d" -o "src/low_level_drivers/usart.o" "../src/low_level_drivers/usart.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/low_level_drivers/usart.d" -MT"src/low_level_drivers/usart.o" -MT"src/low_level_drivers/usart.d" -o "src/low_level_drivers/usart.o" "../src/low_level_drivers/usart.c"
 Finished building: ../src/low_level_drivers/usart.c
  
 Building file: ../src/library/utilities.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/library/utilities.d" -MT"src/library/utilities.o" -MT"src/library/utilities.d" -o "src/library/utilities.o" "../src/library/utilities.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/library/utilities.d" -MT"src/library/utilities.o" -MT"src/library/utilities.d" -o "src/library/utilities.o" "../src/library/utilities.c"
 Finished building: ../src/library/utilities.c
  
 Building file: ../src/high_level_drivers/BMP280_driver/bmp280.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/BMP280_driver/bmp280.d" -MT"src/high_level_drivers/BMP280_driver/bmp280.o" -MT"src/high_level_drivers/BMP280_driver/bmp280.d" -o "src/high_level_drivers/BMP280_driver/bmp280.o" "../src/high_level_drivers/BMP280_driver/bmp280.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/BMP280_driver/bmp280.d" -MT"src/high_level_drivers/BMP280_driver/bmp280.o" -MT"src/high_level_drivers/BMP280_driver/bmp280.d" -o "src/high_level_drivers/BMP280_driver/bmp280.o" "../src/high_level_drivers/BMP280_driver/bmp280.c"
 Finished building: ../src/high_level_drivers/BMP280_driver/bmp280.c
  
 Building file: ../src/high_level_drivers/address.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/address.d" -MT"src/high_level_drivers/address.o" -MT"src/high_level_drivers/address.d" -o "src/high_level_drivers/address.o" "../src/high_level_drivers/address.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/address.d" -MT"src/high_level_drivers/address.o" -MT"src/high_level_drivers/address.d" -o "src/high_level_drivers/address.o" "../src/high_level_drivers/address.c"
 Finished building: ../src/high_level_drivers/address.c
  
 Building file: ../src/high_level_drivers/buzzer.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/buzzer.d" -MT"src/high_level_drivers/buzzer.o" -MT"src/high_level_drivers/buzzer.d" -o "src/high_level_drivers/buzzer.o" "../src/high_level_drivers/buzzer.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/buzzer.d" -MT"src/high_level_drivers/buzzer.o" -MT"src/high_level_drivers/buzzer.d" -o "src/high_level_drivers/buzzer.o" "../src/high_level_drivers/buzzer.c"
 Finished building: ../src/high_level_drivers/buzzer.c
  
 Building file: ../src/high_level_drivers/gas_mq2.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/gas_mq2.d" -MT"src/high_level_drivers/gas_mq2.o" -MT"src/high_level_drivers/gas_mq2.d" -o "src/high_level_drivers/gas_mq2.o" "../src/high_level_drivers/gas_mq2.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/gas_mq2.d" -MT"src/high_level_drivers/gas_mq2.o" -MT"src/high_level_drivers/gas_mq2.d" -o "src/high_level_drivers/gas_mq2.o" "../src/high_level_drivers/gas_mq2.c"
 Finished building: ../src/high_level_drivers/gas_mq2.c
  
 Building file: ../src/high_level_drivers/highleveldrivers.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/highleveldrivers.d" -MT"src/high_level_drivers/highleveldrivers.o" -MT"src/high_level_drivers/highleveldrivers.d" -o "src/high_level_drivers/highleveldrivers.o" "../src/high_level_drivers/highleveldrivers.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/highleveldrivers.d" -MT"src/high_level_drivers/highleveldrivers.o" -MT"src/high_level_drivers/highleveldrivers.d" -o "src/high_level_drivers/highleveldrivers.o" "../src/high_level_drivers/highleveldrivers.c"
 Finished building: ../src/high_level_drivers/highleveldrivers.c
  
 Building file: ../src/high_level_drivers/humidity_dht22.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/humidity_dht22.d" -MT"src/high_level_drivers/humidity_dht22.o" -MT"src/high_level_drivers/humidity_dht22.d" -o "src/high_level_drivers/humidity_dht22.o" "../src/high_level_drivers/humidity_dht22.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/humidity_dht22.d" -MT"src/high_level_drivers/humidity_dht22.o" -MT"src/high_level_drivers/humidity_dht22.d" -o "src/high_level_drivers/humidity_dht22.o" "../src/high_level_drivers/humidity_dht22.c"
 Finished building: ../src/high_level_drivers/humidity_dht22.c
  
 Building file: ../src/high_level_drivers/lum_tsl2561.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/lum_tsl2561.d" -MT"src/high_level_drivers/lum_tsl2561.o" -MT"src/high_level_drivers/lum_tsl2561.d" -o "src/high_level_drivers/lum_tsl2561.o" "../src/high_level_drivers/lum_tsl2561.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/lum_tsl2561.d" -MT"src/high_level_drivers/lum_tsl2561.o" -MT"src/high_level_drivers/lum_tsl2561.d" -o "src/high_level_drivers/lum_tsl2561.o" "../src/high_level_drivers/lum_tsl2561.c"
 Finished building: ../src/high_level_drivers/lum_tsl2561.c
  
 Building file: ../src/high_level_drivers/microphone.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/microphone.d" -MT"src/high_level_drivers/microphone.o" -MT"src/high_level_drivers/microphone.d" -o "src/high_level_drivers/microphone.o" "../src/high_level_drivers/microphone.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/microphone.d" -MT"src/high_level_drivers/microphone.o" -MT"src/high_level_drivers/microphone.d" -o "src/high_level_drivers/microphone.o" "../src/high_level_drivers/microphone.c"
 Finished building: ../src/high_level_drivers/microphone.c
  
 Building file: ../src/high_level_drivers/pir_hcsr501.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/pir_hcsr501.d" -MT"src/high_level_drivers/pir_hcsr501.o" -MT"src/high_level_drivers/pir_hcsr501.d" -o "src/high_level_drivers/pir_hcsr501.o" "../src/high_level_drivers/pir_hcsr501.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/pir_hcsr501.d" -MT"src/high_level_drivers/pir_hcsr501.o" -MT"src/high_level_drivers/pir_hcsr501.d" -o "src/high_level_drivers/pir_hcsr501.o" "../src/high_level_drivers/pir_hcsr501.c"
 Finished building: ../src/high_level_drivers/pir_hcsr501.c
  
 Building file: ../src/high_level_drivers/pressure_bmp280.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/pressure_bmp280.d" -MT"src/high_level_drivers/pressure_bmp280.o" -MT"src/high_level_drivers/pressure_bmp280.d" -o "src/high_level_drivers/pressure_bmp280.o" "../src/high_level_drivers/pressure_bmp280.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/pressure_bmp280.d" -MT"src/high_level_drivers/pressure_bmp280.o" -MT"src/high_level_drivers/pressure_bmp280.d" -o "src/high_level_drivers/pressure_bmp280.o" "../src/high_level_drivers/pressure_bmp280.c"
 Finished building: ../src/high_level_drivers/pressure_bmp280.c
  
 Building file: ../src/high_level_drivers/rgbled.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/rgbled.d" -MT"src/high_level_drivers/rgbled.o" -MT"src/high_level_drivers/rgbled.d" -o "src/high_level_drivers/rgbled.o" "../src/high_level_drivers/rgbled.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/rgbled.d" -MT"src/high_level_drivers/rgbled.o" -MT"src/high_level_drivers/rgbled.d" -o "src/high_level_drivers/rgbled.o" "../src/high_level_drivers/rgbled.c"
 Finished building: ../src/high_level_drivers/rgbled.c
  
 Building file: ../src/high_level_drivers/temp_ds18b20.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/temp_ds18b20.d" -MT"src/high_level_drivers/temp_ds18b20.o" -MT"src/high_level_drivers/temp_ds18b20.d" -o "src/high_level_drivers/temp_ds18b20.o" "../src/high_level_drivers/temp_ds18b20.c"
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/temp_ds18b20.d" -MT"src/high_level_drivers/temp_ds18b20.o" -MT"src/high_level_drivers/temp_ds18b20.d" -o "src/high_level_drivers/temp_ds18b20.o" "../src/high_level_drivers/temp_ds18b20.c"
 Finished building: ../src/high_level_drivers/temp_ds18b20.c
  
 Building target: libMultiSensor_bsp.a
@@ -318,96 +318,113 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "libMultiSensor_bsp.a" ; # arm-none-eabi-objdump -h -S "libMultiSensor_bsp.a" >"libMultiSensor_bsp.lss"
    text	   data	    bss	    dec	    hex	filename
-   1428	      0	    169	   1597	    63d	adc.o (ex libMultiSensor_bsp.a)
-    120	      0	      0	    120	     78	boardconfig.o (ex libMultiSensor_bsp.a)
-   2616	     32	     29	   2677	    a75	gpio.o (ex libMultiSensor_bsp.a)
-    720	      0	      0	    720	    2d0	i2c.o (ex libMultiSensor_bsp.a)
-   1102	      0	    332	   1434	    59a	lowleveldrivers.o (ex libMultiSensor_bsp.a)
-   1252	      0	     32	   1284	    504	mrt.o (ex libMultiSensor_bsp.a)
-    364	      0	      0	    364	    16c	pinmux.o (ex libMultiSensor_bsp.a)
-   1160	      0	      0	   1160	    488	pwm.o (ex libMultiSensor_bsp.a)
-    472	      0	      8	    480	    1e0	systick.o (ex libMultiSensor_bsp.a)
-   1964	      0	    464	   2428	    97c	usart.o (ex libMultiSensor_bsp.a)
-     64	      0	      0	     64	     40	utilities.o (ex libMultiSensor_bsp.a)
-   6460	      0	      4	   6464	   1940	bmp280.o (ex libMultiSensor_bsp.a)
-    272	      0	      0	    272	    110	address.o (ex libMultiSensor_bsp.a)
-    540	      0	      0	    540	    21c	buzzer.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	gas_mq2.o (ex libMultiSensor_bsp.a)
-   1132	      0	    485	   1617	    651	highleveldrivers.o (ex libMultiSensor_bsp.a)
-   1520	      0	      0	   1520	    5f0	humidity_dht22.o (ex libMultiSensor_bsp.a)
-   1828	      0	      0	   1828	    724	lum_tsl2561.o (ex libMultiSensor_bsp.a)
-   1368	      0	      0	   1368	    558	microphone.o (ex libMultiSensor_bsp.a)
-    216	      0	      0	    216	     d8	pir_hcsr501.o (ex libMultiSensor_bsp.a)
-    940	      0	      4	    944	    3b0	pressure_bmp280.o (ex libMultiSensor_bsp.a)
-   1472	      0	      0	   1472	    5c0	rgbled.o (ex libMultiSensor_bsp.a)
+    468	      0	     73	    541	    21d	adc.o (ex libMultiSensor_bsp.a)
+     40	      0	      0	     40	     28	boardconfig.o (ex libMultiSensor_bsp.a)
+    662	      0	     29	    691	    2b3	gpio.o (ex libMultiSensor_bsp.a)
+    320	      0	      0	    320	    140	i2c.o (ex libMultiSensor_bsp.a)
+    429	      0	    332	    761	    2f9	lowleveldrivers.o (ex libMultiSensor_bsp.a)
+    516	      0	     32	    548	    224	mrt.o (ex libMultiSensor_bsp.a)
+    188	      0	      0	    188	     bc	pinmux.o (ex libMultiSensor_bsp.a)
+    398	      0	      0	    398	    18e	pwm.o (ex libMultiSensor_bsp.a)
+    156	      0	      8	    164	     a4	systick.o (ex libMultiSensor_bsp.a)
+    668	      0	    168	    836	    344	usart.o (ex libMultiSensor_bsp.a)
+     16	      0	      0	     16	     10	utilities.o (ex libMultiSensor_bsp.a)
+   3104	      0	      4	   3108	    c24	bmp280.o (ex libMultiSensor_bsp.a)
+     92	      0	      0	     92	     5c	address.o (ex libMultiSensor_bsp.a)
+    206	      0	      0	    206	     ce	buzzer.o (ex libMultiSensor_bsp.a)
+    122	      0	      0	    122	     7a	gas_mq2.o (ex libMultiSensor_bsp.a)
+    480	      0	    501	    981	    3d5	highleveldrivers.o (ex libMultiSensor_bsp.a)
+    646	      0	      0	    646	    286	humidity_dht22.o (ex libMultiSensor_bsp.a)
+    728	      0	      0	    728	    2d8	lum_tsl2561.o (ex libMultiSensor_bsp.a)
+    600	      0	      0	    600	    258	microphone.o (ex libMultiSensor_bsp.a)
+     74	      0	      0	     74	     4a	pir_hcsr501.o (ex libMultiSensor_bsp.a)
+    392	      0	      4	    396	    18c	pressure_bmp280.o (ex libMultiSensor_bsp.a)
+    604	      0	      0	    604	    25c	rgbled.o (ex libMultiSensor_bsp.a)
       0	      0	      0	      0	      0	temp_ds18b20.o (ex libMultiSensor_bsp.a)
  
-13:11:02 **** Build of configuration Debug for project MultiSensor ****
+00:53:54 **** Build of configuration Release for project MultiSensor ****
 make -r all 
+Building file: ../src/userapp/userfunctions/modbusslave.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/userapp/userfunctions/modbusslave.d" -MT"src/userapp/userfunctions/modbusslave.o" -MT"src/userapp/userfunctions/modbusslave.d" -o "src/userapp/userfunctions/modbusslave.o" "../src/userapp/userfunctions/modbusslave.c"
+Finished building: ../src/userapp/userfunctions/modbusslave.c
+ 
+Building file: ../src/userapp/userapp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/userapp/userapp.d" -MT"src/userapp/userapp.o" -MT"src/userapp/userapp.d" -o "src/userapp/userapp.o" "../src/userapp/userapp.c"
+../src/userapp/userapp.c: In function 'userapp_temperature':
+../src/userapp/userapp.c:320:7: warning: unused variable 'done' [-Wunused-variable]
+  bool done = false;
+       ^
+../src/userapp/userapp.c:319:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+../src/userapp/userapp.c: In function 'userapp_gas':
+../src/userapp/userapp.c:332:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+../src/userapp/userapp.c: In function 'userapp_sound':
+../src/userapp/userapp.c:344:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+Finished building: ../src/userapp/userapp.c
+ 
 Building file: ../src/MultiSensor.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/MultiSensor.d" -MT"src/MultiSensor.o" -MT"src/MultiSensor.d" -o "src/MultiSensor.o" "../src/MultiSensor.c"
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/MultiSensor.d" -MT"src/MultiSensor.o" -MT"src/MultiSensor.d" -o "src/MultiSensor.o" "../src/MultiSensor.c"
 Finished building: ../src/MultiSensor.c
  
 Building file: ../src/aeabi_romdiv_patch.s
 Invoking: MCU Assembler
-arm-none-eabi-gcc -c -x assembler-with-cpp -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -g3 -mcpu=cortex-m0 -mthumb -specs=redlib.specs -o "src/aeabi_romdiv_patch.o" "../src/aeabi_romdiv_patch.s"
+arm-none-eabi-gcc -c -x assembler-with-cpp -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -mcpu=cortex-m0 -mthumb -specs=redlib.specs -o "src/aeabi_romdiv_patch.o" "../src/aeabi_romdiv_patch.s"
 Finished building: ../src/aeabi_romdiv_patch.s
  
 Building file: ../src/cr_startup_lpc82x.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc82x.d" -MT"src/cr_startup_lpc82x.o" -MT"src/cr_startup_lpc82x.d" -o "src/cr_startup_lpc82x.o" "../src/cr_startup_lpc82x.c"
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc82x.d" -MT"src/cr_startup_lpc82x.o" -MT"src/cr_startup_lpc82x.d" -o "src/cr_startup_lpc82x.o" "../src/cr_startup_lpc82x.c"
 Finished building: ../src/cr_startup_lpc82x.c
  
 Building file: ../src/crp.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
 Finished building: ../src/crp.c
  
 Building file: ../src/mtb.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/mtb.d" -MT"src/mtb.o" -MT"src/mtb.d" -o "src/mtb.o" "../src/mtb.c"
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/mtb.d" -MT"src/mtb.o" -MT"src/mtb.d" -o "src/mtb.o" "../src/mtb.c"
 Finished building: ../src/mtb.c
  
 Building file: ../src/sysinit.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
 Finished building: ../src/sysinit.c
  
 Building target: MultiSensor.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Debug" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Debug" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Debug.ld" -o "MultiSensor.axf"  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
+arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Release" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Release" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Release.ld" -o "MultiSensor.axf"  ./src/userapp/userfunctions/modbusslave.o  ./src/userapp/userapp.o  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:       25076 B        32 KB     76.53%
-         RamLoc8:        1840 B         8 KB     22.46%
+        MFlash32:       14216 B        32 KB     43.38%
+         RamLoc8:        1592 B         8 KB     19.43%
 Finished building target: MultiSensor.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "MultiSensor.axf"; # arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; # checksum -p LPC824 -d "MultiSensor.bin";
    text	   data	    bss	    dec	    hex	filename
-  25044	     32	   1808	  26884	   6904	MultiSensor.axf
+  14216	      0	   1592	  15808	   3dc0	MultiSensor.axf
  
-13:11:35 **** Incremental Build of configuration Debug for project MultiSensor ****
+00:54:02 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
 make: Nothing to be done for `all'.
-13:12:01 **** Incremental Build of configuration Debug for project MultiSensor ****
+00:57:06 **** Incremental Build of configuration Release for project lpc_chip_82x ****
 make -r all 
 make: Nothing to be done for `all'.
-13:20:28 **** Incremental Build of configuration Debug for project lpc_chip_82x ****
+00:57:06 **** Incremental Build of configuration Release for project MultiSensor_bsp ****
 make -r all 
-make: Nothing to be done for `all'.
-13:20:29 **** Incremental Build of configuration Debug for project MultiSensor_bsp ****
-make -r all 
-Building file: ../src/high_level_drivers/highleveldrivers.c
+Building file: ../src/high_level_drivers/buzzer.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/highleveldrivers.d" -MT"src/high_level_drivers/highleveldrivers.o" -MT"src/high_level_drivers/highleveldrivers.d" -o "src/high_level_drivers/highleveldrivers.o" "../src/high_level_drivers/highleveldrivers.c"
-Finished building: ../src/high_level_drivers/highleveldrivers.c
- 
-Building file: ../src/high_level_drivers/microphone.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/microphone.d" -MT"src/high_level_drivers/microphone.o" -MT"src/high_level_drivers/microphone.d" -o "src/high_level_drivers/microphone.o" "../src/high_level_drivers/microphone.c"
-Finished building: ../src/high_level_drivers/microphone.c
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/buzzer.d" -MT"src/high_level_drivers/buzzer.o" -MT"src/high_level_drivers/buzzer.d" -o "src/high_level_drivers/buzzer.o" "../src/high_level_drivers/buzzer.c"
+Finished building: ../src/high_level_drivers/buzzer.c
  
 Building target: libMultiSensor_bsp.a
 Invoking: MCU Archiver
@@ -419,340 +436,148 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "libMultiSensor_bsp.a" ; # arm-none-eabi-objdump -h -S "libMultiSensor_bsp.a" >"libMultiSensor_bsp.lss"
    text	   data	    bss	    dec	    hex	filename
-   1428	      0	    169	   1597	    63d	adc.o (ex libMultiSensor_bsp.a)
-    120	      0	      0	    120	     78	boardconfig.o (ex libMultiSensor_bsp.a)
-   2616	     32	     29	   2677	    a75	gpio.o (ex libMultiSensor_bsp.a)
-    720	      0	      0	    720	    2d0	i2c.o (ex libMultiSensor_bsp.a)
-   1102	      0	    332	   1434	    59a	lowleveldrivers.o (ex libMultiSensor_bsp.a)
-   1252	      0	     32	   1284	    504	mrt.o (ex libMultiSensor_bsp.a)
-    364	      0	      0	    364	    16c	pinmux.o (ex libMultiSensor_bsp.a)
-   1160	      0	      0	   1160	    488	pwm.o (ex libMultiSensor_bsp.a)
-    472	      0	      8	    480	    1e0	systick.o (ex libMultiSensor_bsp.a)
-   1964	      0	    464	   2428	    97c	usart.o (ex libMultiSensor_bsp.a)
-     64	      0	      0	     64	     40	utilities.o (ex libMultiSensor_bsp.a)
-   6460	      0	      4	   6464	   1940	bmp280.o (ex libMultiSensor_bsp.a)
-    272	      0	      0	    272	    110	address.o (ex libMultiSensor_bsp.a)
-    540	      0	      0	    540	    21c	buzzer.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	gas_mq2.o (ex libMultiSensor_bsp.a)
-   1132	      0	    485	   1617	    651	highleveldrivers.o (ex libMultiSensor_bsp.a)
-   1520	      0	      0	   1520	    5f0	humidity_dht22.o (ex libMultiSensor_bsp.a)
-   1828	      0	      0	   1828	    724	lum_tsl2561.o (ex libMultiSensor_bsp.a)
-   1432	      0	      0	   1432	    598	microphone.o (ex libMultiSensor_bsp.a)
-    216	      0	      0	    216	     d8	pir_hcsr501.o (ex libMultiSensor_bsp.a)
-    940	      0	      4	    944	    3b0	pressure_bmp280.o (ex libMultiSensor_bsp.a)
-   1472	      0	      0	   1472	    5c0	rgbled.o (ex libMultiSensor_bsp.a)
+    468	      0	     73	    541	    21d	adc.o (ex libMultiSensor_bsp.a)
+     40	      0	      0	     40	     28	boardconfig.o (ex libMultiSensor_bsp.a)
+    662	      0	     29	    691	    2b3	gpio.o (ex libMultiSensor_bsp.a)
+    320	      0	      0	    320	    140	i2c.o (ex libMultiSensor_bsp.a)
+    429	      0	    332	    761	    2f9	lowleveldrivers.o (ex libMultiSensor_bsp.a)
+    516	      0	     32	    548	    224	mrt.o (ex libMultiSensor_bsp.a)
+    188	      0	      0	    188	     bc	pinmux.o (ex libMultiSensor_bsp.a)
+    398	      0	      0	    398	    18e	pwm.o (ex libMultiSensor_bsp.a)
+    156	      0	      8	    164	     a4	systick.o (ex libMultiSensor_bsp.a)
+    668	      0	    168	    836	    344	usart.o (ex libMultiSensor_bsp.a)
+     16	      0	      0	     16	     10	utilities.o (ex libMultiSensor_bsp.a)
+   3104	      0	      4	   3108	    c24	bmp280.o (ex libMultiSensor_bsp.a)
+     92	      0	      0	     92	     5c	address.o (ex libMultiSensor_bsp.a)
+    208	      0	      0	    208	     d0	buzzer.o (ex libMultiSensor_bsp.a)
+    122	      0	      0	    122	     7a	gas_mq2.o (ex libMultiSensor_bsp.a)
+    480	      0	    501	    981	    3d5	highleveldrivers.o (ex libMultiSensor_bsp.a)
+    646	      0	      0	    646	    286	humidity_dht22.o (ex libMultiSensor_bsp.a)
+    728	      0	      0	    728	    2d8	lum_tsl2561.o (ex libMultiSensor_bsp.a)
+    600	      0	      0	    600	    258	microphone.o (ex libMultiSensor_bsp.a)
+     74	      0	      0	     74	     4a	pir_hcsr501.o (ex libMultiSensor_bsp.a)
+    392	      0	      4	    396	    18c	pressure_bmp280.o (ex libMultiSensor_bsp.a)
+    604	      0	      0	    604	    25c	rgbled.o (ex libMultiSensor_bsp.a)
       0	      0	      0	      0	      0	temp_ds18b20.o (ex libMultiSensor_bsp.a)
  
-13:20:30 **** Incremental Build of configuration Debug for project MultiSensor ****
+00:57:08 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
-Building file: ../src/MultiSensor.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/MultiSensor.d" -MT"src/MultiSensor.o" -MT"src/MultiSensor.d" -o "src/MultiSensor.o" "../src/MultiSensor.c"
-Finished building: ../src/MultiSensor.c
- 
-Building file: ../src/sysinit.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
-Finished building: ../src/sysinit.c
- 
 Building target: MultiSensor.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Debug" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Debug" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Debug.ld" -o "MultiSensor.axf"  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
+arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Release" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Release" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Release.ld" -o "MultiSensor.axf"  ./src/userapp/userfunctions/modbusslave.o  ./src/userapp/userapp.o  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:       25076 B        32 KB     76.53%
-         RamLoc8:        1840 B         8 KB     22.46%
+        MFlash32:       14220 B        32 KB     43.40%
+         RamLoc8:        1592 B         8 KB     19.43%
 Finished building target: MultiSensor.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "MultiSensor.axf"; # arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; # checksum -p LPC824 -d "MultiSensor.bin";
    text	   data	    bss	    dec	    hex	filename
-  25044	     32	   1808	  26884	   6904	MultiSensor.axf
+  14220	      0	   1592	  15812	   3dc4	MultiSensor.axf
  
-14:25:49 **** Incremental Build of configuration Debug for project lpc_chip_82x ****
+00:57:10 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
 make: Nothing to be done for `all'.
-14:25:50 **** Incremental Build of configuration Debug for project MultiSensor_bsp ****
-make -r all 
-Building file: ../src/high_level_drivers/gas_mq2.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/gas_mq2.d" -MT"src/high_level_drivers/gas_mq2.o" -MT"src/high_level_drivers/gas_mq2.d" -o "src/high_level_drivers/gas_mq2.o" "../src/high_level_drivers/gas_mq2.c"
-../src/high_level_drivers/gas_mq2.c: In function 'GAS_MQ2_Run0':
-../src/high_level_drivers/gas_mq2.c:114:10: warning: unused variable 'check' [-Wunused-variable]
-  uint8_t check;
-          ^
-Finished building: ../src/high_level_drivers/gas_mq2.c
- 
-Building file: ../src/high_level_drivers/highleveldrivers.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/highleveldrivers.d" -MT"src/high_level_drivers/highleveldrivers.o" -MT"src/high_level_drivers/highleveldrivers.d" -o "src/high_level_drivers/highleveldrivers.o" "../src/high_level_drivers/highleveldrivers.c"
-Finished building: ../src/high_level_drivers/highleveldrivers.c
- 
-Building target: libMultiSensor_bsp.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libMultiSensor_bsp.a"  ./src/low_level_drivers/adc.o ./src/low_level_drivers/boardconfig.o ./src/low_level_drivers/gpio.o ./src/low_level_drivers/i2c.o ./src/low_level_drivers/lowleveldrivers.o ./src/low_level_drivers/mrt.o ./src/low_level_drivers/pinmux.o ./src/low_level_drivers/pwm.o ./src/low_level_drivers/systick.o ./src/low_level_drivers/usart.o  ./src/library/utilities.o  ./src/high_level_drivers/BMP280_driver/bmp280.o  ./src/high_level_drivers/address.o ./src/high_level_drivers/buzzer.o ./src/high_level_drivers/gas_mq2.o ./src/high_level_drivers/highleveldrivers.o ./src/high_level_drivers/humidity_dht22.o ./src/high_level_drivers/lum_tsl2561.o ./src/high_level_drivers/microphone.o ./src/high_level_drivers/pir_hcsr501.o ./src/high_level_drivers/pressure_bmp280.o ./src/high_level_drivers/rgbled.o ./src/high_level_drivers/temp_ds18b20.o   
-c:\nxp\LPCXpresso_8.1.4_606\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libMultiSensor_bsp.a
-Finished building target: libMultiSensor_bsp.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libMultiSensor_bsp.a" ; # arm-none-eabi-objdump -h -S "libMultiSensor_bsp.a" >"libMultiSensor_bsp.lss"
-   text	   data	    bss	    dec	    hex	filename
-   1428	      0	    169	   1597	    63d	adc.o (ex libMultiSensor_bsp.a)
-    120	      0	      0	    120	     78	boardconfig.o (ex libMultiSensor_bsp.a)
-   2616	     32	     29	   2677	    a75	gpio.o (ex libMultiSensor_bsp.a)
-    720	      0	      0	    720	    2d0	i2c.o (ex libMultiSensor_bsp.a)
-   1102	      0	    332	   1434	    59a	lowleveldrivers.o (ex libMultiSensor_bsp.a)
-   1252	      0	     32	   1284	    504	mrt.o (ex libMultiSensor_bsp.a)
-    364	      0	      0	    364	    16c	pinmux.o (ex libMultiSensor_bsp.a)
-   1160	      0	      0	   1160	    488	pwm.o (ex libMultiSensor_bsp.a)
-    472	      0	      8	    480	    1e0	systick.o (ex libMultiSensor_bsp.a)
-   1964	      0	    464	   2428	    97c	usart.o (ex libMultiSensor_bsp.a)
-     64	      0	      0	     64	     40	utilities.o (ex libMultiSensor_bsp.a)
-   6460	      0	      4	   6464	   1940	bmp280.o (ex libMultiSensor_bsp.a)
-    272	      0	      0	    272	    110	address.o (ex libMultiSensor_bsp.a)
-    540	      0	      0	    540	    21c	buzzer.o (ex libMultiSensor_bsp.a)
-    340	      0	      0	    340	    154	gas_mq2.o (ex libMultiSensor_bsp.a)
-   1132	      0	    485	   1617	    651	highleveldrivers.o (ex libMultiSensor_bsp.a)
-   1520	      0	      0	   1520	    5f0	humidity_dht22.o (ex libMultiSensor_bsp.a)
-   1828	      0	      0	   1828	    724	lum_tsl2561.o (ex libMultiSensor_bsp.a)
-   1432	      0	      0	   1432	    598	microphone.o (ex libMultiSensor_bsp.a)
-    216	      0	      0	    216	     d8	pir_hcsr501.o (ex libMultiSensor_bsp.a)
-    940	      0	      4	    944	    3b0	pressure_bmp280.o (ex libMultiSensor_bsp.a)
-   1472	      0	      0	   1472	    5c0	rgbled.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	temp_ds18b20.o (ex libMultiSensor_bsp.a)
- 
-14:25:52 **** Incremental Build of configuration Debug for project MultiSensor ****
-make -r all 
-Building file: ../src/MultiSensor.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/MultiSensor.d" -MT"src/MultiSensor.o" -MT"src/MultiSensor.d" -o "src/MultiSensor.o" "../src/MultiSensor.c"
-Finished building: ../src/MultiSensor.c
- 
-Building file: ../src/sysinit.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
-Finished building: ../src/sysinit.c
- 
-Building target: MultiSensor.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Debug" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Debug" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Debug.ld" -o "MultiSensor.axf"  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:       25076 B        32 KB     76.53%
-         RamLoc8:        1840 B         8 KB     22.46%
-Finished building target: MultiSensor.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "MultiSensor.axf"; # arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; # checksum -p LPC824 -d "MultiSensor.bin";
-   text	   data	    bss	    dec	    hex	filename
-  25044	     32	   1808	  26884	   6904	MultiSensor.axf
- 
-14:26:42 **** Incremental Build of configuration Debug for project lpc_chip_82x ****
+01:07:36 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
 make: Nothing to be done for `all'.
-14:26:43 **** Incremental Build of configuration Debug for project MultiSensor_bsp ****
-make -r all 
-Building file: ../src/high_level_drivers/gas_mq2.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/gas_mq2.d" -MT"src/high_level_drivers/gas_mq2.o" -MT"src/high_level_drivers/gas_mq2.d" -o "src/high_level_drivers/gas_mq2.o" "../src/high_level_drivers/gas_mq2.c"
-Finished building: ../src/high_level_drivers/gas_mq2.c
- 
-Building file: ../src/high_level_drivers/highleveldrivers.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/highleveldrivers.d" -MT"src/high_level_drivers/highleveldrivers.o" -MT"src/high_level_drivers/highleveldrivers.d" -o "src/high_level_drivers/highleveldrivers.o" "../src/high_level_drivers/highleveldrivers.c"
-Finished building: ../src/high_level_drivers/highleveldrivers.c
- 
-Building target: libMultiSensor_bsp.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libMultiSensor_bsp.a"  ./src/low_level_drivers/adc.o ./src/low_level_drivers/boardconfig.o ./src/low_level_drivers/gpio.o ./src/low_level_drivers/i2c.o ./src/low_level_drivers/lowleveldrivers.o ./src/low_level_drivers/mrt.o ./src/low_level_drivers/pinmux.o ./src/low_level_drivers/pwm.o ./src/low_level_drivers/systick.o ./src/low_level_drivers/usart.o  ./src/library/utilities.o  ./src/high_level_drivers/BMP280_driver/bmp280.o  ./src/high_level_drivers/address.o ./src/high_level_drivers/buzzer.o ./src/high_level_drivers/gas_mq2.o ./src/high_level_drivers/highleveldrivers.o ./src/high_level_drivers/humidity_dht22.o ./src/high_level_drivers/lum_tsl2561.o ./src/high_level_drivers/microphone.o ./src/high_level_drivers/pir_hcsr501.o ./src/high_level_drivers/pressure_bmp280.o ./src/high_level_drivers/rgbled.o ./src/high_level_drivers/temp_ds18b20.o   
-c:\nxp\LPCXpresso_8.1.4_606\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libMultiSensor_bsp.a
-Finished building target: libMultiSensor_bsp.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libMultiSensor_bsp.a" ; # arm-none-eabi-objdump -h -S "libMultiSensor_bsp.a" >"libMultiSensor_bsp.lss"
-   text	   data	    bss	    dec	    hex	filename
-   1428	      0	    169	   1597	    63d	adc.o (ex libMultiSensor_bsp.a)
-    120	      0	      0	    120	     78	boardconfig.o (ex libMultiSensor_bsp.a)
-   2616	     32	     29	   2677	    a75	gpio.o (ex libMultiSensor_bsp.a)
-    720	      0	      0	    720	    2d0	i2c.o (ex libMultiSensor_bsp.a)
-   1102	      0	    332	   1434	    59a	lowleveldrivers.o (ex libMultiSensor_bsp.a)
-   1252	      0	     32	   1284	    504	mrt.o (ex libMultiSensor_bsp.a)
-    364	      0	      0	    364	    16c	pinmux.o (ex libMultiSensor_bsp.a)
-   1160	      0	      0	   1160	    488	pwm.o (ex libMultiSensor_bsp.a)
-    472	      0	      8	    480	    1e0	systick.o (ex libMultiSensor_bsp.a)
-   1964	      0	    464	   2428	    97c	usart.o (ex libMultiSensor_bsp.a)
-     64	      0	      0	     64	     40	utilities.o (ex libMultiSensor_bsp.a)
-   6460	      0	      4	   6464	   1940	bmp280.o (ex libMultiSensor_bsp.a)
-    272	      0	      0	    272	    110	address.o (ex libMultiSensor_bsp.a)
-    540	      0	      0	    540	    21c	buzzer.o (ex libMultiSensor_bsp.a)
-    340	      0	      0	    340	    154	gas_mq2.o (ex libMultiSensor_bsp.a)
-   1132	      0	    485	   1617	    651	highleveldrivers.o (ex libMultiSensor_bsp.a)
-   1520	      0	      0	   1520	    5f0	humidity_dht22.o (ex libMultiSensor_bsp.a)
-   1828	      0	      0	   1828	    724	lum_tsl2561.o (ex libMultiSensor_bsp.a)
-   1432	      0	      0	   1432	    598	microphone.o (ex libMultiSensor_bsp.a)
-    216	      0	      0	    216	     d8	pir_hcsr501.o (ex libMultiSensor_bsp.a)
-    940	      0	      4	    944	    3b0	pressure_bmp280.o (ex libMultiSensor_bsp.a)
-   1472	      0	      0	   1472	    5c0	rgbled.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	temp_ds18b20.o (ex libMultiSensor_bsp.a)
- 
-14:26:44 **** Incremental Build of configuration Debug for project MultiSensor ****
-make -r all 
-Building file: ../src/MultiSensor.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/MultiSensor.d" -MT"src/MultiSensor.o" -MT"src/MultiSensor.d" -o "src/MultiSensor.o" "../src/MultiSensor.c"
-Finished building: ../src/MultiSensor.c
- 
-Building file: ../src/sysinit.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
-Finished building: ../src/sysinit.c
- 
-Building target: MultiSensor.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Debug" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Debug" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Debug.ld" -o "MultiSensor.axf"  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:       25076 B        32 KB     76.53%
-         RamLoc8:        1840 B         8 KB     22.46%
-Finished building target: MultiSensor.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "MultiSensor.axf"; # arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; # checksum -p LPC824 -d "MultiSensor.bin";
-   text	   data	    bss	    dec	    hex	filename
-  25044	     32	   1808	  26884	   6904	MultiSensor.axf
- 
-14:30:21 **** Incremental Build of configuration Debug for project lpc_chip_82x ****
+01:08:00 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
 make: Nothing to be done for `all'.
-14:30:22 **** Incremental Build of configuration Debug for project MultiSensor_bsp ****
-make -r all 
-Building file: ../src/high_level_drivers/highleveldrivers.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/highleveldrivers.d" -MT"src/high_level_drivers/highleveldrivers.o" -MT"src/high_level_drivers/highleveldrivers.d" -o "src/high_level_drivers/highleveldrivers.o" "../src/high_level_drivers/highleveldrivers.c"
-../src/high_level_drivers/highleveldrivers.c:299:17: warning: 'initialize_gas_mq2' defined but not used [-Wunused-function]
- static status_t initialize_gas_mq2()
-                 ^
-Finished building: ../src/high_level_drivers/highleveldrivers.c
- 
-Building target: libMultiSensor_bsp.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libMultiSensor_bsp.a"  ./src/low_level_drivers/adc.o ./src/low_level_drivers/boardconfig.o ./src/low_level_drivers/gpio.o ./src/low_level_drivers/i2c.o ./src/low_level_drivers/lowleveldrivers.o ./src/low_level_drivers/mrt.o ./src/low_level_drivers/pinmux.o ./src/low_level_drivers/pwm.o ./src/low_level_drivers/systick.o ./src/low_level_drivers/usart.o  ./src/library/utilities.o  ./src/high_level_drivers/BMP280_driver/bmp280.o  ./src/high_level_drivers/address.o ./src/high_level_drivers/buzzer.o ./src/high_level_drivers/gas_mq2.o ./src/high_level_drivers/highleveldrivers.o ./src/high_level_drivers/humidity_dht22.o ./src/high_level_drivers/lum_tsl2561.o ./src/high_level_drivers/microphone.o ./src/high_level_drivers/pir_hcsr501.o ./src/high_level_drivers/pressure_bmp280.o ./src/high_level_drivers/rgbled.o ./src/high_level_drivers/temp_ds18b20.o   
-c:\nxp\LPCXpresso_8.1.4_606\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libMultiSensor_bsp.a
-Finished building target: libMultiSensor_bsp.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libMultiSensor_bsp.a" ; # arm-none-eabi-objdump -h -S "libMultiSensor_bsp.a" >"libMultiSensor_bsp.lss"
-   text	   data	    bss	    dec	    hex	filename
-   1428	      0	    169	   1597	    63d	adc.o (ex libMultiSensor_bsp.a)
-    120	      0	      0	    120	     78	boardconfig.o (ex libMultiSensor_bsp.a)
-   2616	     32	     29	   2677	    a75	gpio.o (ex libMultiSensor_bsp.a)
-    720	      0	      0	    720	    2d0	i2c.o (ex libMultiSensor_bsp.a)
-   1102	      0	    332	   1434	    59a	lowleveldrivers.o (ex libMultiSensor_bsp.a)
-   1252	      0	     32	   1284	    504	mrt.o (ex libMultiSensor_bsp.a)
-    364	      0	      0	    364	    16c	pinmux.o (ex libMultiSensor_bsp.a)
-   1160	      0	      0	   1160	    488	pwm.o (ex libMultiSensor_bsp.a)
-    472	      0	      8	    480	    1e0	systick.o (ex libMultiSensor_bsp.a)
-   1964	      0	    464	   2428	    97c	usart.o (ex libMultiSensor_bsp.a)
-     64	      0	      0	     64	     40	utilities.o (ex libMultiSensor_bsp.a)
-   6460	      0	      4	   6464	   1940	bmp280.o (ex libMultiSensor_bsp.a)
-    272	      0	      0	    272	    110	address.o (ex libMultiSensor_bsp.a)
-    540	      0	      0	    540	    21c	buzzer.o (ex libMultiSensor_bsp.a)
-    340	      0	      0	    340	    154	gas_mq2.o (ex libMultiSensor_bsp.a)
-   1212	      0	    501	   1713	    6b1	highleveldrivers.o (ex libMultiSensor_bsp.a)
-   1520	      0	      0	   1520	    5f0	humidity_dht22.o (ex libMultiSensor_bsp.a)
-   1828	      0	      0	   1828	    724	lum_tsl2561.o (ex libMultiSensor_bsp.a)
-   1432	      0	      0	   1432	    598	microphone.o (ex libMultiSensor_bsp.a)
-    216	      0	      0	    216	     d8	pir_hcsr501.o (ex libMultiSensor_bsp.a)
-    940	      0	      4	    944	    3b0	pressure_bmp280.o (ex libMultiSensor_bsp.a)
-   1472	      0	      0	   1472	    5c0	rgbled.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	temp_ds18b20.o (ex libMultiSensor_bsp.a)
- 
-14:30:23 **** Incremental Build of configuration Debug for project MultiSensor ****
-make -r all 
-Building file: ../src/MultiSensor.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/MultiSensor.d" -MT"src/MultiSensor.o" -MT"src/MultiSensor.d" -o "src/MultiSensor.o" "../src/MultiSensor.c"
-Finished building: ../src/MultiSensor.c
- 
-Building file: ../src/sysinit.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
-Finished building: ../src/sysinit.c
- 
-Building target: MultiSensor.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Debug" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Debug" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Debug.ld" -o "MultiSensor.axf"  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:       25076 B        32 KB     76.53%
-         RamLoc8:        1840 B         8 KB     22.46%
-Finished building target: MultiSensor.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "MultiSensor.axf"; # arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; # checksum -p LPC824 -d "MultiSensor.bin";
-   text	   data	    bss	    dec	    hex	filename
-  25044	     32	   1808	  26884	   6904	MultiSensor.axf
- 
-14:31:51 **** Incremental Build of configuration Debug for project lpc_chip_82x ****
+01:08:21 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
 make: Nothing to be done for `all'.
-14:31:51 **** Incremental Build of configuration Debug for project MultiSensor_bsp ****
+01:08:38 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
-Building file: ../src/high_level_drivers/highleveldrivers.c
+make: Nothing to be done for `all'.
+01:09:39 **** Incremental Build of configuration Release for project lpc_chip_82x ****
+make -r all 
+make: Nothing to be done for `all'.
+01:09:40 **** Incremental Build of configuration Release for project MultiSensor_bsp ****
+make -r all 
+make: Nothing to be done for `all'.
+01:09:41 **** Incremental Build of configuration Release for project MultiSensor ****
+make -r all 
+Building file: ../src/userapp/userapp.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -DCORE_M0PLUS -D__USE_LPCOPEN -D__LPC82X__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/high_level_drivers/highleveldrivers.d" -MT"src/high_level_drivers/highleveldrivers.o" -MT"src/high_level_drivers/highleveldrivers.d" -o "src/high_level_drivers/highleveldrivers.o" "../src/high_level_drivers/highleveldrivers.c"
-Finished building: ../src/high_level_drivers/highleveldrivers.c
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/userapp/userapp.d" -MT"src/userapp/userapp.o" -MT"src/userapp/userapp.d" -o "src/userapp/userapp.o" "../src/userapp/userapp.c"
+../src/userapp/userapp.c: In function 'userapp_temperature':
+../src/userapp/userapp.c:320:7: warning: unused variable 'done' [-Wunused-variable]
+  bool done = false;
+       ^
+../src/userapp/userapp.c:319:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+../src/userapp/userapp.c: In function 'userapp_gas':
+../src/userapp/userapp.c:332:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+../src/userapp/userapp.c: In function 'userapp_sound':
+../src/userapp/userapp.c:344:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+Finished building: ../src/userapp/userapp.c
  
-Building target: libMultiSensor_bsp.a
-Invoking: MCU Archiver
-arm-none-eabi-ar -r  "libMultiSensor_bsp.a"  ./src/low_level_drivers/adc.o ./src/low_level_drivers/boardconfig.o ./src/low_level_drivers/gpio.o ./src/low_level_drivers/i2c.o ./src/low_level_drivers/lowleveldrivers.o ./src/low_level_drivers/mrt.o ./src/low_level_drivers/pinmux.o ./src/low_level_drivers/pwm.o ./src/low_level_drivers/systick.o ./src/low_level_drivers/usart.o  ./src/library/utilities.o  ./src/high_level_drivers/BMP280_driver/bmp280.o  ./src/high_level_drivers/address.o ./src/high_level_drivers/buzzer.o ./src/high_level_drivers/gas_mq2.o ./src/high_level_drivers/highleveldrivers.o ./src/high_level_drivers/humidity_dht22.o ./src/high_level_drivers/lum_tsl2561.o ./src/high_level_drivers/microphone.o ./src/high_level_drivers/pir_hcsr501.o ./src/high_level_drivers/pressure_bmp280.o ./src/high_level_drivers/rgbled.o ./src/high_level_drivers/temp_ds18b20.o   
-c:\nxp\LPCXpresso_8.1.4_606\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating libMultiSensor_bsp.a
-Finished building target: libMultiSensor_bsp.a
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "libMultiSensor_bsp.a" ; # arm-none-eabi-objdump -h -S "libMultiSensor_bsp.a" >"libMultiSensor_bsp.lss"
-   text	   data	    bss	    dec	    hex	filename
-   1428	      0	    169	   1597	    63d	adc.o (ex libMultiSensor_bsp.a)
-    120	      0	      0	    120	     78	boardconfig.o (ex libMultiSensor_bsp.a)
-   2616	     32	     29	   2677	    a75	gpio.o (ex libMultiSensor_bsp.a)
-    720	      0	      0	    720	    2d0	i2c.o (ex libMultiSensor_bsp.a)
-   1102	      0	    332	   1434	    59a	lowleveldrivers.o (ex libMultiSensor_bsp.a)
-   1252	      0	     32	   1284	    504	mrt.o (ex libMultiSensor_bsp.a)
-    364	      0	      0	    364	    16c	pinmux.o (ex libMultiSensor_bsp.a)
-   1160	      0	      0	   1160	    488	pwm.o (ex libMultiSensor_bsp.a)
-    472	      0	      8	    480	    1e0	systick.o (ex libMultiSensor_bsp.a)
-   1964	      0	    464	   2428	    97c	usart.o (ex libMultiSensor_bsp.a)
-     64	      0	      0	     64	     40	utilities.o (ex libMultiSensor_bsp.a)
-   6460	      0	      4	   6464	   1940	bmp280.o (ex libMultiSensor_bsp.a)
-    272	      0	      0	    272	    110	address.o (ex libMultiSensor_bsp.a)
-    540	      0	      0	    540	    21c	buzzer.o (ex libMultiSensor_bsp.a)
-    340	      0	      0	    340	    154	gas_mq2.o (ex libMultiSensor_bsp.a)
-   1264	      0	    501	   1765	    6e5	highleveldrivers.o (ex libMultiSensor_bsp.a)
-   1520	      0	      0	   1520	    5f0	humidity_dht22.o (ex libMultiSensor_bsp.a)
-   1828	      0	      0	   1828	    724	lum_tsl2561.o (ex libMultiSensor_bsp.a)
-   1432	      0	      0	   1432	    598	microphone.o (ex libMultiSensor_bsp.a)
-    216	      0	      0	    216	     d8	pir_hcsr501.o (ex libMultiSensor_bsp.a)
-    940	      0	      4	    944	    3b0	pressure_bmp280.o (ex libMultiSensor_bsp.a)
-   1472	      0	      0	   1472	    5c0	rgbled.o (ex libMultiSensor_bsp.a)
-      0	      0	      0	      0	      0	temp_ds18b20.o (ex libMultiSensor_bsp.a)
- 
-14:31:53 **** Incremental Build of configuration Debug for project MultiSensor ****
-make -r all 
 Building target: MultiSensor.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Debug" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Debug" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Debug.ld" -o "MultiSensor.axf"  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
+arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Release" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Release" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Release.ld" -o "MultiSensor.axf"  ./src/userapp/userfunctions/modbusslave.o  ./src/userapp/userapp.o  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
 Memory region         Used Size  Region Size  %age Used
-        MFlash32:       25484 B        32 KB     77.77%
-         RamLoc8:        1856 B         8 KB     22.66%
+        MFlash32:       14224 B        32 KB     43.41%
+         RamLoc8:        1592 B         8 KB     19.43%
 Finished building target: MultiSensor.axf
  
 make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size "MultiSensor.axf"; # arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; # checksum -p LPC824 -d "MultiSensor.bin";
    text	   data	    bss	    dec	    hex	filename
-  25452	     32	   1824	  27308	   6aac	MultiSensor.axf
+  14224	      0	   1592	  15816	   3dc8	MultiSensor.axf
  
+01:09:43 **** Incremental Build of configuration Release for project MultiSensor ****
+make -r all 
+make: Nothing to be done for `all'.
+01:13:41 **** Incremental Build of configuration Release for project lpc_chip_82x ****
+make -r all 
+make: Nothing to be done for `all'.
+01:13:42 **** Incremental Build of configuration Release for project MultiSensor_bsp ****
+make -r all 
+make: Nothing to be done for `all'.
+01:13:43 **** Incremental Build of configuration Release for project MultiSensor ****
+make -r all 
+Building file: ../src/userapp/userapp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Os -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/userapp/userapp.d" -MT"src/userapp/userapp.o" -MT"src/userapp/userapp.d" -o "src/userapp/userapp.o" "../src/userapp/userapp.c"
+../src/userapp/userapp.c: In function 'userapp_temperature':
+../src/userapp/userapp.c:320:7: warning: unused variable 'done' [-Wunused-variable]
+  bool done = false;
+       ^
+../src/userapp/userapp.c:319:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+../src/userapp/userapp.c: In function 'userapp_gas':
+../src/userapp/userapp.c:332:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+../src/userapp/userapp.c: In function 'userapp_sound':
+../src/userapp/userapp.c:344:11: warning: unused variable 'stat' [-Wunused-variable]
+  status_t stat = status_ok;
+           ^
+Finished building: ../src/userapp/userapp.c
+ 
+Building target: MultiSensor.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Release" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Release" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Release.ld" -o "MultiSensor.axf"  ./src/userapp/userfunctions/modbusslave.o  ./src/userapp/userapp.o  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       14244 B        32 KB     43.47%
+         RamLoc8:        1592 B         8 KB     19.43%
+Finished building target: MultiSensor.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "MultiSensor.axf"; # arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; # checksum -p LPC824 -d "MultiSensor.bin";
+   text	   data	    bss	    dec	    hex	filename
+  14244	      0	   1592	  15836	   3ddc	MultiSensor.axf
+ 
+01:13:46 **** Incremental Build of configuration Release for project MultiSensor ****
+make -r all 
+make: Nothing to be done for `all'.

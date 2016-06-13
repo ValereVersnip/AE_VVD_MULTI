@@ -1,19 +1,6 @@
-14:31:53 **** Incremental Build of configuration Debug for project MultiSensor ****
+01:13:46 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
-Building target: MultiSensor.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Debug" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Debug" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Debug.ld" -o "MultiSensor.axf"  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
-Memory region         Used Size  Region Size  %age Used
-        MFlash32:       25484 B        32 KB     77.77%
-         RamLoc8:        1856 B         8 KB     22.66%
-Finished building target: MultiSensor.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size "MultiSensor.axf"; # arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; # checksum -p LPC824 -d "MultiSensor.bin";
-   text	   data	    bss	    dec	    hex	filename
-  25452	     32	   1824	  27308	   6aac	MultiSensor.axf
- 
+make: Nothing to be done for `all'.
 
-14:31:53 Build Finished (took 329ms)
+01:13:46 Build Finished (took 77ms)
 

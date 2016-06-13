@@ -143,6 +143,16 @@ status_t BUZZER_Start(buzzer_t *p_buzzerDevice, bool start);
 status_t BUZZER_Buzz(buzzer_t *p_buzzerDevice, uint32_t time);
 
 
+/**
+ * Check if the buzzer is performing a timed buzzer.
+ *
+ * @param p_buzzerDevice buzzer device
+ * @param p_buzzing true: timed buzz going on, false: no timed buzz going on
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t BUZZER_GetTimedBuzz(buzzer_t *p_buzzerDevice, bool *p_buzzing);
+
+
 
 /**
  * Run function for the buzzer device.

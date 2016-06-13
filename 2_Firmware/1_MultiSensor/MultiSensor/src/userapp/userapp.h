@@ -26,32 +26,43 @@
 /**
  * Valere Versnip Design 
  *
- * @project MultiSensor_bsp
- * @file adc.h
+ * @project MultiSensor
+ * @file userapp.h
  * @author TimB
- * @date 18-mei-2016
- * @brief	Header file for adc.c
+ * @date 9-jun.-2016
+ * @brief	Header file for userapp.c
  *
  */
 
-#ifndef DEF_adc_H
-#define DEF_adc_H
+#ifndef DEF_userapp_H
+#define DEF_userapp_H
 
 /* ***********************************************************************************************************************************************
  * Include Files
  * ***********************************************************************************************************************************************
  */
-#include "chip.h"
-#include "status.h"
+#include "userfunctions/modbusslave.h"
 
 /*
  * ***********************************************************************************************************************************************
  * Defines
  * ***********************************************************************************************************************************************
  */
+#define USERAPP_VERSION_MAJOR					10
+#define USERAPP_VERSION_MINOR					5
+#define USERAPP_VERSION_CHANGE					1
 
-#define ADC_CHANNELAMOUNT			12					/**< The LPC824 has 12 ADC inputs */
-#define ADC_BUFFERSIZE				8					/**< Adc databuffer size MUST be power of 2*/
+
+
+
+/* MODBUS defines */
+#define USERAPP_MODBUS_BAUDRATE					115200						/**< the baudrate for the modbus */
+#define USERAPP_MODBUS_TXENABLE_PORT			0							/**< rs485 tx enable pin connected to port 0 */
+#define USERAPP_MODBUS_TXENABLE_PIN				27							/**< rs485 tx enable pin connected to pin 27 */
+
+
+/* DHT22 HUMIDTIY */
+#define USERAPP_HUMIDITY_POLLRATE				2500						/**< Pollrate for the dht22 humidity sensor (should be at least 2000!) (in ms) */
 
 /*
  * ***********************************************************************************************************************************************
@@ -59,24 +70,27 @@
  * ***********************************************************************************************************************************************
  */
 
-/**
- * Struct for adc configuration data.
- */
-typedef struct adc_config_t
-{
-	bool usechannel[ADC_CHANNELAMOUNT];					/**< true: channel enabled, false: channel disabled */
-}adc_config_t;
 
 /**
- * Adc device.
+ * enum for the order in which we will update the sensor measurements.
  */
-typedef struct adc_t
+typedef enum
 {
-	bool usechannel[ADC_CHANNELAMOUNT];					/**< true: channel enabled, false: channel disabled */
-	RINGBUFF_T *p_ringbuffer[ADC_CHANNELAMOUNT];		/**< pointer to adcchannel ringbuffer */
-	bool overrun[ADC_CHANNELAMOUNT];					/**< true: channel overrun, false: no channel overrun */
-	bool seqA_running;									/**< true: sequence A is running, false: no conversion is running */
-}adc_t;
+	order_humidity = 0,														/**< update humidity */
+	order_temperature,														/**< update temperature */
+	order_pressure,                                                         /**< update pressure */
+	order_pir,                                                              /**< update motion (pir) */
+	order_rgbled,                                                           /**< update rgbled */
+	order_buzzer,                                                           /**< update buzzer */
+	order_luminosity,                                                       /**< update luminosity */
+	order_gas,                                                              /**< update gas */
+	order_sound,                                                            /**< update sound */
+
+	order_done,																/**< done */
+
+	order_last,																/**< last member, so we know size of this enum */
+}userapp_order_t;
+
 
 /*
  * ***********************************************************************************************************************************************
@@ -85,44 +99,27 @@ typedef struct adc_t
  */
 
 /**
- * Initialize the ADC.
- *
- * For enabled channels:
- * 	ringbuffers will be initialized
- * 	they will all be put in sequencer A (for our purpose, 1 sequencer is enough)
- * 	We don't use tresholds, we only give interrupts when sequencer A is finished.
- * @param p_adc adc device
- * @param p_config configuration data
- * @return	status_ok if succeeded (otherwise check status.h for details).
+ * Initialize the userapp.
  */
-status_t ADC_Init(adc_t *p_adc, adc_config_t *p_config);
-
+void USERAPP_Init();
 
 
 /**
- * Run function for ADC.
+ * Run function for the user app.
  *
- * Check if SeqA is finished.
- * Ifso: check the overrun status, and set in struct.
- * Push new data to relevant ringbuffer.
- *
- * @note This function should be called periodically by higher level routines.
- * @param p_adc adc device
- * @return	status_ok if succeeded (otherwise check status.h for details).
+ * @note this function should be called periodically by higher level routines.
  */
-status_t ADC_Run0(adc_t *p_adc);
+void USERAPP_Run0();
 
 
 /**
- * Start Sequence A ADC conversion.
+ * Handle the status.
  *
- * This function is best called from a timer interrupt routine.
- * It will start a seq A adc conversion.
- * But it will first check if no previous conversion is running.
- * @param p_adc adc device
- * @return	status_ok if succeeded (otherwise check status.h for details).
+ * If we don't get status_ok, we will put on the red led, and trap here.
+ * So we can attach our debugger and watch the failing callstack.
+ * @param stat status
  */
-status_t ADC_StartSequenceA(adc_t *p_adc);
+void USERAPP_HandleStatus(status_t stat);
 
 #endif
-/* End of file adc.h */
+/* End of file userapp.h */

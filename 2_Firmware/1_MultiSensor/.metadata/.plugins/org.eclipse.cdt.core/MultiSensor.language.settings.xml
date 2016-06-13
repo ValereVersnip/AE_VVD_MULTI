@@ -20,6 +20,22 @@
 						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
 						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
 					</resource>
+					<resource project-relative-path="src/userapp/userfunctions/modbusslave.c">
+						<entry kind="includePath" name="/MultiSensor_bsp/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/lpc_chip_82x/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M0PLUS" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC82X__" value=""/>
+						<entry kind="macro" name="__MTB_BUFFER_SIZE" value="256"/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
+					</resource>
 					<resource project-relative-path="src/mtb.c">
 						<entry kind="includePath" name="/MultiSensor_bsp/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -53,6 +69,38 @@
 						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
 					</resource>
 					<resource project-relative-path="src/cr_startup_lpc82x.c">
+						<entry kind="includePath" name="/MultiSensor_bsp/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/lpc_chip_82x/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M0PLUS" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC82X__" value=""/>
+						<entry kind="macro" name="__MTB_BUFFER_SIZE" value="256"/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
+					</resource>
+					<resource project-relative-path="src/userapp/userapp.c">
+						<entry kind="includePath" name="/MultiSensor_bsp/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/lpc_chip_82x/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M0PLUS" value=""/>
+						<entry kind="macro" name="DEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC82X__" value=""/>
+						<entry kind="macro" name="__MTB_BUFFER_SIZE" value="256"/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
+					</resource>
+					<resource project-relative-path="src/userapp/userfunctions/userfunctions.c">
 						<entry kind="includePath" name="/MultiSensor_bsp/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>
@@ -108,6 +156,22 @@
 						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
 						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
 					</resource>
+					<resource project-relative-path="src/userapp/userfunctions/modbusslave.c">
+						<entry kind="includePath" name="/MultiSensor_bsp/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/lpc_chip_82x/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M0PLUS" value=""/>
+						<entry kind="macro" name="NDEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC82X__" value=""/>
+						<entry kind="macro" name="__MTB_BUFFER_SIZE" value="256"/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
+					</resource>
 					<resource project-relative-path="src/mtb.c">
 						<entry kind="includePath" name="/MultiSensor_bsp/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
@@ -141,6 +205,22 @@
 						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
 					</resource>
 					<resource project-relative-path="src/cr_startup_lpc82x.c">
+						<entry kind="includePath" name="/MultiSensor_bsp/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="includePath" name="/lpc_chip_82x/inc">
+							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
+						</entry>
+						<entry kind="macro" name="CORE_M0PLUS" value=""/>
+						<entry kind="macro" name="NDEBUG" value=""/>
+						<entry kind="macro" name="__CODE_RED" value=""/>
+						<entry kind="macro" name="__LPC82X__" value=""/>
+						<entry kind="macro" name="__MTB_BUFFER_SIZE" value="256"/>
+						<entry kind="macro" name="__REDLIB__" value=""/>
+						<entry kind="macro" name="__USE_LPCOPEN" value=""/>
+						<entry kind="macro" name="__USE_ROMDIVIDE" value=""/>
+					</resource>
+					<resource project-relative-path="src/userapp/userapp.c">
 						<entry kind="includePath" name="/MultiSensor_bsp/inc">
 							<flag value="VALUE_WORKSPACE_PATH|RESOLVED"/>
 						</entry>

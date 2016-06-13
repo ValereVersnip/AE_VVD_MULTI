@@ -100,7 +100,7 @@ status_t ADDRESS_Init(address_t *p_address, address_config_t *p_config)
 		/* get the pin state */
 		GPIO_Get_Pin(p_address->port[i], p_address->pin[i], &gpioState);
 		/* and shift in result */
-		if(gpioState)
+		if(!gpioState) /* inverse because of how the switch works */
 		{
 			p_address->address = (p_address->address << 1) | 0x01;
 		}

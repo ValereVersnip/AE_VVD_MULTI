@@ -232,6 +232,12 @@ void bss_init(unsigned int start, unsigned int len) {
     unsigned int loop;
     for (loop = 0; loop < len; loop = loop + 4)
         *pulDest++ = 0;
+
+    /* added magic word by Tim, for stack overrun detection */
+    for (loop = 0; loop < 128; loop = loop +4)
+    {
+    	*pulDest++ = 0xABBABABE;
+    }
 }
 
 //*****************************************************************************

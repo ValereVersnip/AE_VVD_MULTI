@@ -182,5 +182,13 @@ status_t USART_Send(usart_name_t usart, uint8_t* p_sendData, uint8_t length);
 status_t USART_SendBlocking(usart_name_t usart, uint8_t* p_sendData, uint8_t length);
 
 
+/**
+ * Enable or disable all rx interrupts.
+ * @param enable true: enable, false disable
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t USART_EnableInterrupt(bool enable);
+
+
 #endif
 /* End of file usart.h */

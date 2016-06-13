@@ -15,6 +15,9 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="LOWLEVELDRIVERSCONFIG_MRT_2_ENABLEINTERRUPT"/>
+			<item value="p_adc"/>
+			<item value="data_init"/>
 			<item value="PWM_setdutycycle"/>
 			<item value="tsl2561_read8"/>
 			<item value="TSL2561_LUX_B1T"/>

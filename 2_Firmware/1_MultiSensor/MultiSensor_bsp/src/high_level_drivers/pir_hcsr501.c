@@ -111,7 +111,8 @@ status_t PIR_HCSR501_RisingEdgeRoutine(pir_hcsr501_t *p_pirDevice)
 	uint32_t currentTime;
 	/* get ms timestamp  */
 	SYSTICK_GetTicks(&currentTime);
-	p_pirDevice->detecttime = (uint16_t)currentTime/1000;
+	/* we divide by 1000, because we want second ticks */
+	p_pirDevice->detecttime = (uint16_t)(currentTime/1000);
 	/* increment the samplecount */
 	p_pirDevice->detectcount++;
 	return status;

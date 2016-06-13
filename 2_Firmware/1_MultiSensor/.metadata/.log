@@ -2010,3 +2010,1557 @@ Binding(CTRL+SHIFT+H,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2016-06-05 14:49:49.948 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-05 14:49:55.680
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-05 14:49:55.685
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-05 14:50:07.652
+!MESSAGE Indexed 'MultiSensor' (5 sources, 67 headers) in 0,424 sec: 3.405 declarations; 4.060 references; 6 unresolved inclusions; 12 syntax errors; 1.134 unresolved names (13%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-05 14:50:55.314
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 69 headers) in 0,486 sec: 4.114 declarations; 9.358 references; 6 unresolved inclusions; 10 syntax errors; 1.422 unresolved names (9,5%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-05 14:50:59.391
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 43 headers) in 0,287 sec: 3.310 declarations; 5.793 references; 4 unresolved inclusions; 10 syntax errors; 1.230 unresolved names (12%)
+!SESSION 2016-06-09 21:17:28.079 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-06-09 21:26:01.183
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2016-06-09 21:26:06.342
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-09 21:26:06.347
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2016-06-09 21:36:53.650
+!MESSAGE Drivers loaded in 732 milliseconds
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 21:46:03.317
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 69 headers) in 0,506 sec: 4.114 declarations; 9.358 references; 6 unresolved inclusions; 10 syntax errors; 1.422 unresolved names (9,5%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 21:46:07.689
+!MESSAGE Indexed 'MultiSensor' (5 sources, 67 headers) in 0,266 sec: 3.405 declarations; 4.060 references; 6 unresolved inclusions; 12 syntax errors; 1.134 unresolved names (13%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 21:46:14.755
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 43 headers) in 0,277 sec: 3.310 declarations; 5.793 references; 4 unresolved inclusions; 10 syntax errors; 1.230 unresolved names (12%)
+
+!ENTRY com.crt.debugcommon 2 0 2016-06-09 21:50:21.425
+!MESSAGE All SWD targets are currently connected to other debug sessions.
+
+
+Press 'Cancel' to terminate this launch.
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 22:43:28.156
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 66 headers) in 0,608 sec: 3.768 declarations; 8.234 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 22:43:36.164
+!MESSAGE Indexed 'MultiSensor' (7 sources, 77 headers) in 0,324 sec: 3.783 declarations; 5.755 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 22:43:41.632
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 92 headers) in 0,526 sec: 4.583 declarations; 12.045 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 22:44:03.117
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 66 headers) in 0,476 sec: 3.768 declarations; 8.234 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 22:44:06.781
+!MESSAGE Indexed 'MultiSensor' (7 sources, 77 headers) in 0,315 sec: 3.783 declarations; 5.755 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-09 22:44:10.830
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 92 headers) in 0,53 sec: 4.583 declarations; 12.045 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2016-06-10 15:39:26.478 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-10 15:39:35.274
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-10 15:39:35.281
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2016-06-10 15:40:22.888
+!MESSAGE Drivers loaded in 36445 milliseconds
+
+!ENTRY com.crt.debugcommon 4 -1 2016-06-10 15:40:22.910
+!MESSAGE Error received while booting LinkServer:
+Timeout waiting for LinkServer to initialize (0).
+
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 15:41:03.795
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 15:41:03.795
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 15:41:03.795
+!MESSAGE ACK Fault
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 15:41:03.795
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 15:41:24.741
+!MESSAGE 15: Target error from Remove break/watch: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 15:41:24.741
+!MESSAGE 15: Target error from Remove break/watch: Ee(FF). Redlink interface error 255.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-10 16:59:29.505
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2757 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 16:59:29.507
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2757 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 16:59:29.774
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 16:59:29.774
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 16:59:29.774
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 16:59:29.774
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-10 16:59:36.758
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2762 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 16:59:36.758
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2762 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 16:59:37.029
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 16:59:37.029
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 16:59:37.029
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 16:59:37.029
+!MESSAGE 31: No connection to emulator device
+!SESSION 2016-06-10 16:59:48.475 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-10 16:59:54.044
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-10 16:59:54.051
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-10 17:00:04.045
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2771 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 17:00:04.047
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2771 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 17:00:04.312
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:00:04.312
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:00:04.312
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:00:04.312
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY com.crt.log 1 0 2016-06-10 17:01:30.058
+!MESSAGE Drivers loaded in 516 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-10 17:01:32.518
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2780 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 17:01:32.518
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2780 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 17:01:32.786
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:01:32.786
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:01:32.786
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:01:32.786
+!MESSAGE 31: No connection to emulator device
+!SESSION 2016-06-10 17:01:43.566 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-10 17:01:48.943
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-10 17:01:48.950
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-10 17:01:58.083
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2797 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 17:01:58.084
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2797 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 17:01:58.347
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:01:58.347
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:01:58.347
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:01:58.347
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-10 17:17:21.571
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2881 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 17:17:21.571
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2881 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 17:17:21.786
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:17:21.786
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:17:21.786
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:17:21.787
+!MESSAGE 31: No connection to emulator device
+!SESSION 2016-06-10 17:17:34.723 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-10 17:17:41.114
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-10 17:17:41.120
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-10 17:17:50.550
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2890 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 17:17:50.552
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=2890 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 17:17:50.814
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:17:50.814
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:17:50.814
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:17:50.814
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 17:30:18.615
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:30:18.615
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-10 17:30:46.382
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@326f6b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-continue
+Error message from debugger back end:
+Warning:\nCannot insert hardware breakpoint 1.\nCannot insert hardware breakpoint 2.\nCould not insert hardware breakpoints:\nYou may have requested too many hardware breakpoints/watchpoints.\n java.lang.Exception: Warning:\nCannot insert hardware breakpoint 1.\nCannot insert hardware breakpoint 2.\nCould not insert hardware breakpoints:\nYou may have requested too many hardware breakpoints/watchpoints.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 17:30:46.382
+!MESSAGE Failed to execute MI command:
+-exec-continue
+Error message from debugger back end:
+Warning:\nCannot insert hardware breakpoint 1.\nCannot insert hardware breakpoint 2.\nCould not insert hardware breakpoints:\nYou may have requested too many hardware breakpoints/watchpoints.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert hardware breakpoint 1.\nCannot insert hardware breakpoint 2.\nCould not insert hardware breakpoints:\nYou may have requested too many hardware breakpoints/watchpoints.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 17:30:46.667
+!MESSAGE 15: Target error from Set break/watch: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 17:30:46.667
+!MESSAGE 15: Target error from Set break/watch: Ee(FF). Redlink interface error 255.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-10 17:51:08.198
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1330fd4): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Given context: (gdb[5].proc[42000].threadGroup[i1],gdb[5].proc[42000].OSthread[1]).thread[1], is already running. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2016-06-10 17:51:08.199
+!MESSAGE Given context: (gdb[5].proc[42000].threadGroup[i1],gdb[5].proc[42000].OSthread[1]).thread[1], is already running.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-10 18:10:03.996
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@12c84c2): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-continue
+Error message from debugger back end:
+Warning:\nCannot insert hardware breakpoint 1.\nCould not insert hardware breakpoints:\nYou may have requested too many hardware breakpoints/watchpoints.\n java.lang.Exception: Warning:\nCannot insert hardware breakpoint 1.\nCould not insert hardware breakpoints:\nYou may have requested too many hardware breakpoints/watchpoints.\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-10 18:10:03.996
+!MESSAGE Failed to execute MI command:
+-exec-continue
+Error message from debugger back end:
+Warning:\nCannot insert hardware breakpoint 1.\nCould not insert hardware breakpoints:\nYou may have requested too many hardware breakpoints/watchpoints.\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert hardware breakpoint 1.\nCould not insert hardware breakpoints:\nYou may have requested too many hardware breakpoints/watchpoints.\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-10 18:10:04.287
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 18:10:04.287
+!MESSAGE 15: Target error from Set break/watch
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-10 18:10:04.287
+!MESSAGE Hardware Transfer Error
+
+!ENTRY com.crt.log 1 0 2016-06-10 18:10:42.483
+!MESSAGE Drivers loaded in 523 milliseconds
+!SESSION 2016-06-11 18:34:47.706 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-11 18:34:57.356
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-11 18:34:57.365
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2016-06-11 18:42:53.375
+!MESSAGE Drivers loaded in 923 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-11 18:42:57.634
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35308 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 18:42:57.636
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35308 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:42:57.852
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:42:57.852
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:42:57.852
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:42:57.852
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-11 18:43:26.404
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35327 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 18:43:26.404
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35327 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:43:26.669
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:43:26.670
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:43:26.670
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:43:26.670
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-11 18:44:02.312
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35348 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 18:44:02.312
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35348 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:44:02.558
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:44:02.558
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:44:02.558
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:44:02.558
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY com.crt.log 1 0 2016-06-11 18:44:30.513
+!MESSAGE Drivers loaded in 727 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-11 18:44:32.259
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35365 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 18:44:32.260
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35365 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:44:32.525
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:44:32.525
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:44:32.525
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:44:32.526
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-11 18:45:27.959
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35385 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 18:45:27.959
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35385 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:45:28.230
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:45:28.230
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:45:28.231
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:45:28.231
+!MESSAGE 31: No connection to emulator device
+!SESSION 2016-06-11 18:46:29.514 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-11 18:46:34.320
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-11 18:46:34.326
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2016-06-11 18:46:58.603
+!MESSAGE Drivers loaded in 972 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-11 18:47:00.376
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35420 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 18:47:00.377
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35420 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:47:00.639
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:47:00.639
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:47:00.639
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:47:00.639
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-11 18:48:24.276
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35460 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 18:48:24.277
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35460 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:48:24.533
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:48:24.533
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:48:24.534
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:48:24.534
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-11 18:48:35.673
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35467 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 18:48:35.674
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=35467 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:48:35.947
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:48:35.947
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:48:35.947
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:48:35.947
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY com.crt.log 1 0 2016-06-11 18:50:19.426
+!MESSAGE Drivers loaded in 826 milliseconds
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 18:50:56.013
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 18:50:56.013
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+
+!ENTRY com.crt.debugcommon 2 0 2016-06-11 19:12:32.227
+!MESSAGE All SWD targets are currently connected to other debug sessions.
+
+
+Press 'Cancel' to terminate this launch.
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 19:30:19.743
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 19:30:19.743
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 19:31:02.828
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 19:31:02.828
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-11 19:31:20.792
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@1cc0772): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function java.lang.Exception: Cannot find bounds of current function' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-11 19:31:20.792
+!MESSAGE Failed to execute MI command:
+-exec-step 1
+Error message from debugger back end:
+Cannot find bounds of current function
+!STACK 0
+java.lang.Exception: Cannot find bounds of current function
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 19:31:30.758
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 19:31:30.758
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-11 20:04:09.869
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-11 20:09:32.656
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 20:09:32.657
+!MESSAGE 16: Target error from status-poll
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 20:09:32.657
+!MESSAGE ACK Fault
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-11 20:09:32.657
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-06-11 20:10:01.892
+!MESSAGE An internal error occurred during: "Interrupt monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@da963 rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@17091c[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 2133]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorInterruptJob.run(GDBBackend.java:904)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-12 15:00:30.445
+!MESSAGE Indexed 'MultiSensor' (7 sources, 69 headers) in 0,343 sec: 3.555 declarations; 4.505 references; 6 unresolved inclusions; 12 syntax errors; 1.157 unresolved names (13%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-12 15:00:46.609
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 69 headers) in 0,363 sec: 4.120 declarations; 9.330 references; 6 unresolved inclusions; 10 syntax errors; 1.423 unresolved names (9,6%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-12 15:00:51.084
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 43 headers) in 0,252 sec: 3.310 declarations; 5.793 references; 4 unresolved inclusions; 10 syntax errors; 1.230 unresolved names (12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-12 15:01:19.451
+!MESSAGE Indexed 'MultiSensor' (7 sources, 77 headers) in 0,357 sec: 3.795 declarations; 5.812 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-12 15:01:25.474
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 92 headers) in 0,581 sec: 4.584 declarations; 12.016 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-12 15:01:30.237
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 66 headers) in 0,431 sec: 3.768 declarations; 8.234 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.debugcommon 2 0 2016-06-12 18:14:21.498
+!MESSAGE All SWD targets are currently connected to other debug sessions.
+
+
+Press 'Cancel' to terminate this launch.
+
+!ENTRY com.crt.debugcommon 2 0 2016-06-12 19:07:07.999
+!MESSAGE All SWD targets are currently connected to other debug sessions.
+
+
+Press 'Cancel' to terminate this launch.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-12 20:34:44.796
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@181d96a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nCannot access memory at address 0xfffffff9\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nCannot access memory at address 0xfffffff9\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-12 20:34:44.796
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nCannot access memory at address 0xfffffff9\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nCannot access memory at address 0xfffffff9\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-12 20:34:45.054
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-12 20:34:45.055
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-12 20:34:50.917
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.viewmodel.SteppingController$3@435ed5): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nCannot access memory at address 0xfffffff9\n java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nCannot access memory at address 0xfffffff9\n' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-12 20:34:50.918
+!MESSAGE Failed to execute MI command:
+-exec-finish
+Error message from debugger back end:
+Warning:\nCannot insert breakpoint 0.\nCannot access memory at address 0xfffffff9\n
+!STACK 0
+java.lang.Exception: Warning:\nCannot insert breakpoint 0.\nCannot access memory at address 0xfffffff9\n
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-12 20:34:51.216
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-12 20:34:51.216
+!MESSAGE 15: Target error from Set break/watch: Et:96: Pseudo-address (0xFFFFFFxx) for EXC_RETURN is invalid (GDB error?)
+
+!ENTRY com.crt.debugcommon 2 0 2016-06-12 21:27:36.266
+!MESSAGE All SWD targets are currently connected to other debug sessions.
+
+
+Press 'Cancel' to terminate this launch.
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-12 21:27:41.844
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.debugcommon 2 0 2016-06-12 21:27:50.127
+!MESSAGE All SWD targets are currently connected to other debug sessions.
+
+
+Press 'Cancel' to terminate this launch.
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-12 21:27:55.224
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-12 21:27:55.224
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-12 21:30:03.492
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@1f26d4d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Given context: (gdb[59].proc[42000].threadGroup[i1],gdb[59].proc[42000].OSthread[1]).thread[1], is already running. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2016-06-12 21:30:03.493
+!MESSAGE Given context: (gdb[59].proc[42000].threadGroup[i1],gdb[59].proc[42000].OSthread[1]).thread[1], is already running.
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-13 20:17:30.076
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.log 1 0 2016-06-13 20:17:50.188
+!MESSAGE Drivers loaded in 607 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-13 20:17:52.122
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=34117 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-13 20:17:52.122
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=34117 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-13 20:17:52.326
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-13 20:17:52.326
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-13 20:17:52.326
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-13 20:17:52.326
+!MESSAGE 31: No connection to emulator device
+!SESSION 2016-06-13 20:18:10.730 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-13 20:18:20.531
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-13 20:18:20.539
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY com.crt.log 1 0 2016-06-13 20:18:31.524
+!MESSAGE Drivers loaded in 735 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-13 20:18:33.320
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=34127 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-13 20:18:33.322
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=34127 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-13 20:18:33.587
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-13 20:18:33.587
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-13 20:18:33.587
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-13 20:18:33.587
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:05:53.657
+!MESSAGE Indexed 'MultiSensor' (7 sources, 69 headers) in 0,384 sec: 3.616 declarations; 4.702 references; 6 unresolved inclusions; 12 syntax errors; 1.202 unresolved names (13%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:05:58.208
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 43 headers) in 0,294 sec: 3.310 declarations; 5.793 references; 4 unresolved inclusions; 10 syntax errors; 1.230 unresolved names (12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:06:03.198
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 69 headers) in 0,386 sec: 4.127 declarations; 9.350 references; 6 unresolved inclusions; 10 syntax errors; 1.426 unresolved names (9,6%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2016-06-13 23:06:28.862
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2016-06-13 23:06:28.862
+!MESSAGE G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2016-06-13 23:06:37.398
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2016-06-13 23:06:37.399
+!MESSAGE G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2016-06-13 23:07:02.849
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2016-06-13 23:07:02.849
+!MESSAGE G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2016-06-13 23:08:13.261
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2016-06-13 23:08:13.261
+!MESSAGE G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-13 23:08:56.483
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-13 23:08:56.483
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-13 23:09:17.032
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:11:23.080
+!MESSAGE Indexed 'MultiSensor' (7 sources, 77 headers) in 0,459 sec: 3.856 declarations; 6.054 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:11:28.463
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 92 headers) in 0,652 sec: 4.591 declarations; 12.039 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:11:31.818
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 66 headers) in 0,467 sec: 3.768 declarations; 8.234 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:51:32.954
+!MESSAGE Indexed 'MultiSensor' (7 sources, 77 headers) in 0,473 sec: 3.849 declarations; 6.014 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:51:37.336
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 66 headers) in 0,499 sec: 3.768 declarations; 8.234 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-13 23:51:41.246
+!MESSAGE Indexed 'MultiSensor_bsp' (23 sources, 92 headers) in 0,55 sec: 4.591 declarations; 12.039 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.dsf.ui 4 0 2016-06-13 23:53:40.437
+!MESSAGE Can't view memory on &(stat)
+!STACK 1
+org.eclipse.debug.core.DebugException: Error evaluating memory address (ExecutionException).
+	at org.eclipse.cdt.dsf.debug.model.DsfMemoryBlockRetrieval.resolveMemoryAddress(DsfMemoryBlockRetrieval.java:532)
+	at org.eclipse.cdt.dsf.gdb.internal.memory.GdbMemoryBlockRetrieval.getMemoryBlock(GdbMemoryBlockRetrieval.java:205)
+	at org.eclipse.cdt.dsf.gdb.internal.memory.GdbMemoryBlockRetrieval.getExtendedMemoryBlock(GdbMemoryBlockRetrieval.java:133)
+	at com.crt.dsfdebug.peripheral.memory.PeripheralMemoryBlockRetrieval.super_getExtendedMemoryBlock(PeripheralMemoryBlockRetrieval.java:116)
+	at com.crt.dsfdebug.peripheral.memory.PeripheralMemoryBlockRetrieval.getExtendedMemoryBlock(PeripheralMemoryBlockRetrieval.java:96)
+	at org.eclipse.cdt.dsf.debug.internal.ui.viewmodel.actions.DsfViewMemoryHandler.showExpressionInMemoryView(DsfViewMemoryHandler.java:196)
+	at org.eclipse.cdt.dsf.debug.internal.ui.viewmodel.actions.DsfViewMemoryHandler.access$0(DsfViewMemoryHandler.java:178)
+	at org.eclipse.cdt.dsf.debug.internal.ui.viewmodel.actions.DsfViewMemoryHandler$1$1$1.run(DsfViewMemoryHandler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.util.concurrent.ExecutionException: org.eclipse.core.runtime.CoreException: The result of expression evaluation "" is not formatted correctly.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.debug.model.DsfMemoryBlockRetrieval.resolveMemoryAddress(DsfMemoryBlockRetrieval.java:525)
+	... 8 more
+Caused by: org.eclipse.core.runtime.CoreException: The result of expression evaluation "" is not formatted correctly.
+	... 10 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.substring(String.java:1931)
+	at org.eclipse.cdt.dsf.debug.model.DsfMemoryBlockRetrieval$2$1.handleSuccess(DsfMemoryBlockRetrieval.java:501)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 5013 2016-06-13 23:53:40.438
+!MESSAGE Error evaluating memory address (ExecutionException).
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.core.runtime.CoreException: The result of expression evaluation "" is not formatted correctly.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.debug.model.DsfMemoryBlockRetrieval.resolveMemoryAddress(DsfMemoryBlockRetrieval.java:525)
+	at org.eclipse.cdt.dsf.gdb.internal.memory.GdbMemoryBlockRetrieval.getMemoryBlock(GdbMemoryBlockRetrieval.java:205)
+	at org.eclipse.cdt.dsf.gdb.internal.memory.GdbMemoryBlockRetrieval.getExtendedMemoryBlock(GdbMemoryBlockRetrieval.java:133)
+	at com.crt.dsfdebug.peripheral.memory.PeripheralMemoryBlockRetrieval.super_getExtendedMemoryBlock(PeripheralMemoryBlockRetrieval.java:116)
+	at com.crt.dsfdebug.peripheral.memory.PeripheralMemoryBlockRetrieval.getExtendedMemoryBlock(PeripheralMemoryBlockRetrieval.java:96)
+	at org.eclipse.cdt.dsf.debug.internal.ui.viewmodel.actions.DsfViewMemoryHandler.showExpressionInMemoryView(DsfViewMemoryHandler.java:196)
+	at org.eclipse.cdt.dsf.debug.internal.ui.viewmodel.actions.DsfViewMemoryHandler.access$0(DsfViewMemoryHandler.java:178)
+	at org.eclipse.cdt.dsf.debug.internal.ui.viewmodel.actions.DsfViewMemoryHandler$1$1$1.run(DsfViewMemoryHandler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.core.runtime.CoreException: The result of expression evaluation "" is not formatted correctly.
+	... 10 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: -2
+	at java.lang.String.substring(String.java:1931)
+	at org.eclipse.cdt.dsf.debug.model.DsfMemoryBlockRetrieval$2$1.handleSuccess(DsfMemoryBlockRetrieval.java:501)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor.handleCompleted(RequestMonitor.java:385)
+	at org.eclipse.cdt.dsf.concurrent.RequestMonitor$2.run(RequestMonitor.java:312)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 00:01:42.414
+!MESSAGE 11: Target error from Reset: (null)
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 00:01:42.414
+!MESSAGE 11: Target error from Reset: (null)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 00:01:49.130
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@30e558): Status ERROR: org.eclipse.cdt.dsf.gdb code=10001 Connection is shut down null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10001 2016-06-14 00:01:49.130
+!MESSAGE Connection is shut down
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 00:01:49.140
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.etmetb.redlink.RedlinkClient$3@1ece3f0): Status ERROR: com.crt.etmetb code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.crt.etmetb 4 0 2016-06-14 00:01:49.140
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:141)
+	at com.crt.etmetb.redlink.RedlinkClient$2.run(RedlinkClient.java:122)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-14 00:05:22.582
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 00:15:03.758
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 00:15:18.014
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 00:15:22.920
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 00:16:08.270
+!MESSAGE Request for monitor: 'CountingRequestMonitor: Status OK: org.eclipse.cdt.dsf code=0  null children=[]' resulted in a rejected execution exception.
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-14 00:28:30.324
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 00:33:08.614
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 00:33:08.614
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 00:33:47.813
+!MESSAGE 15: Target error from Remove break/watch: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 00:33:47.813
+!MESSAGE 15: Target error from Remove break/watch: Ee(FF). Redlink interface error 255.
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-14 00:35:50.620
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-14 00:46:24.132
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 00:59:05.270
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 00:59:05.270
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:06:08.719
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@2ce290): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-14 01:06:08.719
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:06:44.790
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@18949e8): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-14 01:06:44.791
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:06:53.024
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2016-06-14 01:06:53.024
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:07:08.624
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@1a76afa): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-14 01:07:08.624
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:07:19.402
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@cd9079): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-14 01:07:19.403
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:07:21.841
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2016-06-14 01:07:21.841
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:07:22.910
+!MESSAGE Breakpoint already removed
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10005 2016-06-14 01:07:22.910
+!MESSAGE Breakpoint already removed
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:07:28.650
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIRunControl$9@1a3c646): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Interrupt failed. null' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-14 01:07:28.651
+!MESSAGE Interrupt failed.
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-06-14 01:07:35.706
+!MESSAGE An internal error occurred during: "Interrupt monitor job.".
+!STACK 0
+java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@ec5f3f rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@19296ba[Shutting down, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 2923]
+	at java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2047)
+	at java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:823)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:326)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:533)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:438)
+	at java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:632)
+	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:470)
+	at org.eclipse.cdt.dsf.gdb.service.GDBBackend$MonitorInterruptJob.run(GDBBackend.java:904)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-14 01:07:38.937
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=37775 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-14 01:07:38.937
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=37775 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 01:07:39.193
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:07:39.193
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:07:39.194
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:07:39.194
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-14 01:08:03.469
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=37782 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-14 01:08:03.469
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=37782 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 01:08:03.727
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:08:03.727
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:08:03.728
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:08:03.728
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY com.crt.log 1 0 2016-06-14 01:08:23.309
+!MESSAGE Drivers loaded in 767 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2016-06-14 01:08:24.975
+!MESSAGE Error in final launch sequence
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=37788 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.concurrent.Query.get(Query.java:111)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:235)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-14 01:08:24.975
+!MESSAGE Failed to execute MI command:
+-target-select extended-remote | crt_emu_cm_redlink -msg-port=37788 -g -mi -2 -pLPC824 -vendor=NXP -vc -reset= -ProbeHandle=1 -CoreIndex=0 -flash-driver=LPC800_32.cfx
+Error message from debugger back end:
+Remote communication error.  Target disconnected.: No error.
+!STACK 0
+java.lang.Exception: Remote communication error.  Target disconnected.: No error.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 01:08:25.236
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:08:25.236
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:08:25.236
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:08:25.236
+!MESSAGE 31: No connection to emulator device
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-14 01:12:52.342
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.etmetb.redlink.RedlinkClient$3@135c982): Status ERROR: com.crt.etmetb code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.crt.etmetb 4 0 2016-06-14 01:12:52.342
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:141)
+	at com.crt.etmetb.redlink.RedlinkClient$2.run(RedlinkClient.java:122)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 01:12:53.610
+!MESSAGE 15: Target error from Read Memory: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:12:53.610
+!MESSAGE 15: Target error from Read Memory: Ee(FF). Redlink interface error 255.
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-14 01:17:58.178
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-14 01:17:58.178
+!MESSAGE 16: Target error from status-poll: Ee(FF). Redlink interface error 255.

@@ -426,6 +426,7 @@ status_t HIGHLEVELDRIVERS_Run0()
 		status = GAS_MQ2_Run0(&GasMq2_M2);
 	}
 
+
 	return status;
 }
 
@@ -452,8 +453,6 @@ void HIGHLEVELRIVERS_DHT22_Pin_Handler()
 void HIGHLEVELRIVERS_PIR_Pin_Handler()
 {
 	PIR_HCSR501_RisingEdgeRoutine(&PirHcsr501_M1);
-
-	HUMIDITY_DHT22_FallingEdgeRoutine(&HumidityDht22_U5);
 }
 
 

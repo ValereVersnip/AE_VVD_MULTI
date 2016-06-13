@@ -216,10 +216,10 @@ status_t humidity_dht22_statemachine(humidity_dht22_t *p_dht22)
 			}
 			if(status == status_ok)
 			{
-				/* set the data pin as input */
-				status = GPIO_Set_PinDir(p_dht22->gpioport, p_dht22->gpiopin, input);
 				/* enable the pininterrupt routine */
 				status = GPIO_PinInterrupt_Enable(p_dht22->gpiopin, true);
+				/* set the data pin as input */
+				status = GPIO_Set_PinDir(p_dht22->gpioport, p_dht22->gpiopin, input);
 			}
 		}
 		break;
@@ -257,7 +257,7 @@ status_t humidity_dht22_statemachine(humidity_dht22_t *p_dht22)
 
 	/* PROCESS DATA STATE */
 	case humidity_dht22_state_processdata:
-		status = humidity_dht22_processdata(p_dht22); 	/* always get new wait timestamp */
+		status = humidity_dht22_processdata(p_dht22); 	/* process the data */
 		p_dht22->running = false;						/* always reset running flag */
 		p_dht22->state = humidity_dht22_state_idle;		/* next state always idle */
 		SYSTICK_GetTicks(&p_dht22->waitstamp);
@@ -272,10 +272,10 @@ status_t humidity_dht22_statemachine(humidity_dht22_t *p_dht22)
 	/* if status is not ok, reset everything, and go to idle */
 	if(status != status_ok)
 	{
-		status = humidity_dht22_processdata(p_dht22); 	/* always get new wait timestamp */
+		SYSTICK_GetTicks(&p_dht22->waitstamp);	     	/* always get new wait timestamp */
 		p_dht22->running = false;						/* always reset running flag */
 		p_dht22->state = humidity_dht22_state_idle;		/* next state always idle */
-		p_dht22->ready = false;		/* ready only set, if crc is correct */
+		p_dht22->ready = false;							/* ready only set, if crc is correct */
 		p_dht22->start = false;
 		memset(p_dht22->samplebuffer, 0, sizeof(p_dht22->samplebuffer));
 		p_dht22->crc 			= 0;

@@ -535,4 +535,30 @@ status_t USART_SendBlocking(usart_name_t usart, uint8_t* p_sendData, uint8_t len
 }
 
 
+/**
+ * Enable or disable all rx interrupts.
+ * @param enable true: enable, false disable
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t USART_EnableInterrupt(bool enable)
+{
+	status_t stat = status_ok;
+	uint8_t i;
+
+	for(i = 0; i < usart_size; i++)
+	{
+		LPC_USART_T* p_usartbase = usart_getbase((usart_name_t)i);
+		if(enable)
+		{
+			Chip_UART_IntEnable(p_usartbase, UART_INTEN_RXRDY);
+		}
+		else
+		{
+			Chip_UART_IntDisable(p_usartbase, UART_INTEN_RXRDY);
+		}
+	}
+	return stat;
+}
+
+
 /* End of file usart.c */

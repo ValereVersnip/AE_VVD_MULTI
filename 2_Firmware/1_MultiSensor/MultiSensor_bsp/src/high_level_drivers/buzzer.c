@@ -190,13 +190,35 @@ status_t BUZZER_Start(buzzer_t *p_buzzerDevice, bool start)
  */
 status_t BUZZER_Buzz(buzzer_t *p_buzzerDevice, uint32_t time)
 {
-	status_t status = status_ok;
-	if(status == status_ok)
+	status_t stat = status_ok;
+	if(stat == status_ok)
 	{
 		p_buzzerDevice->pulsewidth = time;
 		p_buzzerDevice->buzzpending = true;
 	}
-	return status;
+	return stat;
+}
+
+
+/**
+ * Check if the buzzer is performing a timed buzzer.
+ *
+ * @param p_buzzerDevice buzzer device
+ * @param p_buzzing true: timed buzz going on, false: no timed buzz going on
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t BUZZER_GetTimedBuzz(buzzer_t *p_buzzerDevice, bool *p_buzzing)
+{
+	status_t stat = status_ok;
+	if(p_buzzerDevice->buzzerstate == buzzer_state_buzz)
+	{
+		*p_buzzing = true;
+	}
+	else
+	{
+		*p_buzzing = false;
+	}
+	return stat;
 }
 
 
