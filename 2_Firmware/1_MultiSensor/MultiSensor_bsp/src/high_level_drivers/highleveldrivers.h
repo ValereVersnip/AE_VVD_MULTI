@@ -55,6 +55,7 @@
 #include "rgbled.h"
 #include "temp_ds18b20.h"
 #include "color.h"
+#include "onewire.h"
 
 
 /*
@@ -95,6 +96,12 @@ extern microphone_t Microphone_M6;			/**< Microphone M6 */
 
 /* gas mq2 device */
 extern gas_mq2_t GasMq2_M2;					/**< Gas mq2 sensor M2 */
+
+/* onewire device */
+extern onewire_t OneWire;					/**< Onewire device */
+
+/* temp ds18b20 device */
+extern temp_ds18b20_t Tempds18b20_U4;			/**< Temperature DS18B20 sensor U4 */
 
 /*
  * ***********************************************************************************************************************************************

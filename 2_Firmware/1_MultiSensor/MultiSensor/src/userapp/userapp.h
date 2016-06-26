@@ -43,6 +43,7 @@
  */
 #include "userfunctions/modbusslave.h"
 
+
 /*
  * ***********************************************************************************************************************************************
  * Defines
@@ -63,6 +64,9 @@
 
 /* DHT22 HUMIDTIY */
 #define USERAPP_HUMIDITY_POLLRATE				2500						/**< Pollrate for the dht22 humidity sensor (should be at least 2000!) (in ms) */
+#define USERAPP_HUMIDITY_CONSECUTIVE_ERRTH		5							/**< if we get this many consecutive faulty readings from the humidity sensor, we will consider this to be a hardware problem
+ 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 (one of two faulty readings is possible though...) */
+
 
 /*
  * ***********************************************************************************************************************************************
@@ -76,15 +80,15 @@
  */
 typedef enum
 {
-	order_humidity = 0,														/**< update humidity */
+	order_humidity,														/**< update humidity */
 	order_temperature,														/**< update temperature */
 	order_pressure,                                                         /**< update pressure */
 	order_pir,                                                              /**< update motion (pir) */
-	order_rgbled,                                                           /**< update rgbled */
-	order_buzzer,                                                           /**< update buzzer */
 	order_luminosity,                                                       /**< update luminosity */
 	order_gas,                                                              /**< update gas */
 	order_sound,                                                            /**< update sound */
+	order_rgbled,                                                           /**< update rgbled */
+	order_buzzer,                                                           /**< update buzzer */
 
 	order_done,																/**< done */
 

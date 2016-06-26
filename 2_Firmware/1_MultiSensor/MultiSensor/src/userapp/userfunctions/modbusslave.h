@@ -55,6 +55,42 @@
 #define MODBUSSLAVE_USART_USED						usart_0				/**< the usart, this MODBUS uses */
 
 
+/* modbus_reg_version bitmasks */
+
+/* modbus_reg_status bitmasks */
+#define MODBUSSLAVE_STATUS_BIT_ERR					(1 << 0)			/**< Global ERROR bit */
+#define MODBUSSLAVE_STATUS_BIT_HUM_ERR				(1 << 1)			/**< Humidity ERROR bit */
+#define MODBUSSLAVE_STATUS_BIT_PIR_ERR				(1 << 2)			/**< PIR ERROR bit */
+#define MODBUSSLAVE_STATUS_BIT_PRESS_ERR			(1 << 3)			/**< PRESSURE ERROR bit */
+#define MODBUSSLAVE_STATUS_BIT_LUM_ERR				(1 << 4)			/**< LUMINOSITY ERROR bit */
+#define MODBUSSLAVE_STATUS_BIT_GAS_ERR				(1 << 5)			/**< GAS ERROR bit */
+#define MODBUSSLAVE_STATUS_BIT_SOUND_ERR			(1 << 6)			/**< SOUND ERROR bit */
+//#define MODBUSSLAVE_STATUS_BIT_OK					(1 << 7)			/**< Global OK bit */
+//#define MODBUSSLAVE_STATUS_BIT_OK					(1 << 8)			/**< Global OK bit */
+//#define MODBUSSLAVE_STATUS_BIT_OK					(1 << 9)			/**< Global OK bit */
+
+
+/* modbus_reg_rgbled_red_green bitmasks */
+#define MODBUSSLAVE_RGBLED_RED_GREEN_BIT_RED		(0xFF << 8)			/**< RED mask */
+#define MODBUSSLAVE_RGBLED_RED_GREEN_BIT_GREEN		(0xFF << 0)			/**< GREEN mask */
+
+/* modbus_reg_rgbled_blue_dim bitmasks */
+#define MODBUSSLAVE_RGBLED_BLUE_DIM_BIT_BLUE		(0xFF << 8)			/**< BLUE mask */
+#define MODBUSSLAVE_RGBLED_BLUE_DIM_BIT_DIM			(0xFF << 0)			/**< DIM mask */
+
+/* modbus_reg_rgbled_control bitmasks */
+#define MODBUSSLAVE_RGBLED_CONTROL_BIT_BLON			(0x1F << 11)		/**< Blink Ontime mask */
+#define MODBUSSLAVE_RGBLED_CONTROL_BIT_BLOFF		(0x1F << 6)			/**< Blink Offtime mask */
+#define MODBUSSLAVE_RGBLED_CONTROL_BIT_GLINT		(0x0F << 2)			/**< GlowInterval mask */
+#define MODBUSSLAVE_RGBLED_CONTROL_BIT_MODE			(0x03 << 0)			/**< Ledout mode mask */
+
+/* modbus_reg_gas_treshold bitmasks */
+#define MODBUSSLAVE_GAS_TRESHOLD_BIT_ALARM			(0x01 << 15)		/**< Alarm mask */
+#define MODBUSSLAVE_GAS_TRESHOLD_BIT_TRESHOLD		(0xFFF << 0)		/**< treshold mask */
+
+/* modbus_reg_gas_mv bitmasks */
+#define MODBUSSLAVE_GAS_MV_BIT_GAS					(0xFFF << 0)		/**< Gas value mask */
+
 /*
  * ***********************************************************************************************************************************************
  * Typedefs and enumerations
@@ -72,18 +108,18 @@ typedef enum
 	modbus_reg_status,							/**<  */
 	modbus_reg_rgbled_red_green,
 	modbus_reg_rgbled_blue_dim,
-	modbus_reg_rgbled_blon_bloff_glint_mode,
+	modbus_reg_rgbled_control,
 	modbus_reg_buzzer_control,
 	modbus_reg_pir_detectcount,
 	modbus_reg_pir_detecttime,
-	modbus_reg_humidity_humidity,
-	modbus_reg_humidity_temperature,
-	modbus_reg_pressure_pressure_kpa,
-	modbus_reg_pressure_pressure_pa,
-	modbus_reg_pressure_temperature,
+	modbus_reg_humidity,
+	modbus_reg_humidity_temp,
+	modbus_reg_pressure_kpa,
+	modbus_reg_pressure_pa,
+	modbus_reg_pressure_temp,
 	modbus_reg_luminosity_lux,
-	modbus_reg_x_4,
-	modbus_reg_y_4,
+	modbus_reg_gas_treshold,
+	modbus_reg_gas_mv,
 	modbus_reg_z_4,
 	modbus_reg_x_5,
 	modbus_reg_y_5,
@@ -206,6 +242,50 @@ modbusslave_regarray_t *MODBUSSLAVE_GetRegisterArray(modbusslave_t *p_modbusslav
  * @return true: just responded, false: not just responded
  */
 bool MODBUSSLAVE_GetSetJustResponded(modbusslave_t *p_modbusslave);
+
+
+/**
+ * Set the bits specified in mask, in the specified register.
+ *
+ * @param p_modbusslave modbusslave device
+ * @param reg register
+ * @param mask mask
+ */
+void MODBUSSLAVE_DiscreteSet(modbusslave_t *p_modbusslave, uint8_t reg, uint16_t mask);
+
+
+/**
+ * Clear the bits specified in mask, in the specified register.
+ *
+ * @param p_modbusslave modbusslave device
+ * @param reg register
+ * @param mask mask
+ */
+void MODBUSSLAVE_DiscreteClear(modbusslave_t *p_modbusslave, uint8_t reg, uint16_t mask);
+
+
+/**
+ * Write a field in the modbus register.
+ *
+ * @note this function will check if the value will fit in the amount of mask spaces, and if there even is a mask.
+ * @param p_modbusslave modbusslave device
+ * @param reg register
+ * @param fieldmask fielsmask (EG: 0x0F70)
+ * @param fieldvalue value (eg: 15);
+ * @return true: if succeeded, false: if somehting is wrong
+ */
+bool MODBUSSLAVE_WriteField(modbusslave_t *p_modbusslave, uint8_t reg, uint16_t fieldmask, uint16_t fieldvalue);
+
+
+/**
+ * Read a field in the modbus register.
+ *
+ * @param p_modbusslave modbusslave device
+ * @param reg register
+ * @param fieldmask fieldmask (eg: 0x0F70)
+ * @return the field value (if no valid mask --> 0)
+ */
+uint16_t MODBUSSLAVE_ReadField(modbusslave_t *p_modbusslave, uint8_t reg, uint16_t fieldmask);
 
 
 #endif

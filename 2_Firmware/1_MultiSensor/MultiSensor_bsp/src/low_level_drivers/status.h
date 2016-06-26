@@ -147,6 +147,16 @@ typedef enum
 	microphone_bufferoverflow,					/**< one of the buffers has overflowed, this should never happen! */
 	microphone_pop,								/**< there was a pop error */
 
+	/* onewire related codes */
+	onewire_presence,							/**< no presence detection after reset pulse */
+
+	/* temp_ds18b20 related codes */
+	temp_ds18b20_romcrc,						/**< bad rom crc check */
+	temp_ds18b20_ramcrc,						/**< bad ram crc check */
+	temp_ds18b20_running,						/**< we try to start a new conversion, but another is already running */
+	temp_ds18b20_timeout,						/**< the conversion has timed out */
+	temp_ds18b20_state,							/**< unknown state */
+	temp_ds18b20_notready,						/**< no conversion result is ready */
 
 }status_t;
 /*

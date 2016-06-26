@@ -151,13 +151,30 @@
 
 
 /*
- * Microphone TODO: finetune ALARM parameter!
+ * Gas MQ2 TODO: finetune ALARM parameter!
  * ***********************************************************
  */
 #define HIGHLEVELCONFIG_GASMQ2_M2_ID						0				                    /**< Id for this device */
 #define HIGHLEVELCONFIG_GASMQ2_M2_ADC						&Adc			                    /**< adc device */
 #define HIGHLEVELCONFIG_GASMQ2_M2_ADCCHANNEL				0				                    /**< adc channel */
 #define HIGHLEVELCONFIG_GASMQ2_M2_ALARMTERSHOLD				1000				                /**<  treshold for alarm counter */
+
+
+/*
+ * ONEWIRE startup values
+ * ***********************************************************
+ */
+#define HIGHLEVELDRIVERSCONFIG_ONEWIRE_ID					0									/**< id */
+#define HIGHLEVELDRIVERSCONFIG_ONEWIRE_LPCGPIO				LPC_GPIO_PORT						/**< pointer to LPC gpio struct */
+#define HIGHLEVELDRIVERSCONFIG_ONEWIRE_GPIOPORT				0									/**< gpioport for data line */
+#define HIGHLEVELDRIVERSCONFIG_ONEWIRE_GPIOPIN				4									/**< gpiopin for data line */
+
+/*
+ * TEMP DS18B20 startup values
+ * ***********************************************************
+ */
+#define HIGHLEVELDRIVERSCONFIG_TEMP_DS18B20_U4_ID			0									/**< id */
+#define HIGHLEVELDRIVERSCONFIG_TEMP_DS18B20_U4_ONEWIRE		&OneWire							/**< pointer to onewire device */
 
 
 /*

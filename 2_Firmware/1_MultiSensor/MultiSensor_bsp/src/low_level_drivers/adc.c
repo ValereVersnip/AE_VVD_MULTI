@@ -345,6 +345,7 @@ status_t ADC_Init(adc_t *p_adc, adc_config_t *p_config)
 	/* Setup for maximum ADC clock rate using sycnchronous clocking */
 	Chip_ADC_SetClockRate(LPC_ADC, ADC_MAX_SAMPLE_RATE);
 
+
 	/* create channel mask */
 	channelmask = 0;
 	for(i = 0; i < ADC_CHANNELAMOUNT; i++)
@@ -417,6 +418,11 @@ status_t ADC_Run0(adc_t *p_adc)
 
 				/* get overrun */
 				p_adc->overrun[i] = (rawsample & ADC_DR_OVERRUN) ? "true" : "false";
+
+//				if(p_adc->overrun[i])
+//				{
+//					while(1);
+//				}
 
 				/* push data to ringbuffer */
 				data =  ADC_DR_RESULT(rawsample);

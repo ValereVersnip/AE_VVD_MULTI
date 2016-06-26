@@ -528,4 +528,131 @@ bool MODBUSSLAVE_GetSetJustResponded(modbusslave_t *p_modbusslave)
 }
 
 
+/**
+ * Set the bits specified in mask, in the specified register.
+ *
+ * @param p_modbusslave modbusslave device
+ * @param reg register
+ * @param mask mask
+ */
+void MODBUSSLAVE_DiscreteSet(modbusslave_t *p_modbusslave, uint8_t reg, uint16_t mask)
+{
+	uint16_t readvalue;
+	readvalue = MODBUSSLAVE_GetRegister(p_modbusslave, reg);
+	MODBUSSLAVE_SetRegister(p_modbusslave, reg, readvalue | mask);
+}
+
+
+/**
+ * Clear the bits specified in mask, in the specified register.
+ *
+ * @param p_modbusslave modbusslave device
+ * @param reg register
+ * @param mask mask
+ */
+void MODBUSSLAVE_DiscreteClear(modbusslave_t *p_modbusslave, uint8_t reg, uint16_t mask)
+{
+	uint16_t readvalue;
+	readvalue = MODBUSSLAVE_GetRegister(p_modbusslave, reg);
+	MODBUSSLAVE_SetRegister(p_modbusslave, reg, readvalue & ~mask);
+}
+
+
+/**
+ * Write a field in the modbus register.
+ *
+ * @note this function will check if the value will fit in the amount of mask spaces, and if there even is a mask.
+ * @param p_modbusslave modbusslave device
+ * @param reg register
+ * @param fieldmask fielsmask (EG: 0x0F70)
+ * @param fieldvalue value (eg: 15);
+ * @return true: if succeeded, false: if somehting is wrong
+ */
+bool MODBUSSLAVE_WriteField(modbusslave_t *p_modbusslave, uint8_t reg, uint16_t fieldmask, uint16_t fieldvalue)
+{
+	uint8_t i,j;
+	bool check = false;
+	uint16_t tempmask;
+	uint16_t readvalue;
+
+	/* first find where the LSB of the fieldmask is */
+	for(i = 0; i < 16;i++)
+	{
+		if((fieldmask >> i) & 0x0001)
+		{
+			break;
+		}
+	}
+
+	/* then find how wide the fieldmask is */
+	tempmask = (fieldmask >> i);
+	for(j = 0; j < 16;j++)
+	{
+		if(!((tempmask >> j) & 0x0001))
+		{
+			break;
+		}
+	}
+
+	/* i = lsb of fieldmask, j = width of fieldmask*/
+
+	if(i < 16)
+	{
+		/* clear (wrong) upperbits of tempmask */
+		uint8_t k;
+		tempmask = 0;
+		for(k = 0; k < j; k++)
+		{
+			tempmask = (tempmask << k) | 0x0001;
+		}
+
+		/* if we found a fieldmask, check if the value will fit */
+		if(fieldvalue <= tempmask)
+		{
+			/* set check to true */
+			check = true;
+			/* and fill in the fieldvalue */
+			readvalue = MODBUSSLAVE_GetRegister(p_modbusslave, reg);
+			readvalue &= ~fieldmask;
+			readvalue |= (fieldvalue << i);
+			MODBUSSLAVE_SetRegister(p_modbusslave, reg, readvalue);
+		}
+	}
+	return check;
+}
+
+
+
+/**
+ * Read a field in the modbus register.
+ *
+ * @param p_modbusslave modbusslave device
+ * @param reg register
+ * @param fieldmask fieldmask (eg: 0x0F70)
+ * @return the field value (if no valid mask --> 0)
+ */
+uint16_t MODBUSSLAVE_ReadField(modbusslave_t *p_modbusslave, uint8_t reg, uint16_t fieldmask)
+{
+	uint8_t i;
+	uint16_t fieldvalue = 0;
+
+	/* first find where the LSB of the fieldmask is */
+	for(i = 0; i < 16;i++)
+	{
+		if(fieldmask & 0x0001)
+		{
+			break;
+		}
+	}
+
+	if(i < 16)
+	{
+		fieldvalue = MODBUSSLAVE_GetRegister(p_modbusslave, reg);
+		fieldvalue = (fieldvalue & fieldmask) >> i;
+	}
+	return fieldvalue;
+}
+
+
+
 /* End of file modbusslave.c */

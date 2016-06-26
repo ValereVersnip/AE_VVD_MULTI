@@ -53,8 +53,13 @@
 #define HUMIDITY_DHT22_TIME_STARTPULSE				2				/**< the startpulse width (in ms) */
 #define HUMIDITY_DHT22_WAIT_TIME					2500			/**< wait time between two conversions (in ms) */
 #define HUMIDITY_DHT22_TIME_OUT						10				/**< timeout after conversion is started (in ms) */
-#define HUMIDITY_DHT22_BITPERIOD_TH					17				/**< The threshold for determining 1 or 0 by bit period (in multiples of 10us) */
 
+/* apparently the treshold depends, if we have debug or release (optimezed code) */
+#ifdef DEBUG
+#define HUMIDITY_DHT22_BITPERIOD_TH					15				/**< The threshold for determining 1 or 0 by bit period (in multiples of 10us) */
+#else
+#define HUMIDITY_DHT22_BITPERIOD_TH					17				/**< The threshold for determining 1 or 0 by bit period (in multiples of 10us) */
+#endif
 
 
 

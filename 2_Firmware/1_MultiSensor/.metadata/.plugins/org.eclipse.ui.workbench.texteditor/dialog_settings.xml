@@ -2,21 +2,24 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="timestamp" key="selection"/>
+		<item value="ONEWIRE_readbit" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="onewire_readbit"/>
+			<item value="onewire_writebit"/>
+			<item value="modbus_reg_rgbled_blon_bloff_glint_mode"/>
 			<item value="timestamp"/>
 			<item value="buzzer_ok"/>
 			<item value="tsl2561_read8"/>
 			<item value="bmp280_compensate_temperature_int32"/>
 			<item value="BOARDCONFIG"/>
-			<item value="bmp280_get_standby_durn"/>
-			<item value="BMP280_INIT_VALUE"/>
 		</list>
 		<list key="replacehistory">
+			<item value="ONEWIRE_readbit"/>
+			<item value="ONEWIRE_writebit"/>
 			<item value="status_ok"/>
 			<item value="LOWLEVELDRIVERSCONFIG"/>
 		</list>

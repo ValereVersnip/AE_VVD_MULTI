@@ -84,6 +84,13 @@ microphone_t Microphone_M6;				/**< Microphone M6 */
 /* gas mq2 device */
 gas_mq2_t GasMq2_M2;					/**< Gas mq2 sensor M2 */
 
+/* onewire device */
+onewire_t OneWire;						/**< Onewire device */
+
+/* temp ds18b20 device */
+temp_ds18b20_t Tempds18b20_U4;			/**< Temperature DS18B20 sensor U4 */
+
+
 /*
  * ***********************************************************************************************************************************************
  * Private Function Prototypes
@@ -312,6 +319,46 @@ static status_t initialize_gas_mq2()
 }
 
 
+/**
+ * Initialize the onewire device.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_onewire()
+{
+	status_t status = status_ok;
+	onewire_config_t config;
+
+	config.id			= HIGHLEVELDRIVERSCONFIG_ONEWIRE_ID;
+	config.p_lpc_gpio	= HIGHLEVELDRIVERSCONFIG_ONEWIRE_LPCGPIO;
+	config.gpioport		= HIGHLEVELDRIVERSCONFIG_ONEWIRE_GPIOPORT;
+	config.gpiopin		= HIGHLEVELDRIVERSCONFIG_ONEWIRE_GPIOPIN;
+
+	status = ONEWIRE_Init(&OneWire, &config);
+
+	return status;
+}
+
+
+/**
+ * Initialize the temp_ds18b20 device.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+static status_t initialize_temp_ds18b20()
+{
+	status_t status = status_ok;
+	temp_ds18b20_config_t config;
+
+	config.id			= HIGHLEVELDRIVERSCONFIG_TEMP_DS18B20_U4_ID;
+	config.p_onewire	= HIGHLEVELDRIVERSCONFIG_TEMP_DS18B20_U4_ONEWIRE;
+
+	status = TEMP_DS18B20_Init(&Tempds18b20_U4, &config);
+
+	return status;
+}
+
+
 /*
  * ***********************************************************************************************************************************************
  * Public Functions
@@ -381,6 +428,18 @@ status_t HIGHLEVELDRIVERS_Init()
 		status = initialize_gas_mq2();
 	}
 
+	/* Initialize onewire */
+	if(status == status_ok)
+	{
+		status = initialize_onewire();
+	}
+
+	/* Initialize temp ds18b20 */
+	if(status == status_ok)
+	{
+		status = initialize_temp_ds18b20();
+	}
+
 
 	return status;
 }
@@ -424,6 +483,12 @@ status_t HIGHLEVELDRIVERS_Run0()
 	if(status == status_ok)
 	{
 		status = GAS_MQ2_Run0(&GasMq2_M2);
+	}
+
+	/* Temp ds18b20 Run0 */
+	if(status == status_ok)
+	{
+		status = TEMP_DS18B20_Run0(&Tempds18b20_U4);
 	}
 
 

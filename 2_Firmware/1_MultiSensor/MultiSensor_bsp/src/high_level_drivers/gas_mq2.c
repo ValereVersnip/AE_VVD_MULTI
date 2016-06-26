@@ -150,4 +150,19 @@ status_t GAS_MQ2_GetResult(gas_mq2_t *p_gas, uint16_t *p_latestresult, uint16_t 
 }
 
 
+/**
+ * Set alarm treshold value.
+ * @param p_gas gas_mq2 device
+ * @param treshold alarmtreshold
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t GAS_MQ2_SetTreshold(gas_mq2_t *p_gas, uint16_t treshold)
+{
+	status_t status = status_ok;
+	p_gas->alarmtreshold = treshold;
+	return status;
+
+}
+
+
 /* End of file gas_mq2.c */

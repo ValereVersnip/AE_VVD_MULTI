@@ -132,4 +132,18 @@ status_t SYSTICK_GetTicks(uint32_t *p_ticks)
 }
 
 
+/**
+ * Increment the Ticks.
+ *
+ * This can be usefull, if we have to suspend all interrupts for a while.
+ * @param ticks amount of ticks to increment Ticks with
+ * @return status_ok
+ */
+status_t SYSTICK_IncTicks(uint32_t ticks)
+{
+	Ticks += ticks;
+	return status_ok;
+}
+
+
 /* End of file systick.c */

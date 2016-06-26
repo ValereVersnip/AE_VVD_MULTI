@@ -173,6 +173,7 @@ extern void LOWLEVELDRIVERSCONFIG_MRT_3_INTR_FUNCTION(void);
 													{ .port = 0, .pin = 17, 	.dir = input, 		.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 0, 		.dir = outputlow,	.irq = none, 		.irqchannel = 0},\
 													{ .port = 0, .pin = 27, 	.dir = outputlow,	.irq = none, 		.irqchannel = 0},\
+													{ .port = 0, .pin = 12, 	.dir = outputlow,	.irq = none, 		.irqchannel = 0},\
 													}												/**< startup direction for gpio pins, and value if output */
 
 

@@ -72,8 +72,6 @@
 
 
 
-
-
 int main(void) {
 
 	status_t stat;
@@ -91,12 +89,22 @@ int main(void) {
 		}
 	}
 
-	/* delay for all modules to be powered */
-	SYSTICK_DelayMs(500);
 
 	/* initialization of highlevel drivers */
 	stat = HIGHLEVELDRIVERS_Init();
 	USERAPP_HandleStatus(stat);
+
+
+
+	TEMP_DS18B20_Start(&Tempds18b20_U4);
+	while(1)
+	{
+		stat = TEMP_DS18B20_Run0(&Tempds18b20_U4);
+	}
+
+
+
+
 
 	/* initialize the user application */
 	USERAPP_Init();

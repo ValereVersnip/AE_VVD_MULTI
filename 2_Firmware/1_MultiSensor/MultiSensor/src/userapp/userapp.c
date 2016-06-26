@@ -68,6 +68,10 @@ uint16_t Rgbled_blon_bloff_glint_mode_old;				/**< old value of this register */
 uint16_t Buzzer_control_old;							/**< old value of this register */
 
 bool Humidity_Running;									/**< current state for humitity measurement */
+uint8_t HumidityErrorCount;								/**< error count for Humidity sensor */
+
+uint16_t GasAlarmCount;									/**< to keep track of how many samples were above the treshold. */
+
 
 /*
  * ***********************************************************************************************************************************************
@@ -171,7 +175,7 @@ static void userapp_rgbled()
 	/* get the current modbus values */
 	rgbled_red_green 					= MODBUSSLAVE_GetRegister(&Modbus, modbus_reg_rgbled_red_green);
 	rgbled_blue_dim 					= MODBUSSLAVE_GetRegister(&Modbus, modbus_reg_rgbled_blue_dim);
-	rgbled_blon_bloff_glint_mode 		= MODBUSSLAVE_GetRegister(&Modbus, modbus_reg_rgbled_blon_bloff_glint_mode);
+	rgbled_blon_bloff_glint_mode 		= MODBUSSLAVE_GetRegister(&Modbus, modbus_reg_rgbled_control);
 
 	/* then only update the rgb stuff, if something changed */
 	if(rgbled_red_green != Rgbled_red_green_old || rgbled_blue_dim != Rgbled_blue_dim_old || rgbled_blon_bloff_glint_mode != Rgbled_blon_bloff_glint_mode_old)
@@ -188,6 +192,14 @@ static void userapp_rgbled()
 		blinkon			= (uint32_t)(((rgbled_blon_bloff_glint_mode & 0xF800) >> 11)*100);
 		blinkoff		= (uint32_t)(((rgbled_blon_bloff_glint_mode & 0x07C0) >> 6)*100);
 		ledout			= (rgbled_ledout_t)(rgbled_blon_bloff_glint_mode & 0x0003);
+
+		/* extra check for dimming, it can be maximum 100! */
+		if(dimming > 100)
+		{
+			dimming = 100;
+			/* and immediately change in modbusreg */
+			MODBUSSLAVE_WriteField(&Modbus, modbus_reg_rgbled_blue_dim, MODBUSSLAVE_RGBLED_BLUE_DIM_BIT_DIM, dimming);
+		}
 
 		/* and then set according */
 		switch(ledout)
@@ -223,7 +235,7 @@ static void userapp_pir()
 	uint16_t detecttime;
 
 	/* get the results from the pir */
-	stat = PIR_HCSR501_GetResults(&PirHcsr501_M1, &detectcount, &detecttime);
+	stat = PIR_HCSR501_GetResults(&PirHcsr501_M1, &detectcount, &detecttime); /* Always ok */
 	USERAPP_HandleStatus(stat);
 
 	/* and store them in the modbus registermap */
@@ -272,10 +284,13 @@ static bool userapp_humidity()
 		{
 			stat = HUMIDITY_DHT22_GetResults(&HumidityDht22_U5, &humidity, &temperature);
 			USERAPP_HandleStatus(stat);
-			MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_humidity_humidity, humidity);
-			MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_humidity_temperature, (uint16_t)temperature);
+			MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_humidity, humidity);
+			MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_humidity_temp, (uint16_t)temperature);
 			done = true;
 			Humidity_Running = false;
+			/* reset the error count, as we want to know consecutive errors, and also reset the error bit in the status register */
+			HumidityErrorCount = 0;
+			MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_HUM_ERR);
 		}
 	}
 	return done;
@@ -295,16 +310,20 @@ static void userapp_pressure()
 	if(stat == status_ok)
 	{
 		/* if the returned status is ok, fill in the values in the modbus registermap */
-		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_pressure_kpa, (uint16_t)(pressure / 1000));	/* divid by 1000 to get KPA */
-		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_pressure_pa, (uint16_t)(pressure % 1000));		/* modulo by 1000 to get PA */
-		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_temperature, (uint16_t)temperature);
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_kpa, (uint16_t)(pressure / 1000));	/* divid by 1000 to get KPA */
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_pa, (uint16_t)(pressure % 1000));		/* modulo by 1000 to get PA */
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_temp, (uint16_t)temperature);
+		/* and clear error bit in status register */
+		MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_PRESS_ERR);
 	}
 	else
 	{
 		/* if not ok, fill in 0xFFFF, this indicates an error */
-		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_pressure_kpa, 0xFFFF);
-		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_pressure_pa, 0xFFFF);
-		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_temperature, 0xFFFF);
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_kpa, 0xFFFF);
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_pa, 0xFFFF);
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pressure_temp, 0xFFFF);
+		/* and set error bit in status register */
+		MODBUSSLAVE_DiscreteSet(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_PRESS_ERR);
 	}
 }
 
@@ -329,9 +348,34 @@ static bool userapp_temperature()
  */
 static void userapp_gas()
 {
-	status_t stat = status_ok;
+	uint16_t treshold;
+	uint16_t count;
+	uint16_t value;
 
-	/* todo */
+	/* set the latest treshold value */
+	treshold = MODBUSSLAVE_ReadField(&Modbus, modbus_reg_gas_treshold, MODBUSSLAVE_GAS_TRESHOLD_BIT_TRESHOLD);
+	GAS_MQ2_SetTreshold(&GasMq2_M2, treshold); /* always OK */
+
+	/* get the latest alarmcount, and latest gas value (in mV) */
+	GAS_MQ2_GetResult(&GasMq2_M2, &value, &count);
+
+	/* store the latest value in modbus reg */
+	MODBUSSLAVE_WriteField(&Modbus, modbus_reg_gas_mv, MODBUSSLAVE_GAS_MV_BIT_GAS, value);
+
+	/* if we got more samples over treshold as previous time, OR the current value is also above the treshold, set the alarm bit, otherwise reset it */
+	if(count > GasAlarmCount || value > treshold)
+	{
+		/* first update count */
+		GasAlarmCount = count;
+		/* and set the alarmbit */
+		MODBUSSLAVE_DiscreteSet(&Modbus, modbus_reg_gas_treshold, MODBUSSLAVE_GAS_TRESHOLD_BIT_ALARM);
+	}
+	else
+	{
+		/* clear the alarmbit */
+		MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_gas_treshold, MODBUSSLAVE_GAS_TRESHOLD_BIT_ALARM);
+	}
+
 
 }
 
@@ -361,12 +405,15 @@ static void userapp_luminosity()
 	{
 		/* if the returned status is ok, fill in the values in the modbus registermap */
 		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_luminosity_lux, (uint16_t)(lux));
-
+		/* and clear error bit in status register */
+		MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_LUM_ERR);
 	}
 	else
 	{
 		/* if not ok, fill in 0xFFFF, this indicates an error */
 		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_luminosity_lux, 0xFFFF);
+		/* and set error bit in status register */
+		MODBUSSLAVE_DiscreteSet(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_LUM_ERR);
 	}
 }
 
@@ -431,6 +478,22 @@ static void userapp_updatemeasurements()
 }
 
 
+void userapp_checkglobalerror()
+{
+	uint16_t readvalue;
+	/* if one of the bits (except bit 0) of the status register is set, there is an error */
+	readvalue = MODBUSSLAVE_GetRegister(&Modbus, modbus_reg_status);
+	if(readvalue & 0xFE)
+	{
+		MODBUSSLAVE_DiscreteSet(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_ERR);
+	}
+	else
+	{
+		MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_ERR);
+	}
+}
+
+
 /*
  * ***********************************************************************************************************************************************
  * Public Functions
@@ -449,6 +512,10 @@ void USERAPP_Init()
 
 	/* Humidity not running */
 	Humidity_Running = false;
+	HumidityErrorCount = 0;
+
+	/* no alarms found for gas */
+	GasAlarmCount = 0;
 
 	/* initialize the modbus */
 	initialize_modbus();
@@ -491,7 +558,8 @@ void USERAPP_Run0()
 	/* run function for updating measurements */
 	userapp_updatemeasurements();
 
-
+	/* check the global error bit */
+	userapp_checkglobalerror();
 
 }
 
@@ -508,15 +576,30 @@ void USERAPP_Run0()
  */
 void USERAPP_HandleStatus(status_t stat)
 {
-	/* first make exceptions. */
 
-//	/* if we get bad crc for dht22, this is because we are receiving uart requests, at the same time as readout. No ready flag will be */
-//	if(stat = humidity_dht22_crc)
-//	{
-//
-//	}
+	/* first make exceptions, for time driven measurement bad statusses (these will be returned in higherlevel run function). */
+	/**************************************************************************************************************************/
+
+	/* if we get bad crc for dht22, this is because we are receiving uart requests, at the same time as readout. No ready flag will be */
+	if(stat == humidity_dht22_crc)
+	{
+		/* anyway increment the order, so we go to the next measurement */
+		Order++;
+		/* also set running as false */
+		Humidity_Running = false;
+		/* then increment the HumidityErrorCount */
+		HumidityErrorCount++;
+		/* if we get to many consecutive errors, raise error flag in status register*/
+		if(HumidityErrorCount > USERAPP_HUMIDITY_CONSECUTIVE_ERRTH)
+		{
+			MODBUSSLAVE_DiscreteSet(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_HUM_ERR);
+		}
+		/* overwrite stat to status_ok */
+		stat = status_ok;
+	}
 
 
+	/* for debugging, really trap here, TODO: comment this for release */
 	if(stat != status_ok)
 	{
 		while(1)
