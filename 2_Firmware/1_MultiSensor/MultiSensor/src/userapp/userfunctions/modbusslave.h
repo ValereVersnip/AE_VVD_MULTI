@@ -65,9 +65,8 @@
 #define MODBUSSLAVE_STATUS_BIT_LUM_ERR				(1 << 4)			/**< LUMINOSITY ERROR bit */
 #define MODBUSSLAVE_STATUS_BIT_GAS_ERR				(1 << 5)			/**< GAS ERROR bit */
 #define MODBUSSLAVE_STATUS_BIT_SOUND_ERR			(1 << 6)			/**< SOUND ERROR bit */
-//#define MODBUSSLAVE_STATUS_BIT_OK					(1 << 7)			/**< Global OK bit */
-//#define MODBUSSLAVE_STATUS_BIT_OK					(1 << 8)			/**< Global OK bit */
-//#define MODBUSSLAVE_STATUS_BIT_OK					(1 << 9)			/**< Global OK bit */
+#define MODBUSSLAVE_STATUS_BIT_TEMP_ERR				(1 << 7)			/**< TEMPERATURE ERROR bit */
+
 
 
 /* modbus_reg_rgbled_red_green bitmasks */
@@ -120,8 +119,8 @@ typedef enum
 	modbus_reg_luminosity_lux,
 	modbus_reg_gas_treshold,
 	modbus_reg_gas_mv,
-	modbus_reg_z_4,
-	modbus_reg_x_5,
+	modbus_reg_temp_frac,
+	modbus_reg_temp_int,
 	modbus_reg_y_5,
 	modbus_reg_z_5,
 	modbus_reg_x_6,

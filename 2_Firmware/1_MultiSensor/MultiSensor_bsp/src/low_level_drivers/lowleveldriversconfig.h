@@ -98,7 +98,7 @@ extern void LOWLEVELDRIVERSCONFIG_MRT_0_INTR_FUNCTION(void);
  */
 #define LOWLEVELDRIVERSCONFIG_MRT_1_ENABLE					true							/**< this timer is enabled */
 #define LOWLEVELDRIVERSCONFIG_MRT_1_ENABLEINTERRUPT			true							/**< interrupts enabled for this timer */
-#define LOWLEVELDRIVERSCONFIG_MRT_1_INTERRUPTFREQ			10000							/**< 10000 --> 100MS (freqsetting in mHz!)*/
+#define LOWLEVELDRIVERSCONFIG_MRT_1_INTERRUPTFREQ			100000							/**< 10000 --> 100MS (freqsetting in mHz!)*/
 #define LOWLEVELDRIVERSCONFIG_MRT_1_INTR_FUNCTION			LOWLEVELDRIVERS_MRT1_HANDLER	/**< Define if higherlevel interrupt handler should be specified */
 
 /* do not modify under this line */

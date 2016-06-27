@@ -51,7 +51,7 @@
 
 #ifdef DEBUG
 #define ONEWIRE_TIMING_TICK				657					/**< The real delay 1 tick in the inline delay function provides (in ns) */
-#elif
+#else
 #define ONEWIRE_TIMING_TICK				216					/**< The real delay 1 tick in the inline delay function provides (in ns) */
 #endif
 

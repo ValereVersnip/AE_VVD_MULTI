@@ -59,7 +59,7 @@
 modbusslave_t Modbus;									/**< Modbus slave device */
 
 /* sensor measurement order */
-userapp_order_t Order;									/**< order for measurement updates */
+volatile userapp_order_t Order;							/**< order for measurement updates */
 
 /* userapp members */
 uint16_t Rgbled_red_green_old;							/**< old value of this register */
@@ -67,8 +67,9 @@ uint16_t Rgbled_blue_dim_old;							/**< old value of this register */
 uint16_t Rgbled_blon_bloff_glint_mode_old;				/**< old value of this register */
 uint16_t Buzzer_control_old;							/**< old value of this register */
 
-bool Humidity_Running;									/**< current state for humitity measurement */
 uint8_t HumidityErrorCount;								/**< error count for Humidity sensor */
+
+uint8_t TemperatureErrorCount;							/**< error count for Temperature sensor */
 
 uint16_t GasAlarmCount;									/**< to keep track of how many samples were above the treshold. */
 
@@ -259,40 +260,37 @@ static bool userapp_humidity()
 	uint16_t humidity;
 	int16_t temperature;
 	bool done = false;
+	bool running;
 
+	/* get the running flag */
+	HUMIDITY_DHT22_GetRunning(&HumidityDht22_U5, &running);
+	/* also get the ready flag */
+	HUMIDITY_DHT22_GetReady(&HumidityDht22_U5, &ready);		/* always ok */
+
+
+	/* if we are not running, check if we are ready, if ready, get result, and set done to true */
+	if(ready)
+	{
+		stat = HUMIDITY_DHT22_GetResults(&HumidityDht22_U5, &humidity, &temperature);
+		USERAPP_HandleStatus(stat);
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_humidity, humidity);
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_humidity_temp, (uint16_t)temperature);
+		done = true;
+		/* reset the error count, as we want to know consecutive errors, and also reset the error bit in the status register */
+		HumidityErrorCount = 0;
+		MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_HUM_ERR);
+	}
 	/* if we are not running, try to start a new conversion */
-	if(!Humidity_Running)
+	else if(!running)
 	{
 		stat = HUMIDITY_DHT22_Start(&HumidityDht22_U5);
-		/* if we could start a new conversion (needed time between polls has been passed) */
-		if(stat == status_ok)
+		/* if we could not start a new conversion (needed time between polls has not been passed) */
+		if(stat != status_ok)
 		{
-			Humidity_Running = true;
-		}
-		else
-		{
-			done = true;		/* done for now */
-		}
-	}
-	/* if we are running, now check if we are ready, if ready, get result, and set done to true */
-	else
-	{
-		/* check if new results are ready */
-		HUMIDITY_DHT22_GetReady(&HumidityDht22_U5, &ready);		/* always ok */
-		/* if new results are ready, get them, and put them in the modbusreg */
-		if(ready)
-		{
-			stat = HUMIDITY_DHT22_GetResults(&HumidityDht22_U5, &humidity, &temperature);
-			USERAPP_HandleStatus(stat);
-			MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_humidity, humidity);
-			MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_humidity_temp, (uint16_t)temperature);
 			done = true;
-			Humidity_Running = false;
-			/* reset the error count, as we want to know consecutive errors, and also reset the error bit in the status register */
-			HumidityErrorCount = 0;
-			MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_HUM_ERR);
 		}
 	}
+
 	return done;
 }
 
@@ -336,10 +334,44 @@ static void userapp_pressure()
 static bool userapp_temperature()
 {
 	status_t stat = status_ok;
+	bool ready;
+	bool running;
+	int16_t temperature_int;
+	uint16_t temperature_frac;
 	bool done = false;
 
+	/* get the running flag */
+	TEMP_DS18B20_GetRunningFlag(&Tempds18b20_U4, &running);
+	/* get the ready flag */
+	TEMP_DS18B20_GetReadyFlag(&Tempds18b20_U4, &ready);		/* always ok */
 
-	return true; /* fixme: change */
+
+	/* if new results are ready, get them, and put them in the modbusreg */
+	if(ready)
+	{
+		stat = TEMP_DS18B20_GetResult(&Tempds18b20_U4, &temperature_int, &temperature_frac);
+		USERAPP_HandleStatus(stat);
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_temp_int, (uint16_t)temperature_int);
+		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_temp_frac, temperature_frac);
+		done = true;
+		/* reset the error count, as we want to know consecutive errors, and also reset the error bit in the status register */
+		TemperatureErrorCount = 0;
+		MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_TEMP_ERR);
+	}
+	/* if we are not running, try to start a new conversion */
+	else if(!running)
+	{
+		stat = TEMP_DS18B20_Start(&Tempds18b20_U4);
+	}
+
+	/* otherwise, trigger the temp ds18b20 state machine that it is ok to readout starting from now */
+	else
+	{
+		stat = TEMP_DS18B20_OkToReadOut(&Tempds18b20_U4);	/* always ok */
+	}
+
+	//return done;
+	return true;
 }
 
 
@@ -511,7 +543,6 @@ void USERAPP_Init()
 	Order = 0;
 
 	/* Humidity not running */
-	Humidity_Running = false;
 	HumidityErrorCount = 0;
 
 	/* no alarms found for gas */
@@ -580,19 +611,34 @@ void USERAPP_HandleStatus(status_t stat)
 	/* first make exceptions, for time driven measurement bad statusses (these will be returned in higherlevel run function). */
 	/**************************************************************************************************************************/
 
-	/* if we get bad crc for dht22, this is because we are receiving uart requests, at the same time as readout. No ready flag will be */
+	/* if we get bad crc for dht22, this is because we are receiving uart requests, at the same time as readout. No ready flag will be set */
 	if(stat == humidity_dht22_crc)
 	{
 		/* anyway increment the order, so we go to the next measurement */
 		Order++;
-		/* also set running as false */
-		Humidity_Running = false;
 		/* then increment the HumidityErrorCount */
 		HumidityErrorCount++;
 		/* if we get to many consecutive errors, raise error flag in status register*/
 		if(HumidityErrorCount > USERAPP_HUMIDITY_CONSECUTIVE_ERRTH)
 		{
 			MODBUSSLAVE_DiscreteSet(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_HUM_ERR);
+		}
+		/* overwrite stat to status_ok */
+		stat = status_ok;
+	}
+
+
+	/* if we get bad crc for temp ds18b20 ram or rom, this is because we are receiving uart requests, at the same time as readout. No ready flag will be set */
+	if(stat == temp_ds18b20_ramcrc || stat == temp_ds18b20_romcrc)
+	{
+		/* anyway increment the order, so we go to the next measurement */
+		Order++;
+		/* then increment the HumidityErrorCount */
+		TemperatureErrorCount++;
+		/* if we get to many consecutive errors, raise error flag in status register*/
+		if(TemperatureErrorCount > USERAPP_TEMPERATURE_CONSECUTIVE_ERRTH)
+		{
+			MODBUSSLAVE_DiscreteSet(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_TEMP_ERR);
 		}
 		/* overwrite stat to status_ok */
 		stat = status_ok;

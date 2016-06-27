@@ -96,14 +96,6 @@ int main(void) {
 
 
 
-	TEMP_DS18B20_Start(&Tempds18b20_U4);
-	while(1)
-	{
-		stat = TEMP_DS18B20_Run0(&Tempds18b20_U4);
-	}
-
-
-
 
 
 	/* initialize the user application */

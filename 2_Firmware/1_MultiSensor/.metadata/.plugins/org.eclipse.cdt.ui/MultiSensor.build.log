@@ -1,6 +1,6 @@
-00:24:48 **** Incremental Build of configuration Debug for project MultiSensor ****
+00:00:48 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
 make: Nothing to be done for `all'.
 
-00:24:48 Build Finished (took 80ms)
+00:00:48 Build Finished (took 77ms)
 

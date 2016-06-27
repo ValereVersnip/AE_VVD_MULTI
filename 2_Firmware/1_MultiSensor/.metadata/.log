@@ -5224,3 +5224,139 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.eclipse.cdt.core 1 0 2016-06-26 21:30:15.850
 !MESSAGE Indexed 'MultiSensor_bsp' (24 sources, 93 headers) in 0,733 sec: 4.714 declarations; 12.482 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+!SESSION 2016-06-27 20:58:54.433 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2016-06-27 20:59:04.955
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2016-06-27 20:59:04.963
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 21:03:56.956
+!MESSAGE Indexed 'MultiSensor' (7 sources, 70 headers) in 0,427 sec: 3.756 declarations; 4.941 references; 6 unresolved inclusions; 13 syntax errors; 1.275 unresolved names (13%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 21:04:01.120
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 43 headers) in 0,308 sec: 3.310 declarations; 5.793 references; 4 unresolved inclusions; 10 syntax errors; 1.230 unresolved names (12%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 21:04:05.546
+!MESSAGE Indexed 'MultiSensor_bsp' (24 sources, 70 headers) in 0,391 sec: 4.316 declarations; 9.987 references; 6 unresolved inclusions; 11 syntax errors; 1.524 unresolved names (9,6%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2016-06-27 21:05:08.353
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2016-06-27 21:05:08.354
+!MESSAGE G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+!STACK 0
+java.io.FileNotFoundException: G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor\Debug\MultiSensor.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:109)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:97)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.crt.log 1 0 2016-06-27 21:05:19.403
+!MESSAGE Drivers loaded in 883 milliseconds
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-27 21:09:13.087
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIMemory$4@83c80a): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-data-evaluate-expression &(rawtemp)
+Error message from debugger back end:
+Address requested for identifier "rawtemp" which is in register $r3 java.lang.Exception: Address requested for identifier "rawtemp" which is in register $r3' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2016-06-27 21:09:13.087
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(rawtemp)
+Error message from debugger back end:
+Address requested for identifier "rawtemp" which is in register $r3
+!STACK 0
+java.lang.Exception: Address requested for identifier "rawtemp" which is in register $r3
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:927)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:756)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 21:10:07.314
+!MESSAGE Indexed 'MultiSensor' (7 sources, 78 headers) in 0,471 sec: 3.996 declarations; 6.357 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 21:10:10.741
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 66 headers) in 0,555 sec: 3.768 declarations; 8.234 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 21:10:14.569
+!MESSAGE Indexed 'MultiSensor_bsp' (24 sources, 93 headers) in 0,554 sec: 4.780 declarations; 12.774 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2016-06-27 21:10:30.613
+!MESSAGE Request for monitor: 'RequestMonitor (com.crt.etmetb.redlink.RedlinkClient$3@3e28e1): Status ERROR: com.crt.etmetb code=0 Problem obtaining SWO buffer content. java.net.SocketException: Connection reset by peer: socket write error' resulted in an error.
+!SUBENTRY 1 com.crt.etmetb 4 0 2016-06-27 21:10:30.613
+!MESSAGE Problem obtaining SWO buffer content.
+!STACK 0
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:141)
+	at com.crt.etmetb.redlink.RedlinkClient$2.run(RedlinkClient.java:122)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY com.crt.dsfdebug 4 0 2016-06-27 21:10:30.851
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-27 21:10:30.851
+!MESSAGE 02: Failed on connect
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-27 21:10:30.851
+!MESSAGE Could not connect to core.
+!SUBENTRY 1 com.crt.dsfdebug 4 0 2016-06-27 21:10:30.851
+!MESSAGE Emu(0): Connected&Reset. Was: NotConnected. DpID: 0BC11477. CpuID: 00000000. Info: <None>
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 22:12:58.154
+!MESSAGE Indexed 'MultiSensor_bsp' (24 sources, 93 headers) in 0,825 sec: 4.795 declarations; 12.802 references; 0 unresolved inclusions; 0 syntax errors; 1 unresolved names (0,0057%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 22:22:54.159
+!MESSAGE Indexed 'MultiSensor_bsp' (24 sources, 93 headers) in 0,666 sec: 4.795 declarations; 12.803 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 22:22:59.213
+!MESSAGE Indexed 'MultiSensor' (7 sources, 78 headers) in 0,345 sec: 4.009 declarations; 6.422 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-06-27 22:23:03.051
+!MESSAGE Indexed 'lpc_chip_82x' (28 sources, 66 headers) in 0,442 sec: 3.768 declarations; 8.234 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.debugcommon 2 0 2016-06-27 22:40:20.524
+!MESSAGE All SWD targets are currently connected to other debug sessions.
+
+
+Press 'Cancel' to terminate this launch.
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-27 22:40:23.335
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.
+
+!ENTRY com.crt.debugcommon 2 0 2016-06-27 22:40:29.841
+!MESSAGE All SWD targets are currently connected to other debug sessions.
+
+
+Press 'Cancel' to terminate this launch.
+
+!ENTRY com.crt.dsfdebug 2 0 2016-06-27 22:40:33.943
+!MESSAGE Termi&nate/Disconnect All is not enabled.
+
+To terminate debug sessions, first select a debug session in the Debug View and then select Terminate again.

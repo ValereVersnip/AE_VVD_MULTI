@@ -438,4 +438,19 @@ status_t HUMIDITY_DHT22_GetReady(humidity_dht22_t *p_dht22, bool *p_ready)
 	return status;
 }
 
+
+/**
+ * Get the running flag.
+ * @param p_dht22 dht22 device
+ * @param p_running pointer to running
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t HUMIDITY_DHT22_GetRunning(humidity_dht22_t *p_dht22, bool *p_running)
+{
+	status_t status = status_ok;
+	*p_running = p_dht22->running;
+	return status;
+}
+
+
 /* End of file humidity_dht22.c */

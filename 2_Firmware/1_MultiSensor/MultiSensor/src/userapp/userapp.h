@@ -67,6 +67,9 @@
 #define USERAPP_HUMIDITY_CONSECUTIVE_ERRTH		5							/**< if we get this many consecutive faulty readings from the humidity sensor, we will consider this to be a hardware problem
  	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 (one of two faulty readings is possible though...) */
 
+#define USERAPP_TEMPERATURE_CONSECUTIVE_ERRTH		5						/**< if we get this many consecutive faulty readings from the temperature sensor, we will consider this to be a hardware problem
+ 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 (one of two faulty readings is possible though...) */
+
 
 /*
  * ***********************************************************************************************************************************************

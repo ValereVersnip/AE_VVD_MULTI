@@ -145,8 +145,6 @@ static status_t temp_ds18b20_statemachine(temp_ds18b20_t *p_temp)
 	uint32_t currenttime;
 	static uint8_t i;
 	uint8_t crc;
-	int16_t temp_frac;
-	int16_t temp_dec;
 	int16_t rawtemp;
 
 
@@ -198,20 +196,25 @@ static status_t temp_ds18b20_statemachine(temp_ds18b20_t *p_temp)
 
 		/* wait for the conversion to finish */
 		case temp_ds18b20_state_waitforconversion:
-			/* read 1 bit, once we read a '1', we know the conversion is finished */
-			status = ONEWIRE_readbit(p_temp->p_onewire, &bit);	/* always ok */
-			if(bit)
+			/* wait for TEMP_DS18B20_CONVERSION time */
+			/* get current time */
+			SYSTICK_GetTicks(&currenttime);
+			if(currenttime - p_temp->timestamp > TEMP_DS18B20_CONVERSION)
 			{
-				/* if conversion is ready, go to the second send reset state */
-				p_temp->state = temp_ds18b20_state_sendreset2;
+				/* if conversion is ready, go to the wait for ok to readout state */
+				p_temp->state = temp_ds18b20_state_waitforoktoreadout;
 			}
-			else	/* check for time out */
+			break;
+
+		/* wait for OK to readout */
+		case temp_ds18b20_state_waitforoktoreadout:
+			/* if a higherlevel routine triggers ok to readout the scratchpad */
+			if(p_temp->oktoreadout)
 			{
-				SYSTICK_GetTicks(&currenttime);
-				if(currenttime - p_temp->timestamp > TEMP_DS18B20_TIMEOUT)
-				{
-					status = temp_ds18b20_timeout;
-				}
+				/* immediately reset the ok to readout flag */
+				p_temp->oktoreadout = false;
+				/* and go to the sendreset2 state, to start reading out the scratchpad */
+				p_temp->state = temp_ds18b20_state_sendreset2;
 			}
 			break;
 
@@ -278,9 +281,8 @@ static status_t temp_ds18b20_statemachine(temp_ds18b20_t *p_temp)
 		/* store the result */
 		case temp_ds18b20_state_store:
 			/* reset frac and dec parts */
-			temp_frac = 0;
-			temp_dec = 0;
-			p_temp->temperature = 0;
+			p_temp->temperature_int = 0;
+			p_temp->temperature_frac = 0;
 			/* get raw temp */
 			rawtemp = 0;
 			rawtemp |= p_temp->data[1];
@@ -291,18 +293,14 @@ static status_t temp_ds18b20_statemachine(temp_ds18b20_t *p_temp)
 			if(rawtemp & 0x8000)	/* if the MSB of the MSBYTE is 1, then the result is negative */
 			{
 				rawtemp = ~rawtemp + 1;
-				temp_dec = ((rawtemp >> 4) & 0x7F);
-				temp_frac = ((rawtemp & 0x000F) * 625);
-
-				p_temp->temperature = (int32_t)(0xFFFFFFFF & ~(((10000 * temp_dec) + temp_frac) - 1));
+				p_temp->temperature_int = ~(((rawtemp >> 4) & 0x7F) - 1);
+				p_temp->temperature_frac = ((rawtemp & 0x000F) * 625);
 			}
 			/* if the result is positive */
 			else
 			{
-				temp_dec = ((rawtemp >> 4) & 0x7F);
-				temp_frac = ((rawtemp & 0x000F) * 625);
-
-				p_temp->temperature = (int32_t)((10000 * temp_dec) + temp_frac);
+				p_temp->temperature_int = ((rawtemp >> 4) & 0x7F);
+				p_temp->temperature_frac = ((rawtemp & 0x000F) * 625);
 			}
 			/* set the done flag, reset the running and start flag */
 			p_temp->start = false;
@@ -326,8 +324,12 @@ static status_t temp_ds18b20_statemachine(temp_ds18b20_t *p_temp)
 		p_temp->ready = false;
 		p_temp->state = temp_ds18b20_state_idle;
 		/* and fill in 0xFFFF in temp register */
-		p_temp->temperature = 0xFFFF;
+		p_temp->temperature_int = 0xFFFF;
+		p_temp->temperature_frac = 0xFFFF;
 	}
+
+	/* ALWAYS CLEAR THE OK TO READOUT BIT, if we were not ready this time, too bad, wait for the next explicit oktoreadout */
+	p_temp->oktoreadout = false;
 
 	return status;
 }
@@ -355,8 +357,10 @@ status_t TEMP_DS18B20_Init(temp_ds18b20_t *p_temp, temp_ds18b20_config_t *p_conf
 	p_temp->id 			= p_config->id;
 	p_temp->p_onewire	= p_config->p_onewire;
 
-	p_temp->temperature = 0;
+	p_temp->temperature_int = 0;
+	p_temp->temperature_frac = 0;
 	p_temp->state = temp_ds18b20_state_idle;
+	p_temp->oktoreadout = false;
 
 
 	/* get the serialnumber over onewire, and store in struct */
@@ -446,10 +450,11 @@ status_t TEMP_DS18B20_Start(temp_ds18b20_t *p_temp)
  *
  * @note this function will immediately reset the ready flag
  * @param p_temp temp_ds18b20 device
- * @param p_temperature pointer to result (can be NULL if not needed)
+ * @param p_temperature_int pointer to integer result (can be NULL if not needed)
+ * @param p_temperature_frac pointer to fractional result (can be NULL if not needed)
  * @return	status_ok if succeeded (otherwise check status.h for details).
  */
-status_t TEMP_DS18B20_GetResult(temp_ds18b20_t *p_temp, int32_t *p_temperature)
+status_t TEMP_DS18B20_GetResult(temp_ds18b20_t *p_temp, int16_t *p_temperature_int, uint16_t *p_temperature_fraq)
 {
 	status_t status = status_ok;
 
@@ -459,7 +464,8 @@ status_t TEMP_DS18B20_GetResult(temp_ds18b20_t *p_temp, int32_t *p_temperature)
 		/* immediately reset the ready flag */
 		p_temp->ready = false;
 		/* and store in pointer if needed */
-		UTILITIES_StoreInPointer(p_temperature, p_temp->temperature);
+		UTILITIES_StoreInPointer(p_temperature_int, p_temp->temperature_int);
+		UTILITIES_StoreInPointer(p_temperature_fraq, p_temp->temperature_frac);
 	}
 	/* not ready */
 	else
@@ -485,6 +491,49 @@ status_t TEMP_DS18B20_Run0(temp_ds18b20_t *p_temp)
 
 	return status;
 
+}
+
+
+/**
+ * Get the ready flag.
+ *
+ * @param p_temp temp ds18b20 device
+ * @param p_ready pointer to result
+ * @return status_ok
+ */
+status_t TEMP_DS18B20_GetReadyFlag(temp_ds18b20_t *p_temp, bool *p_ready)
+{
+	status_t status = status_ok;
+	*p_ready = p_temp->ready;
+	return status;
+}
+
+
+/**
+ * Get the running flag.
+ *
+ * @param p_temp temp ds18b20 device
+ * @param p_running pointer to result
+ * @return status_ok
+ */
+status_t TEMP_DS18B20_GetRunningFlag(temp_ds18b20_t *p_temp, bool *p_running)
+{
+	status_t status = status_ok;
+	*p_running = p_temp->running;
+	return status;
+}
+
+
+/**
+ * Signal the statemachine, that it is OK to start reading the scratchpad, so we can control when to do this in time.
+ * @param p_temp temp ds18b20 device
+ * @return status_ok
+ */
+status_t TEMP_DS18B20_OkToReadOut(temp_ds18b20_t *p_temp)
+{
+	status_t status = status_ok;
+	p_temp->oktoreadout = true;
+	return status;
 }
 
 /* End of file temp_ds18b20.c */

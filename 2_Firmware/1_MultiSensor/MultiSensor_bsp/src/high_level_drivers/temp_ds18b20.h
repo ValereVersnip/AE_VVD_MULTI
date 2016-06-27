@@ -60,7 +60,7 @@
 #define TEMP_DS18B20_CONVERT_T				0x44						/**< CONVERT T COMMAND CODE */
 #define TEMP_DS18B20_READ_SCRATCHPAD		0xBE						/**< READ SCRATCHPAD COMMAND CODE */
 
-#define TEMP_DS18B20_TIMEOUT				800							/**< timeouttime for conversion (in ms) */
+#define TEMP_DS18B20_CONVERSION				800							/**< Maximum delay time for conversion (in ms) */
 
 /*
  * ***********************************************************************************************************************************************
@@ -78,6 +78,7 @@ typedef enum
 	temp_ds18b20_state_sendskiprom,							/**< send the skip rom command */
 	temp_ds18b20_state_sendconvert,							/**< send the convert t command */
 	temp_ds18b20_state_waitforconversion,					/**< wait for the conversion to finish */
+	temp_ds18b20_state_waitforoktoreadout,					/**< higherlevel routine should give an explicit OK to read out, this way we can control when the reading out takes place in time */
 	temp_ds18b20_state_sendreset2,							/**< send the second reset command */
 	temp_ds18b20_state_sendskiprom2,						/**< send second skip rom command */
 	temp_ds18b20_state_sendreadscratchpad,					/**< send the read scratchpad command */
@@ -105,12 +106,14 @@ typedef struct temp_ds18b20_t
 	uint8_t id;												/**< id */
 	onewire_t *p_onewire;									/**< pointer to onewire device */
 	uint64_t serialnumber;									/**< unique 48-bit serial number (MSB not used)*/
-	int32_t temperature;									/**< 12bit temperature  */
+	int16_t temperature_int;								/**< integer part of temperature  */
+	uint16_t temperature_frac;								/**< fractional part of temperature (4DIGITS AFTER COMMA) */
 	uint8_t data[TEMP_DS18B20_MAXIMUMDATABYTES];			/**< dataarray for buffering incoming data */
 	temp_ds18b20_state_t state;								/**< state for conversion statemachine */
 	bool start;												/**< true: start a conversion, false: don't start conversion */
 	bool running;											/**< true: conversion is running, false: conversion is not running */
 	bool ready;												/**< true: conversion is finished */
+	bool oktoreadout;										/**< true: when the physical device has data ready, we can move on to reading out the scratchpad (in the statemachine) */
 	uint32_t timestamp;										/**< timestamp for timeout check */
 }temp_ds18b20_t;
 
@@ -152,10 +155,11 @@ status_t TEMP_DS18B20_Start(temp_ds18b20_t *p_temp);
  *
  * @note this function will immediately reset the ready flag
  * @param p_temp temp_ds18b20 device
- * @param p_temperature pointer to result (can be NULL if not needed)
+ * @param p_temperature_int pointer to integer result (can be NULL if not needed)
+ * @param p_temperature_frac pointer to fractional result (can be NULL if not needed)
  * @return	status_ok if succeeded (otherwise check status.h for details).
  */
-status_t TEMP_DS18B20_GetResult(temp_ds18b20_t *p_temp, int32_t *p_temperature);
+status_t TEMP_DS18B20_GetResult(temp_ds18b20_t *p_temp, int16_t *p_temperature_int, uint16_t *p_temperature_fraq);
 
 
 /**
@@ -166,6 +170,34 @@ status_t TEMP_DS18B20_GetResult(temp_ds18b20_t *p_temp, int32_t *p_temperature);
  * @return	status_ok if succeeded (otherwise check status.h for details).
  */
 status_t TEMP_DS18B20_Run0(temp_ds18b20_t *p_temp);
+
+
+/**
+ * Get the ready flag.
+ *
+ * @param p_temp temp ds18b20 device
+ * @param p_ready pointer to result
+ * @return status_ok
+ */
+status_t TEMP_DS18B20_GetReadyFlag(temp_ds18b20_t *p_temp, bool *p_ready);
+
+
+/**
+ * Get the running flag.
+ *
+ * @param p_temp temp ds18b20 device
+ * @param p_running pointer to result
+ * @return status_ok
+ */
+status_t TEMP_DS18B20_GetRunningFlag(temp_ds18b20_t *p_temp, bool *p_running);
+
+
+/**
+ * Signal the statemachine, that it is OK to start reading the scratchpad, so we can control when to do this in time.
+ * @param p_temp temp ds18b20 device
+ * @return status_ok
+ */
+status_t TEMP_DS18B20_OkToReadOut(temp_ds18b20_t *p_temp);
 
 
 #endif
