@@ -81,9 +81,9 @@
 status_t microphone_incpointer(microphone_t *p_microphone, uint16_t **p_p_pointer, uint8_t incamount)
 {
 	status_t status = status_ok;
-	uint8_t space;
+	uint32_t space;
 	/* check if we have to wrap around or not */
-	space = &p_microphone->samplebuffer[MICROPHONE_SAMPLEBUFFER_SIZE] - *p_p_pointer;
+	space = (uint32_t)(&p_microphone->samplebuffer[MICROPHONE_SAMPLEBUFFER_SIZE-1] - *p_p_pointer);
 
 	/* if there is enough space left, increment the pointer with incamount */
 	if(space >= incamount)
@@ -93,7 +93,7 @@ status_t microphone_incpointer(microphone_t *p_microphone, uint16_t **p_p_pointe
 	/* else we have to wrap around and then some */
 	else
 	{
-		*p_p_pointer = &p_microphone->samplebuffer[0] + (incamount - space);
+		*p_p_pointer = (uint16_t*)(&p_microphone->samplebuffer[0] + (incamount - space - 1));
 	}
 	return status;
 }
@@ -141,90 +141,6 @@ status_t microphone_tresholdcheck(microphone_t *p_microphone)
 }
 
 
-/**
- * Clapdetection algorithm.
- *
- * Check in a 5 sample window for one of these profiles:
- * L X H X L
- * X L H X L
- * X L H L X
- * L X H L X
- *
- * If one of these profiles is detected, we detect 1 clap.
- * subsequent claps need to be detected within the maximum time specified, otherwise ind. claps will be ignored again.
- * @param p_microphone microphone device.
- * @return	status_ok if succeeded (otherwise check status.h for details).
- */
-status_t microphone_clapcheck(microphone_t *p_microphone)
-{
-	status_t status = status_ok;
-	uint8_t i;
-	uint16_t *p_temppointer;
-	uint16_t clapbuffer[5];
-
-	/* check if we have more than 5 samples for clap checking */
-	while(p_microphone->clap_overrun >= 5)
-	{
-		/* set temppointer to the first sample */
-		p_temppointer = p_microphone->p_read_clap;
-		/* get samples in clapbuffer */
-		for(i = 0; i < 5; i++)
-		{
-			clapbuffer[i] = *p_temppointer;
-			microphone_incpointer(p_microphone, &p_temppointer,1);
-		}
-		/* check the clapbuffer for a clap */
-		if
-		(
-			(
-			( clapbuffer[2] > clapbuffer[0] && clapbuffer[2] - clapbuffer[0] > p_microphone->claptresh) ||
-			( clapbuffer[2] > clapbuffer[1] && clapbuffer[2] - clapbuffer[1] > p_microphone->claptresh)
-			)
-			&&
-			(
-			( clapbuffer[2] > clapbuffer[4] && clapbuffer[2] - clapbuffer[4] > p_microphone->claptresh) ||
-			( clapbuffer[2] > clapbuffer[3] && clapbuffer[2] - clapbuffer[3] > p_microphone->claptresh)
-			)
-		)
-		{
-			/* if we detect a clap, increment the clappers */
-			p_microphone->clappers++;
-			/* then immediately skip 5 samples */
-			microphone_incpointer(p_microphone, &p_microphone->p_read_clap, 1);
-			/* don't forget to decrement the clap overrun counter */
-			p_microphone->clap_overrun -= 1;
-			/* load the claptimeout counter */
-			p_microphone->claptimeout = p_microphone->maxtimebetweenclaps/p_microphone->adcperiod;
-
-			/* check if we have reached the needed clapamount for detection */
-			if(p_microphone->clappers >= p_microphone->clapamount)
-			{
-				p_microphone->clapdetectioncount++;
-				p_microphone->clappers = 0;
-			}
-		}
-		/* if no clap is detected */
-		else
-		{
-			/* check if we are not timed out */
-			if(p_microphone->claptimeout)
-			{
-				/* decrement the claptimeout */
-				p_microphone->claptimeout--;
-				/* if the claptimeout reaches zero again, reset the clappers */
-				if(p_microphone->claptimeout == 0)
-				{
-					p_microphone->clappers = 0;
-				}
-			}
-			/* increment the clapsample pointer by 1 */
-			microphone_incpointer(p_microphone, &p_microphone->p_read_clap, 1);
-			/* don't forget to decrement the clap overrun counter */
-			p_microphone->clap_overrun--;
-		}
-	}
-	return status;
-}
 
 
 /*
@@ -250,21 +166,14 @@ status_t MICROPHONE_Init(microphone_t *p_microphone, microphone_config_t *p_conf
 	p_microphone->adcperiod				= p_config->adcperiod;
 	p_microphone->treshold 				= p_config->treshold;
 	p_microphone->tresholdtime 			= p_config->tresholdtime;
-	p_microphone->maxtimebetweenclaps	= p_config->maxtimebetweenclaps;
-	p_microphone->claptresh 			= p_config->claptresh;
-	p_microphone->clapamount 			= p_config->clapamount;
 
 	p_microphone->tresholddetectioncount= 0;
-	p_microphone->clapdetectioncount	= 0;
+
 	memset(p_microphone->samplebuffer,0,MICROPHONE_SAMPLEBUFFER_SIZE);
 	p_microphone->p_write				= p_microphone->samplebuffer;
-	p_microphone->p_read_clap			= p_microphone->samplebuffer;
-	p_microphone->p_read_tresh			= p_microphone->samplebuffer;
 	p_microphone->tresh_overrun			= 0;
-	p_microphone->clap_overrun			= 0;
 	p_microphone->abovetreshcount		= 0;
-	p_microphone->clappers				= 0;
-	p_microphone->claptimeout			= 0;
+	p_microphone->latestresult			= 0;
 
 	return status;
 }
@@ -275,7 +184,7 @@ status_t MICROPHONE_Init(microphone_t *p_microphone, microphone_config_t *p_conf
  * Run0 function for Microphone.
  *
  * This function will gather new adc samples, if available.
- * Depending on how many, the timetreshold and clap detection algorithms will be run.
+ * Depending on how many, the timetreshold algorithms will be run.
  *
  * @note this function should be called periodically by higherlevel routines.
  * @param p_microphone
@@ -287,48 +196,61 @@ status_t MICROPHONE_Run0(microphone_t *p_microphone)
 	uint8_t newsamples;
 	uint8_t i;
 	uint8_t check;
+	uint32_t average;
+	uint16_t new;
+
 	/* first check if there are new samples in the adc ringbuffer */
 	newsamples = RingBuffer_GetCount(p_microphone->p_adc->p_ringbuffer[p_microphone->adcchannel]);
 	/* if there are new samples */
-	if(newsamples) /* if not zero */
+	if(newsamples >= MICROPHONE_AVERAGE_SAMPLES) /* if enough samples are available for averaging */
 	{
-		/* first increment the overrun counters */
-		p_microphone->tresh_overrun += newsamples;
-		p_microphone->clap_overrun += newsamples;
-
-		/* if these counters become bigger than the samplebuffer size, we have an overrun! */
-		if(p_microphone->tresh_overrun > MICROPHONE_SAMPLEBUFFER_SIZE || p_microphone->clap_overrun > MICROPHONE_SAMPLEBUFFER_SIZE)
+		average = 0;
+		for(i=0; i < MICROPHONE_AVERAGE_SAMPLES; i++)
 		{
-			status = microphone_bufferoverflow;
+			/* get new sample */
+			check = RingBuffer_Pop(p_microphone->p_adc->p_ringbuffer[p_microphone->adcchannel], &new);
+			/* check if we indd popped 1 sample, otherwise break and raise error */
+			if(check != 1)
+			{
+				status = microphone_pop;
+				break;
+			}
+			/* and accumulate */
+			average += (uint32_t)new;
 		}
 
 		if(status == status_ok)
 		{
-			/* if ok, move the new samples to the samplebuffer */
-			for(i = 0; i < newsamples; i++)
+			/* and then divide to get the average */
+			average /= MICROPHONE_AVERAGE_SAMPLES;
+
+			/* first increment the overrun counters */
+			p_microphone->tresh_overrun++;
+
+			/* if these counters become bigger than the samplebuffer size, we have an overrun! */
+			if(p_microphone->tresh_overrun > MICROPHONE_SAMPLEBUFFER_SIZE)
 			{
-				check = RingBuffer_Pop(p_microphone->p_adc->p_ringbuffer[p_microphone->adcchannel], p_microphone->p_write);
-				/* check if we indd popped 1 sample, otherwise break and raise error */
-				if(check != 1)
-				{
-					status = microphone_pop;
-					break;
-				}
-				/* increment or wrap around the writepointer */
-				microphone_incpointer(p_microphone, &p_microphone->p_write, 1);
+				status = microphone_bufferoverflow;
 			}
 		}
 
 		if(status == status_ok)
 		{
-			/* if ok, do the treshold check */
-			status = microphone_tresholdcheck(p_microphone);
+			/* write the average sample to the samplebuffer */
+			*p_microphone->p_write = average;
+
+			/* and also, always store in latest average sample sample */
+			p_microphone->latestresult = *p_microphone->p_write;
+
+			/* increment or wrap around the writepointer */
+			microphone_incpointer(p_microphone, &p_microphone->p_write, 1);
 		}
+
 
 		if(status == status_ok)
 		{
-			/* if ok, do the clap check */
-			status = microphone_clapcheck(p_microphone);
+			/* if ok, do the treshold check */
+			status = microphone_tresholdcheck(p_microphone);
 		}
 	}
 	return status;
@@ -340,15 +262,33 @@ status_t MICROPHONE_Run0(microphone_t *p_microphone)
  *
  * @param p_microphone microphone device
  * @param p_tresholddetectioncount pointer to tresholddetection count (can be NULL if not needed)
- * @param p_clapdetectioncount pointer to clapdetection count (can be NULL if not needed)
+ * @param p_latestresult pointer to latest sound value (can be NULL if not needed)
  * @return	status_ok if succeeded (otherwise check status.h for details).
  */
-status_t MICROPHONE_GetResults(microphone_t *p_microphone, uint16_t *p_tresholddetectioncount, uint16_t *p_clapdetectioncount)
+status_t MICROPHONE_GetResults(microphone_t *p_microphone, uint16_t *p_tresholddetectioncount, uint16_t *p_latestresult)
 {
 	status_t status = status_ok;
 	UTILITIES_StoreInPointer(p_tresholddetectioncount, p_microphone->tresholddetectioncount);
-	UTILITIES_StoreInPointer(p_clapdetectioncount, p_microphone->clapdetectioncount);
+	UTILITIES_StoreInPointer(p_latestresult, p_microphone->latestresult);
 	return status;
 }
+
+
+
+/**
+ * Set the microphone treshold value.
+ *
+ * @param p_microphone microphone device
+ * @param treshold treshold
+ * @param tresholdtime tresholdtime
+ * @return status_ok
+ */
+status_t MICROPHONE_SetTreshold(microphone_t *p_microphone, uint16_t treshold, uint16_t tresholdtime)
+{
+	p_microphone->treshold = treshold;
+	p_microphone->tresholdtime = tresholdtime;
+	return status_ok;
+}
+
 
 /* End of file microphone.c */

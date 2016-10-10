@@ -288,9 +288,6 @@ static status_t initialize_microphone()
 	config.adcperiod			= HIGHLEVELCONFIG_MICROPHONE_M6_ADCPERIOD;
 	config.treshold				= HIGHLEVELCONFIG_MICROPHONE_M6_TRESHOLD;
 	config.tresholdtime			= HIGHLEVELCONFIG_MICROPHONE_M6_TRESHOLDTIME;
-	config.maxtimebetweenclaps	= HIGHLEVELCONFIG_MICROPHONE_M6_MAXTIMECLAPS;
-	config.claptresh			= HIGHLEVELCONFIG_MICROPHONE_M6_CLAPTRESH;
-	config.clapamount			= HIGHLEVELCONFIG_MICROPHONE_M6_CLAPAMOUNT;
 
 	status = MICROPHONE_Init(&Microphone_M6, &config);
 
@@ -311,7 +308,7 @@ static status_t initialize_gas_mq2()
 	config.id					= HIGHLEVELCONFIG_GASMQ2_M2_ID;
 	config.p_adc				= HIGHLEVELCONFIG_GASMQ2_M2_ADC;
 	config.adcchannel			= HIGHLEVELCONFIG_GASMQ2_M2_ADCCHANNEL;
-	config.alarmtreshold		= HIGHLEVELCONFIG_GASMQ2_M2_ALARMTERSHOLD;
+	config.alarmtreshold		= HIGHLEVELCONFIG_GASMQ2_M2_ALARMTRESHOLD;
 
 	status = GAS_MQ2_Init(&GasMq2_M2, &config);
 

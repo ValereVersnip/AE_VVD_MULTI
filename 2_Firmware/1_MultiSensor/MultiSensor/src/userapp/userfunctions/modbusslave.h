@@ -90,6 +90,10 @@
 /* modbus_reg_gas_mv bitmasks */
 #define MODBUSSLAVE_GAS_MV_BIT_GAS					(0xFFF << 0)		/**< Gas value mask */
 
+/* modbus_reg_sound_treshold bitmasks */
+#define MODBUSSLAVE_SOUND_TRESHOLD_BIT_ALARM		(0x01 << 15)		/**< Alarm mask */
+#define MODBUSSLAVE_SOUND_TRESHOLD_BIT_TRESHOLD		(0xFFF << 0)		/**< treshold mask */
+
 /*
  * ***********************************************************************************************************************************************
  * Typedefs and enumerations
@@ -121,11 +125,11 @@ typedef enum
 	modbus_reg_gas_mv,
 	modbus_reg_temp_frac,
 	modbus_reg_temp_int,
-	modbus_reg_y_5,
-	modbus_reg_z_5,
-	modbus_reg_x_6,
-	modbus_reg_y_6,
-	modbus_reg_z_6,
+	modbus_reg_sound_treshold,						/**< treshold for sound detection (in mV), and MSB is alarmbit */
+	modbus_reg_sound_tresholdtime,					/**< time for treshold for sound detection (in mV), and MSB is alarmbit */
+	modbus_reg_sound_mv,							/**< latest sound sample in mV */
+	modbus_reg_x,
+	modbus_reg_x_sdf,
 	modbus_reg_x_7,
 	modbus_reg_y_7,
 	modbus_reg_z_7,

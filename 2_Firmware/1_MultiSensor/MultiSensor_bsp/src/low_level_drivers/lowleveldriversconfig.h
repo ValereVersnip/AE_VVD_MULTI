@@ -98,7 +98,7 @@ extern void LOWLEVELDRIVERSCONFIG_MRT_0_INTR_FUNCTION(void);
  */
 #define LOWLEVELDRIVERSCONFIG_MRT_1_ENABLE					true							/**< this timer is enabled */
 #define LOWLEVELDRIVERSCONFIG_MRT_1_ENABLEINTERRUPT			true							/**< interrupts enabled for this timer */
-#define LOWLEVELDRIVERSCONFIG_MRT_1_INTERRUPTFREQ			100000							/**< 10000 --> 100MS (freqsetting in mHz!)*/
+#define LOWLEVELDRIVERSCONFIG_MRT_1_INTERRUPTFREQ			1000000							/**< 1000000 --> 1MS (freqsetting in mHz!)*/
 #define LOWLEVELDRIVERSCONFIG_MRT_1_INTR_FUNCTION			LOWLEVELDRIVERS_MRT1_HANDLER	/**< Define if higherlevel interrupt handler should be specified */
 
 /* do not modify under this line */
@@ -270,8 +270,8 @@ extern void LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_7(void);
  * USART low level startup values
  * ***********************************************************
  */
-#define LOWLEVELDRIVERSCONFIG_USART0_USE															/**< uncomment if usart0 is used */
-//#define LOWLEVELDRIVERSCONFIG_USART1_USE															/**< uncomment if usart1 is used */
+#define LOWLEVELDRIVERSCONFIG_USART0_USE															/**< uncomment if usart0 is used (modbus)*/
+#define LOWLEVELDRIVERSCONFIG_USART1_USE															/**< uncomment if usart1 is used (secondary bootloader)*/
 //#define LOWLEVELDRIVERSCONFIG_USART2_USE															/**< uncomment if usart2 is used */
 
 #ifdef LOWLEVELDRIVERSCONFIG_USART0_USE

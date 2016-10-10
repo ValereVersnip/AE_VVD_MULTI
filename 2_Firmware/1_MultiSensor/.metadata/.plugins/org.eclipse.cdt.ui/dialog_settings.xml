@@ -15,6 +15,7 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="ADC_BUFFERSIZE"/>
 			<item value="Humidity_Running"/>
 			<item value="LOWLEVELDRIVERSCONFIG_MRT_2_ENABLEINTERRUPT"/>
 			<item value="p_adc"/>

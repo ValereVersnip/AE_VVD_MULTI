@@ -71,8 +71,9 @@ uint8_t HumidityErrorCount;								/**< error count for Humidity sensor */
 
 uint8_t TemperatureErrorCount;							/**< error count for Temperature sensor */
 
-uint16_t GasAlarmCount;									/**< to keep track of how many samples were above the treshold. */
+uint16_t GasAlarmCount;									/**< to keep track of how many samples were above the gas treshold. */
 
+uint16_t SoundAlarmCount;								/**< to keep track of how many samples were above the sound treshold. */
 
 /*
  * ***********************************************************************************************************************************************
@@ -338,7 +339,7 @@ static bool userapp_temperature()
 	bool running;
 	int16_t temperature_int;
 	uint16_t temperature_frac;
-	bool done = false;
+
 
 	/* get the running flag */
 	TEMP_DS18B20_GetRunningFlag(&Tempds18b20_U4, &running);
@@ -353,7 +354,6 @@ static bool userapp_temperature()
 		USERAPP_HandleStatus(stat);
 		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_temp_int, (uint16_t)temperature_int);
 		MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_temp_frac, temperature_frac);
-		done = true;
 		/* reset the error count, as we want to know consecutive errors, and also reset the error bit in the status register */
 		TemperatureErrorCount = 0;
 		MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_status, MODBUSSLAVE_STATUS_BIT_TEMP_ERR);
@@ -417,9 +417,40 @@ static void userapp_gas()
  */
 static void userapp_sound()
 {
-	status_t stat = status_ok;
+	uint16_t treshold;
+	uint16_t treshtime;
+	uint16_t treshcount;
+	uint16_t latestvalue;
 
-	/* todo */
+	/* set the latest treshold and  tresholdttime value */
+	treshold = MODBUSSLAVE_ReadField(&Modbus, modbus_reg_sound_treshold, MODBUSSLAVE_SOUND_TRESHOLD_BIT_TRESHOLD);
+	treshtime = MODBUSSLAVE_GetRegister(&Modbus, modbus_reg_sound_tresholdtime);
+	MICROPHONE_SetTreshold(&Microphone_M6, treshold, treshtime); /* always OK */
+
+
+
+	/* get the latest alarmcount,clapcount and latest sound value (in mV) */
+	MICROPHONE_GetResults(&Microphone_M6, &treshcount, &latestvalue); /* always OK */
+
+
+	/* store the latest value in modbus reg */
+	MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_sound_mv, latestvalue);
+
+
+	/* if we got more samples over treshold as previous time, OR the current value is also above the treshold, set the alarm bit, otherwise reset it */
+	if(treshcount > SoundAlarmCount || latestvalue > treshold)
+	{
+		/* first update count */
+		SoundAlarmCount = treshcount;
+		/* and set the alarmbit */
+		MODBUSSLAVE_DiscreteSet(&Modbus, modbus_reg_sound_treshold, MODBUSSLAVE_SOUND_TRESHOLD_BIT_ALARM);
+	}
+	else
+	{
+		/* clear the alarmbit */
+		MODBUSSLAVE_DiscreteClear(&Modbus, modbus_reg_sound_treshold, MODBUSSLAVE_SOUND_TRESHOLD_BIT_ALARM);
+	}
+
 
 }
 

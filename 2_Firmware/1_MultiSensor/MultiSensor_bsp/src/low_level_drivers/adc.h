@@ -51,7 +51,7 @@
  */
 
 #define ADC_CHANNELAMOUNT			12					/**< The LPC824 has 12 ADC inputs */
-#define ADC_BUFFERSIZE				32					/**< Adc databuffer size MUST be power of 2*/
+#define ADC_BUFFERSIZE				256					/**< Adc databuffer size MUST be power of 2*/
 
 /*
  * ***********************************************************************************************************************************************

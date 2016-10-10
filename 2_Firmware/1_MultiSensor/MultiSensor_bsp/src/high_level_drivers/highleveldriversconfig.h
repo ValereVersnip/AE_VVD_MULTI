@@ -145,10 +145,6 @@
 #define HIGHLEVELCONFIG_MICROPHONE_M6_ADCPERIOD				100				                    /**< adc sample period (in ms) best results are found with 100ms */
 #define HIGHLEVELCONFIG_MICROPHONE_M6_TRESHOLD				150				                    /**< treshold (in mV) */
 #define HIGHLEVELCONFIG_MICROPHONE_M6_TRESHOLDTIME			500			                    	/**< the time (in ms) the sound has to be above treshold value, for trigger (has to be at least the adcfreq) */
-#define HIGHLEVELCONFIG_MICROPHONE_M6_MAXTIMECLAPS			500			                   		/**< the maximum time (in ms) between two claps (must be at least 2*adcperiod) */
-#define HIGHLEVELCONFIG_MICROPHONE_M6_CLAPTRESH				100				                    /**< treshold clap rising/falling detection */
-#define HIGHLEVELCONFIG_MICROPHONE_M6_CLAPAMOUNT			2				                    /**< the amount of claps for triggering */
-
 
 /*
  * Gas MQ2 TODO: finetune ALARM parameter!
@@ -157,7 +153,7 @@
 #define HIGHLEVELCONFIG_GASMQ2_M2_ID						0				                    /**< Id for this device */
 #define HIGHLEVELCONFIG_GASMQ2_M2_ADC						&Adc			                    /**< adc device */
 #define HIGHLEVELCONFIG_GASMQ2_M2_ADCCHANNEL				0				                    /**< adc channel */
-#define HIGHLEVELCONFIG_GASMQ2_M2_ALARMTERSHOLD				1000				                /**<  treshold for alarm counter */
+#define HIGHLEVELCONFIG_GASMQ2_M2_ALARMTRESHOLD				1000				                /**< treshold for alarm counter */
 
 
 /*

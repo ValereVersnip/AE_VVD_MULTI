@@ -48,7 +48,8 @@
  * Defines
  * ***********************************************************************************************************************************************
  */
-#define MICROPHONE_SAMPLEBUFFER_SIZE			30				/**< size of the samplebuffer */
+#define MICROPHONE_SAMPLEBUFFER_SIZE			100				/**< size of the samplebuffer */
+#define MICROPHONE_AVERAGE_SAMPLES				100				/**< amount of samples to avarage */
 
 /*
  * ***********************************************************************************************************************************************
@@ -67,10 +68,6 @@ typedef struct microphone_config_t
 	uint32_t adcperiod;											/**< adc sample period (in ms) best results are found with 100ms */
 	uint16_t treshold;											/**< treshold (in mV) */
 	uint16_t tresholdtime;										/**< the time (in ms) the sound has to be above treshold value, for trigger (has to be at least the adcfreq) */
-	uint16_t maxtimebetweenclaps;								/**< the maximum time (in ms) between two claps (must be at least 2*adcperiod) */
-	uint16_t claptresh;											/**< treshold clap rising/falling detection */
-	uint8_t clapamount;											/**< the amount of claps for triggering */
-
 }microphone_config_t;
 
 
@@ -85,24 +82,13 @@ typedef struct microphone_t
 	uint32_t adcperiod;											/**< adc sample frequency (in ms) */
 	uint16_t treshold;											/**< treshold (in mV) */
 	uint16_t tresholdtime;										/**< the time (in ms) the sound has to be above treshold value, for trigger */
-	uint16_t maxtimebetweenclaps;								/**< the maximum time (in ms) between two claps */
-	uint16_t claptresh;											/**< treshold clap rising/falling detection */
-	uint8_t clapamount;											/**< the amount of claps for triggering */
-
 	uint16_t tresholddetectioncount;							/**< keeps track how many times we have "crossed" the timetreshold */
-	uint16_t clapdetectioncount;								/**< counter for keeping track of clap detection */
-
 	uint16_t samplebuffer[MICROPHONE_SAMPLEBUFFER_SIZE];		/**< buffer where samples will be stored, so we can determine sounddetecions */
 	uint16_t *p_write;											/**< writepointer in samplebuffer */
-	uint16_t *p_read_clap;										/**< clap readpointer */
-	uint16_t *p_read_tresh;										/**< treshold readpointer */
-
 	int8_t tresh_overrun;										/**< if this becomes more than the buffersize, we have a treshold detection overrun */
-	int8_t clap_overrun;										/**< if this becomes more than the buffersize, we have a clap detection overrun */
-
 	uint16_t abovetreshcount;									/**< counter to keep track of how many consecutive samples were above treshold */
-	uint8_t clappers;											/**< counter for individual clappers */
-	uint16_t claptimeout;										/**< if we detect a clap, we need to detect clapamount more before this time runs out (maxtimebetweenclaps) */
+	uint16_t latestresult;										/**< latest sound sample */
+	uint16_t *p_read_tresh;										/**< treshold readpointer */
 }microphone_t;
 
 /*
@@ -125,7 +111,7 @@ status_t MICROPHONE_Init(microphone_t *p_microphone, microphone_config_t *p_conf
  * Run0 function for Microphone.
  *
  * This function will gather new adc samples, if available.
- * Depending on how many, the timetreshold and clap detection algorithms will be run.
+ * Depending on how many, the timetreshold algorithms will be run.
  *
  * @note this function should be called periodically by higherlevel routines.
  * @param p_microphone
@@ -139,10 +125,21 @@ status_t MICROPHONE_Run0(microphone_t *p_microphone);
  *
  * @param p_microphone microphone device
  * @param p_tresholddetectioncount pointer to tresholddetection count (can be NULL if not needed)
- * @param p_clapdetectioncount pointer to clapdetection count (can be NULL if not needed)
+ * @param p_latestresult pointer to latest sound value (can be NULL if not needed)
  * @return	status_ok if succeeded (otherwise check status.h for details).
  */
-status_t MICROPHONE_GetResults(microphone_t *p_microphone, uint16_t *p_tresholddetectioncount, uint16_t *p_clapdetectioncount);
+status_t MICROPHONE_GetResults(microphone_t *p_microphone, uint16_t *p_tresholddetectioncount, uint16_t *p_latestresult);
+
+
+/**
+ * Set the microphone treshold value.
+ *
+ * @param p_microphone microphone device
+ * @param treshold treshold
+ * @param tresholdtime tresholdtime
+ * @return status_ok
+ */
+status_t MICROPHONE_SetTreshold(microphone_t *p_microphone, uint16_t treshold, uint16_t tresholdtime);
 
 
 #endif

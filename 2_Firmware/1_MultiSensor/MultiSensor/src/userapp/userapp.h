@@ -49,9 +49,9 @@
  * Defines
  * ***********************************************************************************************************************************************
  */
-#define USERAPP_VERSION_MAJOR					10
-#define USERAPP_VERSION_MINOR					5
-#define USERAPP_VERSION_CHANGE					1
+#define USERAPP_VERSION_MAJOR					1
+#define USERAPP_VERSION_MINOR					0
+#define USERAPP_VERSION_CHANGE					0
 
 
 
@@ -67,7 +67,7 @@
 #define USERAPP_HUMIDITY_CONSECUTIVE_ERRTH		5							/**< if we get this many consecutive faulty readings from the humidity sensor, we will consider this to be a hardware problem
  	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 (one of two faulty readings is possible though...) */
 
-#define USERAPP_TEMPERATURE_CONSECUTIVE_ERRTH		5						/**< if we get this many consecutive faulty readings from the temperature sensor, we will consider this to be a hardware problem
+#define USERAPP_TEMPERATURE_CONSECUTIVE_ERRTH	5							/**< if we get this many consecutive faulty readings from the temperature sensor, we will consider this to be a hardware problem
  	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 (one of two faulty readings is possible though...) */
 
 
