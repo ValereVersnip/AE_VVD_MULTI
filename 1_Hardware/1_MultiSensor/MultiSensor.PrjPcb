@@ -162,31 +162,94 @@ UniqueID=88E3BF1E-CB9E-4069-80CF-CFF02D8A1A19
 Description=A
 AllowFabrication=0
 ParameterCount=0
-VariationCount=20
-Variation1=Designator=C2|UniqueId=\XJGFNLKW\ATIHITCC|Kind=1|AlternatePart= 
-Variation2=Designator=IC1|UniqueId=\SPKUJQLC\SNBTSDLD|Kind=1|AlternatePart= 
-Variation3=Designator=C1|UniqueId=\XJGFNLKW\HIGLVTFM|Kind=1|AlternatePart= 
-Variation4=Designator=R24|UniqueId=\SPKUJQLC\RVQRPAPV|Kind=1|AlternatePart= 
-Variation5=Designator=R23|UniqueId=\SPKUJQLC\KNGWCVWB|Kind=1|AlternatePart= 
-Variation6=Designator=R25|UniqueId=\SPKUJQLC\EFXMURMD|Kind=1|AlternatePart= 
-Variation7=Designator=C18|UniqueId=\SPKUJQLC\TDANTXUG|Kind=1|AlternatePart= 
-Variation8=Designator=C19|UniqueId=\SPKUJQLC\QECLVDCO|Kind=1|AlternatePart= 
-Variation9=Designator=M3|UniqueId=\CLIAJOHI\UGFPQFCE|Kind=1|AlternatePart= 
-Variation10=Designator=C22|UniqueId=\CLIAJOHI\ALHHADYE|Kind=1|AlternatePart= 
-Variation11=Designator=R32|UniqueId=\CLIAJOHI\EDHJFOCX|Kind=1|AlternatePart= 
-Variation12=Designator=R31|UniqueId=\CLIAJOHI\TKSJHCUE|Kind=1|AlternatePart= 
-Variation13=Designator=R36|UniqueId=\CLIAJOHI\PYTKXBUQ|Kind=1|AlternatePart= 
-Variation14=Designator=R11|UniqueId=\FXAVXTSU\NIOUCOHG|Kind=1|AlternatePart= 
-Variation15=Designator=X1|UniqueId=\FXAVXTSU\KHGWJTKP|Kind=1|AlternatePart= 
-Variation16=Designator=R12|UniqueId=\FXAVXTSU\BQWQNGRO|Kind=1|AlternatePart= 
-Variation17=Designator=C13|UniqueId=\FXAVXTSU\RFUULNUR|Kind=1|AlternatePart= 
-Variation18=Designator=C12|UniqueId=\FXAVXTSU\EXPCDSMS|Kind=1|AlternatePart= 
-Variation19=Designator=CON7|UniqueId=\FXAVXTSU\NADFXIBB|Kind=1|AlternatePart= 
-Variation20=Designator=R37|UniqueId=\CLIAJOHI\IPDKEIXN|Kind=1|AlternatePart= 
+VariationCount=16
+Variation1=Designator=R24|UniqueId=\SPKUJQLC\RVQRPAPV|Kind=1|AlternatePart= 
+Variation2=Designator=R23|UniqueId=\SPKUJQLC\KNGWCVWB|Kind=1|AlternatePart= 
+Variation3=Designator=R25|UniqueId=\SPKUJQLC\EFXMURMD|Kind=1|AlternatePart= 
+Variation4=Designator=C18|UniqueId=\SPKUJQLC\TDANTXUG|Kind=1|AlternatePart= 
+Variation5=Designator=C19|UniqueId=\SPKUJQLC\QECLVDCO|Kind=1|AlternatePart= 
+Variation6=Designator=M3|UniqueId=\CLIAJOHI\UGFPQFCE|Kind=0|AlternatePart= 
+Variation7=Designator=C22|UniqueId=\CLIAJOHI\ALHHADYE|Kind=0|AlternatePart= 
+Variation8=Designator=R32|UniqueId=\CLIAJOHI\EDHJFOCX|Kind=0|AlternatePart= 
+Variation9=Designator=R31|UniqueId=\CLIAJOHI\TKSJHCUE|Kind=1|AlternatePart= 
+Variation10=Designator=R36|UniqueId=\CLIAJOHI\PYTKXBUQ|Kind=1|AlternatePart= 
+Variation11=Designator=CON7|UniqueId=\FXAVXTSU\NADFXIBB|Kind=1|AlternatePart= 
+Variation12=Designator=R37|UniqueId=\CLIAJOHI\IPDKEIXN|Kind=1|AlternatePart= 
+Variation13=Designator=D9|UniqueId=\SPKUJQLC\JQEMMWKI|Kind=1|AlternatePart= 
+Variation14=Designator=C26|UniqueId=\CLIAJOHI\VBYDDAVP|Kind=1|AlternatePart= 
+Variation15=Designator=C27|UniqueId=\CLIAJOHI\WCLVSYPM|Kind=1|AlternatePart= 
+Variation16=Designator=D2|UniqueId=\FXAVXTSU\JGEKIOOJ|Kind=1|AlternatePart= 
+ParamVariationCount=0
+
+[ProjectVariant2]
+UniqueID=88E3BF1E-CB9E-4069-80CF-CFF02D8A1A19
+Description=SMD
+AllowFabrication=0
+ParameterCount=0
+VariationCount=55
+Variation1=Designator=R24|UniqueId=\SPKUJQLC\RVQRPAPV|Kind=1|AlternatePart= 
+Variation2=Designator=R23|UniqueId=\SPKUJQLC\KNGWCVWB|Kind=1|AlternatePart= 
+Variation3=Designator=R25|UniqueId=\SPKUJQLC\EFXMURMD|Kind=1|AlternatePart= 
+Variation4=Designator=C18|UniqueId=\SPKUJQLC\TDANTXUG|Kind=1|AlternatePart= 
+Variation5=Designator=C19|UniqueId=\SPKUJQLC\QECLVDCO|Kind=1|AlternatePart= 
+Variation6=Designator=M3|UniqueId=\CLIAJOHI\UGFPQFCE|Kind=1|AlternatePart= 
+Variation7=Designator=R31|UniqueId=\CLIAJOHI\TKSJHCUE|Kind=1|AlternatePart= 
+Variation8=Designator=R36|UniqueId=\CLIAJOHI\PYTKXBUQ|Kind=1|AlternatePart= 
+Variation9=Designator=CON7|UniqueId=\FXAVXTSU\NADFXIBB|Kind=1|AlternatePart= 
+Variation10=Designator=R37|UniqueId=\CLIAJOHI\IPDKEIXN|Kind=1|AlternatePart= 
+Variation11=Designator=D9|UniqueId=\SPKUJQLC\JQEMMWKI|Kind=1|AlternatePart= 
+Variation12=Designator=S1|UniqueId=\JRJARJLL|Kind=1|AlternatePart= 
+Variation13=Designator=S2|UniqueId=\CUHANTOV|Kind=1|AlternatePart= 
+Variation14=Designator=S3|UniqueId=\DCMEISBR|Kind=1|AlternatePart= 
+Variation15=Designator=S4|UniqueId=\DJTQNGII|Kind=1|AlternatePart= 
+Variation16=Designator=TP23|UniqueId=\SPKUJQLC\GPMVGIYX|Kind=1|AlternatePart= 
+Variation17=Designator=TP24|UniqueId=\SPKUJQLC\JRDOEHWA|Kind=1|AlternatePart= 
+Variation18=Designator=U5|UniqueId=\CLIAJOHI\GTMDYGWV|Kind=1|AlternatePart= 
+Variation19=Designator=M5|UniqueId=\CLIAJOHI\CDHLXJPK|Kind=1|AlternatePart= 
+Variation20=Designator=CON6|UniqueId=\CLIAJOHI\XUYGCPIU|Kind=1|AlternatePart= 
+Variation21=Designator=M6|UniqueId=\CLIAJOHI\VLTNJUCY|Kind=1|AlternatePart= 
+Variation22=Designator=C26|UniqueId=\CLIAJOHI\VBYDDAVP|Kind=1|AlternatePart= 
+Variation23=Designator=C27|UniqueId=\CLIAJOHI\WCLVSYPM|Kind=1|AlternatePart= 
+Variation24=Designator=CON5|UniqueId=\CLIAJOHI\FHBYIEFO|Kind=1|AlternatePart= 
+Variation25=Designator=M4|UniqueId=\CLIAJOHI\MLYVDSTP|Kind=1|AlternatePart= 
+Variation26=Designator=U4|UniqueId=\CLIAJOHI\RBIVIMAO|Kind=1|AlternatePart= 
+Variation27=Designator=M2|UniqueId=\CLIAJOHI\NISBBPUO|Kind=1|AlternatePart= 
+Variation28=Designator=CON4|UniqueId=\CLIAJOHI\IHKVGIGP|Kind=1|AlternatePart= 
+Variation29=Designator=CON1|UniqueId=\XJGFNLKW\PUUUVGOQ|Kind=1|AlternatePart= 
+Variation30=Designator=TP2|UniqueId=\XJGFNLKW\LJQLJIQL|Kind=1|AlternatePart= 
+Variation31=Designator=TP3|UniqueId=\XJGFNLKW\OVQTLSOD|Kind=1|AlternatePart= 
+Variation32=Designator=TP25|UniqueId=\FXAVXTSU\ECPJPWMR|Kind=1|AlternatePart= 
+Variation33=Designator=TP1|UniqueId=\XJGFNLKW\DLITVQTM|Kind=1|AlternatePart= 
+Variation34=Designator=TP4|UniqueId=\XJGFNLKW\XDCXLAPO|Kind=1|AlternatePart= 
+Variation35=Designator=TP5|UniqueId=\XJGFNLKW\RQMYIMWI|Kind=1|AlternatePart= 
+Variation36=Designator=TP6|UniqueId=\XJGFNLKW\TFAGDJAJ|Kind=1|AlternatePart= 
+Variation37=Designator=TP7|UniqueId=\FXAVXTSU\VTMYJYHK|Kind=1|AlternatePart= 
+Variation38=Designator=TP8|UniqueId=\FXAVXTSU\LJPGFFJK|Kind=1|AlternatePart= 
+Variation39=Designator=TP9|UniqueId=\FXAVXTSU\QTBTQHIU|Kind=1|AlternatePart= 
+Variation40=Designator=TP10|UniqueId=\FXAVXTSU\GLMHTGQP|Kind=1|AlternatePart= 
+Variation41=Designator=TP11|UniqueId=\FXAVXTSU\FPBEUGLQ|Kind=1|AlternatePart= 
+Variation42=Designator=TP12|UniqueId=\FXAVXTSU\IYNVWEXQ|Kind=1|AlternatePart= 
+Variation43=Designator=TP13|UniqueId=\FXAVXTSU\IOMRGPCH|Kind=1|AlternatePart= 
+Variation44=Designator=TP14|UniqueId=\FXAVXTSU\OAMIJFMU|Kind=1|AlternatePart= 
+Variation45=Designator=TP15|UniqueId=\FXAVXTSU\FSKYECWV|Kind=1|AlternatePart= 
+Variation46=Designator=TP16|UniqueId=\FXAVXTSU\FHVHHEEN|Kind=1|AlternatePart= 
+Variation47=Designator=TP17|UniqueId=\FXAVXTSU\YSNDGAPD|Kind=1|AlternatePart= 
+Variation48=Designator=TP18|UniqueId=\FXAVXTSU\MAMOPVDA|Kind=1|AlternatePart= 
+Variation49=Designator=TP19|UniqueId=\FXAVXTSU\DMMANPJR|Kind=1|AlternatePart= 
+Variation50=Designator=TP20|UniqueId=\FXAVXTSU\YOKAEXEQ|Kind=1|AlternatePart= 
+Variation51=Designator=TP21|UniqueId=\FXAVXTSU\AIRCKDUN|Kind=1|AlternatePart= 
+Variation52=Designator=TP22|UniqueId=\FXAVXTSU\RWXFAAYY|Kind=1|AlternatePart= 
+Variation53=Designator=D2|UniqueId=\FXAVXTSU\JGEKIOOJ|Kind=1|AlternatePart= 
+Variation54=Designator=SPK1|UniqueId=\FXAVXTSU\YKYFKBCJ|Kind=1|AlternatePart= 
+Variation55=Designator=SW1|UniqueId=\FXAVXTSU\NUFAEHHW|Kind=1|AlternatePart= 
 ParamVariationCount=0
 
 [GeneratedDocument1]
-DocumentPath=PROJECT OUTPUT\info\BOM\Bill of Materials-MultiSensor(A).xls
+DocumentPath=PROJECT OUTPUT\output\Ncdrill\MultiSensor-NonPlated.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=PROJECT OUTPUT\output\Ncdrill\MultiSensor-Plated.TXT
 DItemRevisionGUID=
 
 [Parameter1]
@@ -219,7 +282,7 @@ Value=TBA
 
 [Parameter8]
 Name=PROJECTJOBLOCKERID
-Value=00
+Value=01
 
 [Parameter9]
 Name=PROJECTLEADER
@@ -239,7 +302,7 @@ Value=AE
 
 [Parameter13]
 Name=PROJECTREVISIONDATE
-Value=160423
+Value=161101
 
 [Parameter14]
 Name=PROJECTTITLE
@@ -289,7 +352,7 @@ OutputDir=Project Outputs for VIRCM
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
-TargetPrinter=Send To OneNote 2013
+TargetPrinter=HP-LAYOUT (HP Officejet Pro 8620)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Verilog
 OutputName1=Verilog File
@@ -325,7 +388,7 @@ OutputDefault6=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Send To OneNote 2013
+TargetPrinter=HP-LAYOUT (HP Officejet Pro 8620)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=AdvSimNetlist
 OutputName1=Mixed Sim
@@ -456,11 +519,17 @@ OutputDocumentPath18=
 OutputVariantName18=[No Variations]
 OutputDefault18=0
 PageOptions18=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
+OutputType19=PCBDrawing
+OutputName19=Draftsman
+OutputDocumentPath19=
+OutputVariantName19=
+OutputDefault19=0
+PageOptions19=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 
 [OutputGroup4]
 Name=Assembly Outputs
 Description=
-TargetPrinter=Send To OneNote 2013
+TargetPrinter=HP-LAYOUT (HP Officejet Pro 8620)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Assembly
 OutputName1=Assembly Drawings
@@ -482,7 +551,7 @@ OutputDefault3=0
 [OutputGroup5]
 Name=Fabrication Outputs
 Description=
-TargetPrinter=Send To OneNote 2013
+TargetPrinter=HP-LAYOUT (HP Officejet Pro 8620)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=CompositeDrill
 OutputName1=Composite Drill Drawing
@@ -554,7 +623,7 @@ OutputDefault12=0
 [OutputGroup6]
 Name=Report Outputs
 Description=
-TargetPrinter=Send To OneNote 2013
+TargetPrinter=HP-LAYOUT (HP Officejet Pro 8620)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=BOM_PartType
 OutputName1=Bill of Materials
@@ -603,7 +672,7 @@ OutputDefault6=0
 [OutputGroup7]
 Name=Other Outputs
 Description=
-TargetPrinter=Send To OneNote 2013
+TargetPrinter=HP-LAYOUT (HP Officejet Pro 8620)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Text Print
 OutputName1=Text Print
@@ -783,7 +852,7 @@ PageOptions29=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup8]
 Name=Validation Outputs
 Description=
-TargetPrinter=Send To OneNote 2013
+TargetPrinter=HP-LAYOUT (HP Officejet Pro 8620)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=Design Rules Check
 OutputName1=Design Rules Check
@@ -822,7 +891,7 @@ OutputDefault6=0
 [OutputGroup9]
 Name=Export Outputs
 Description=
-TargetPrinter=Send To OneNote 2013
+TargetPrinter=HP-LAYOUT (HP Officejet Pro 8620)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputType1=ExportSTEP
 OutputName1=Export STEP

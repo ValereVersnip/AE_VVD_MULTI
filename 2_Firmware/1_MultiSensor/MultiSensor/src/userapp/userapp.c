@@ -243,6 +243,9 @@ static void userapp_pir()
 	/* and store them in the modbus registermap */
 	MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pir_detectcount, detectcount);
 	MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_pir_detecttime, detecttime);
+
+	/* also store the 8LSB bits in the FAST pircount register */
+	MODBUSSLAVE_WriteField(&Modbus, modbus_reg_fast_pircount_soundpercent, MODBUSSLAVE_FAST_PIRCOUNT_SOUNDPERCENT_PIRCOUNT, (uint16_t)(0xFF & detectcount)); /* truncate to the 8LSB of detectcount */
 }
 
 
@@ -421,21 +424,23 @@ static void userapp_sound()
 	uint16_t treshtime;
 	uint16_t treshcount;
 	uint16_t latestvalue;
+	uint32_t latestvaluepercent;
 
 	/* set the latest treshold and  tresholdttime value */
 	treshold = MODBUSSLAVE_ReadField(&Modbus, modbus_reg_sound_treshold, MODBUSSLAVE_SOUND_TRESHOLD_BIT_TRESHOLD);
 	treshtime = MODBUSSLAVE_GetRegister(&Modbus, modbus_reg_sound_tresholdtime);
 	MICROPHONE_SetTreshold(&Microphone_M6, treshold, treshtime); /* always OK */
 
-
-
-	/* get the latest alarmcount,clapcount and latest sound value (in mV) */
+	/* get the latest alarmcount, and latest sound value (in mV) */
 	MICROPHONE_GetResults(&Microphone_M6, &treshcount, &latestvalue); /* always OK */
 
 
 	/* store the latest value in modbus reg */
 	MODBUSSLAVE_SetRegister(&Modbus, modbus_reg_sound_mv, latestvalue);
 
+	/* also store the latest value in percents in the fast register */
+	latestvaluepercent = (uint32_t)((latestvalue * 100) / 255);
+	MODBUSSLAVE_WriteField(&Modbus, modbus_reg_fast_pircount_soundpercent, MODBUSSLAVE_FAST_PIRCOUNT_SOUNDPERCENT_SOUNDPERCENT, (uint16_t)latestvaluepercent);
 
 	/* if we got more samples over treshold as previous time, OR the current value is also above the treshold, set the alarm bit, otherwise reset it */
 	if(treshcount > SoundAlarmCount || latestvalue > treshold)

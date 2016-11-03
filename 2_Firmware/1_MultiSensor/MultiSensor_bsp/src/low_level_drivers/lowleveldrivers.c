@@ -262,6 +262,19 @@ status_t initialize_adc()
 	return status;
 }
 
+/**
+ * Initialize the WDT.
+ *
+ * @return	status_ok if succeeded (otherwise check status.h for details).
+ */
+status_t initialize_wdt()
+{
+	status_t status = status_ok;
+
+	status = WDT_Init(LOWLEVELDRIVERSCONFIG_WDT_TIMEOUT);
+
+	return status;
+}
 
 
 /*
@@ -323,6 +336,13 @@ status_t LOWLEVELDRIVERS_Init()
 		status = initialize_adc();
 	}
 
+	/* Initialize WDT */
+	if(status == status_ok)
+	{
+		status = initialize_wdt();
+	}
+
+
 	return status;
 }
 
@@ -347,6 +367,14 @@ status_t LOWLEVELDRIVERS_Run0()
 			status = status_ok;
 		}
 	}
+
+
+	/* WDT kick here */
+	if(status == status_ok)
+	{
+		status = WDT_Kick();
+	}
+
 	return status;
 }
 

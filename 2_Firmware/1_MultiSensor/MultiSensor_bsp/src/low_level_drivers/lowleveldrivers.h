@@ -52,6 +52,7 @@
 #include "usart.h"
 #include "pwm.h"
 #include "adc.h"
+#include "wdt.h"
 
 
 /*

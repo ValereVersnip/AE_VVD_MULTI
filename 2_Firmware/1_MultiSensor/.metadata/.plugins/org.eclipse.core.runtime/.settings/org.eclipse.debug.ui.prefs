@@ -1,5 +1,4 @@
 eclipse.preferences.version=1
-org.eclipse.debug.ui.BreakpointView+org.eclipse.debug.ui.actions.SkipAllBreakpoints=true
 org.eclipse.debug.ui.MemoryView.RenderingViewPane.1=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<persistedMemoryRenderings>\r\n<memoryRendering memoryBlock\="18887424" renderingId\="org.eclipse.cdt.debug.ui.memory.traditional.TraditionalRendering"/>\r\n</persistedMemoryRenderings>\r\n
 org.eclipse.debug.ui.MemoryView.RenderingViewPane.2=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<persistedMemoryRenderings>\r\n<memoryRendering memoryBlock\="18887424" renderingId\="org.eclipse.debug.ui.rendering.raw_memory"/>\r\n</persistedMemoryRenderings>\r\n
 org.eclipse.debug.ui.MemoryView.orientation=0

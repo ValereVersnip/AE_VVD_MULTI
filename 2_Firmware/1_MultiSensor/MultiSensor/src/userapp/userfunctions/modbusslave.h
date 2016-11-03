@@ -94,6 +94,10 @@
 #define MODBUSSLAVE_SOUND_TRESHOLD_BIT_ALARM		(0x01 << 15)		/**< Alarm mask */
 #define MODBUSSLAVE_SOUND_TRESHOLD_BIT_TRESHOLD		(0xFFF << 0)		/**< treshold mask */
 
+/* modbus_reg_fast_pircount_soundpercent bitmasks */
+#define MODBUSSLAVE_FAST_PIRCOUNT_SOUNDPERCENT_PIRCOUNT		(0xFF << 8)	/**< fast pircount mask */
+#define MODBUSSLAVE_FAST_PIRCOUNT_SOUNDPERCENT_SOUNDPERCENT	(0xEF << 0)	/**< fast soundpercent mask */
+
 /*
  * ***********************************************************************************************************************************************
  * Typedefs and enumerations
@@ -128,13 +132,7 @@ typedef enum
 	modbus_reg_sound_treshold,						/**< treshold for sound detection (in mV), and MSB is alarmbit */
 	modbus_reg_sound_tresholdtime,					/**< time for treshold for sound detection (in mV), and MSB is alarmbit */
 	modbus_reg_sound_mv,							/**< latest sound sample in mV */
-	modbus_reg_x,
-	modbus_reg_x_sdf,
-	modbus_reg_x_7,
-	modbus_reg_y_7,
-	modbus_reg_z_7,
-	modbus_reg_control_health,						/**< the master will write a 1 in the respective bitfield for every slave that is completley healthy, a 0 otherwise --> this will be broadcast*/
-	modbus_reg_control_count,						/**< the master will increment a counter here */
+	modbus_reg_fast_pircount_soundpercent,			/**< this FAST register is foreseen, so it can be sampled much faster as the rest, typically we want pir count and sound to be detected faster than the rest */
 	modbus_reg_size
 }modbusslave_regmap_t;
 

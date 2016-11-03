@@ -341,6 +341,12 @@ extern void LOWLEVELDRIVERSCONFIG_GPIO_PININTR_FUNCTION_7(void);
 #define LOWLEVELDRIVERSCONFIG_ADC11_USE			false				/**< true: use this adc channel, false: don't use */
 
 /*
+ * WDT low level startup values
+ * ***********************************************************
+ */
+#define LOWLEVELDRIVERSCONFIG_WDT_TIMEOUT		2					/**< Watchdog timeout (in s) */
+
+/*
  * ***********************************************************************************************************************************************
  * Typedefs and enumerations
  * ***********************************************************************************************************************************************
