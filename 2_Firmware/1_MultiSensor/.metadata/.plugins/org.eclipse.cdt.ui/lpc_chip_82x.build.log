@@ -1,6 +1,184 @@
-21:01:09 **** Incremental Build of configuration Release for project lpc_chip_82x ****
+13:23:48 **** Incremental Build of configuration Release for project lpc_chip_82x ****
 make -r all 
-make: Nothing to be done for `all'.
+Building file: ../src/acmp_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/acmp_8xx.d" -MT"src/acmp_8xx.o" -MT"src/acmp_8xx.d" -o "src/acmp_8xx.o" "../src/acmp_8xx.c"
+Finished building: ../src/acmp_8xx.c
+ 
+Building file: ../src/adc_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_8xx.d" -MT"src/adc_8xx.o" -MT"src/adc_8xx.d" -o "src/adc_8xx.o" "../src/adc_8xx.c"
+Finished building: ../src/adc_8xx.c
+ 
+Building file: ../src/chip_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/chip_8xx.d" -MT"src/chip_8xx.o" -MT"src/chip_8xx.d" -o "src/chip_8xx.o" "../src/chip_8xx.c"
+Finished building: ../src/chip_8xx.c
+ 
+Building file: ../src/clock_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/clock_8xx.d" -MT"src/clock_8xx.o" -MT"src/clock_8xx.d" -o "src/clock_8xx.o" "../src/clock_8xx.c"
+Finished building: ../src/clock_8xx.c
+ 
+Building file: ../src/crc_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crc_8xx.d" -MT"src/crc_8xx.o" -MT"src/crc_8xx.d" -o "src/crc_8xx.o" "../src/crc_8xx.c"
+Finished building: ../src/crc_8xx.c
+ 
+Building file: ../src/dma_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/dma_8xx.d" -MT"src/dma_8xx.o" -MT"src/dma_8xx.d" -o "src/dma_8xx.o" "../src/dma_8xx.c"
+Finished building: ../src/dma_8xx.c
+ 
+Building file: ../src/gpio_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio_8xx.d" -MT"src/gpio_8xx.o" -MT"src/gpio_8xx.d" -o "src/gpio_8xx.o" "../src/gpio_8xx.c"
+Finished building: ../src/gpio_8xx.c
+ 
+Building file: ../src/i2c_common_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2c_common_8xx.d" -MT"src/i2c_common_8xx.o" -MT"src/i2c_common_8xx.d" -o "src/i2c_common_8xx.o" "../src/i2c_common_8xx.c"
+Finished building: ../src/i2c_common_8xx.c
+ 
+Building file: ../src/i2cm_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2cm_8xx.d" -MT"src/i2cm_8xx.o" -MT"src/i2cm_8xx.d" -o "src/i2cm_8xx.o" "../src/i2cm_8xx.c"
+Finished building: ../src/i2cm_8xx.c
+ 
+Building file: ../src/i2cs_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2cs_8xx.d" -MT"src/i2cs_8xx.o" -MT"src/i2cs_8xx.d" -o "src/i2cs_8xx.o" "../src/i2cs_8xx.c"
+Finished building: ../src/i2cs_8xx.c
+ 
+Building file: ../src/iap.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iap.d" -MT"src/iap.o" -MT"src/iap.d" -o "src/iap.o" "../src/iap.c"
+Finished building: ../src/iap.c
+ 
+Building file: ../src/iocon_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iocon_8xx.d" -MT"src/iocon_8xx.o" -MT"src/iocon_8xx.d" -o "src/iocon_8xx.o" "../src/iocon_8xx.c"
+Finished building: ../src/iocon_8xx.c
+ 
+Building file: ../src/irc_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/irc_8xx.d" -MT"src/irc_8xx.o" -MT"src/irc_8xx.d" -o "src/irc_8xx.o" "../src/irc_8xx.c"
+Finished building: ../src/irc_8xx.c
+ 
+Building file: ../src/pinint_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pinint_8xx.d" -MT"src/pinint_8xx.o" -MT"src/pinint_8xx.d" -o "src/pinint_8xx.o" "../src/pinint_8xx.c"
+Finished building: ../src/pinint_8xx.c
+ 
+Building file: ../src/pmu_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pmu_8xx.d" -MT"src/pmu_8xx.o" -MT"src/pmu_8xx.d" -o "src/pmu_8xx.o" "../src/pmu_8xx.c"
+Finished building: ../src/pmu_8xx.c
+ 
+Building file: ../src/ring_buffer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.o" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
+Finished building: ../src/ring_buffer.c
+ 
+Building file: ../src/sct_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_8xx.d" -MT"src/sct_8xx.o" -MT"src/sct_8xx.d" -o "src/sct_8xx.o" "../src/sct_8xx.c"
+Finished building: ../src/sct_8xx.c
+ 
+Building file: ../src/sct_pwm_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sct_pwm_8xx.d" -MT"src/sct_pwm_8xx.o" -MT"src/sct_pwm_8xx.d" -o "src/sct_pwm_8xx.o" "../src/sct_pwm_8xx.c"
+Finished building: ../src/sct_pwm_8xx.c
+ 
+Building file: ../src/spi_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spi_8xx.d" -MT"src/spi_8xx.o" -MT"src/spi_8xx.d" -o "src/spi_8xx.o" "../src/spi_8xx.c"
+Finished building: ../src/spi_8xx.c
+ 
+Building file: ../src/spim_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spim_8xx.d" -MT"src/spim_8xx.o" -MT"src/spim_8xx.d" -o "src/spim_8xx.o" "../src/spim_8xx.c"
+Finished building: ../src/spim_8xx.c
+ 
+Building file: ../src/spis_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spis_8xx.d" -MT"src/spis_8xx.o" -MT"src/spis_8xx.d" -o "src/spis_8xx.o" "../src/spis_8xx.c"
+Finished building: ../src/spis_8xx.c
+ 
+Building file: ../src/stopwatch_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/stopwatch_8xx.d" -MT"src/stopwatch_8xx.o" -MT"src/stopwatch_8xx.d" -o "src/stopwatch_8xx.o" "../src/stopwatch_8xx.c"
+Finished building: ../src/stopwatch_8xx.c
+ 
+Building file: ../src/swm_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/swm_8xx.d" -MT"src/swm_8xx.o" -MT"src/swm_8xx.d" -o "src/swm_8xx.o" "../src/swm_8xx.c"
+Finished building: ../src/swm_8xx.c
+ 
+Building file: ../src/syscon_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/syscon_8xx.d" -MT"src/syscon_8xx.o" -MT"src/syscon_8xx.d" -o "src/syscon_8xx.o" "../src/syscon_8xx.c"
+Finished building: ../src/syscon_8xx.c
+ 
+Building file: ../src/sysinit_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit_8xx.d" -MT"src/sysinit_8xx.o" -MT"src/sysinit_8xx.d" -o "src/sysinit_8xx.o" "../src/sysinit_8xx.c"
+Finished building: ../src/sysinit_8xx.c
+ 
+Building file: ../src/uart_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart_8xx.d" -MT"src/uart_8xx.o" -MT"src/uart_8xx.d" -o "src/uart_8xx.o" "../src/uart_8xx.c"
+Finished building: ../src/uart_8xx.c
+ 
+Building file: ../src/wkt_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wkt_8xx.d" -MT"src/wkt_8xx.o" -MT"src/wkt_8xx.d" -o "src/wkt_8xx.o" "../src/wkt_8xx.c"
+Finished building: ../src/wkt_8xx.c
+ 
+Building file: ../src/wwdt_8xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DNDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M0PLUS -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wwdt_8xx.d" -MT"src/wwdt_8xx.o" -MT"src/wwdt_8xx.d" -o "src/wwdt_8xx.o" "../src/wwdt_8xx.c"
+Finished building: ../src/wwdt_8xx.c
+ 
+Building target: liblpc_chip_82x.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_chip_82x.a"  ./src/acmp_8xx.o ./src/adc_8xx.o ./src/chip_8xx.o ./src/clock_8xx.o ./src/crc_8xx.o ./src/dma_8xx.o ./src/gpio_8xx.o ./src/i2c_common_8xx.o ./src/i2cm_8xx.o ./src/i2cs_8xx.o ./src/iap.o ./src/iocon_8xx.o ./src/irc_8xx.o ./src/pinint_8xx.o ./src/pmu_8xx.o ./src/ring_buffer.o ./src/sct_8xx.o ./src/sct_pwm_8xx.o ./src/spi_8xx.o ./src/spim_8xx.o ./src/spis_8xx.o ./src/stopwatch_8xx.o ./src/swm_8xx.o ./src/syscon_8xx.o ./src/sysinit_8xx.o ./src/uart_8xx.o ./src/wkt_8xx.o ./src/wwdt_8xx.o   
+c:\nxp\LPCXpresso_8.1.4_606\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating liblpc_chip_82x.a
+Finished building target: liblpc_chip_82x.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_chip_82x.a" ; # arm-none-eabi-objdump -h -S "liblpc_chip_82x.a" >"liblpc_chip_82x.lss"
+   text	   data	    bss	    dec	    hex	filename
+    220	      0	      0	    220	     dc	acmp_8xx.o (ex liblpc_chip_82x.a)
+    152	      0	      0	    152	     98	adc_8xx.o (ex liblpc_chip_82x.a)
+     16	      0	      0	     16	     10	chip_8xx.o (ex liblpc_chip_82x.a)
+    652	      0	      0	    652	    28c	clock_8xx.o (ex liblpc_chip_82x.a)
+    228	      0	      0	    228	     e4	crc_8xx.o (ex liblpc_chip_82x.a)
+      0	      0	      0	      0	      0	dma_8xx.o (ex liblpc_chip_82x.a)
+     52	      0	      0	     52	     34	gpio_8xx.o (ex liblpc_chip_82x.a)
+    208	      0	      0	    208	     d0	i2c_common_8xx.o (ex liblpc_chip_82x.a)
+    380	      0	      0	    380	    17c	i2cm_8xx.o (ex liblpc_chip_82x.a)
+    132	      0	      0	    132	     84	i2cs_8xx.o (ex liblpc_chip_82x.a)
+    392	      0	      0	    392	    188	iap.o (ex liblpc_chip_82x.a)
+    212	      0	      0	    212	     d4	iocon_8xx.o (ex liblpc_chip_82x.a)
+   1172	      0	      2	   1174	    496	irc_8xx.o (ex liblpc_chip_82x.a)
+     80	      0	      0	     80	     50	pinint_8xx.o (ex liblpc_chip_82x.a)
+    148	      0	      0	    148	     94	pmu_8xx.o (ex liblpc_chip_82x.a)
+    360	      0	      0	    360	    168	ring_buffer.o (ex liblpc_chip_82x.a)
+    144	      0	      0	    144	     90	sct_8xx.o (ex liblpc_chip_82x.a)
+    164	      0	      0	    164	     a4	sct_pwm_8xx.o (ex liblpc_chip_82x.a)
+    668	      0	      0	    668	    29c	spi_8xx.o (ex liblpc_chip_82x.a)
+    500	      0	      1	    501	    1f5	spim_8xx.o (ex liblpc_chip_82x.a)
+    324	      0	      1	    325	    145	spis_8xx.o (ex liblpc_chip_82x.a)
+    220	      0	     12	    232	     e8	stopwatch_8xx.o (ex liblpc_chip_82x.a)
+     96	      0	      0	     96	     60	swm_8xx.o (ex liblpc_chip_82x.a)
+    124	      0	      0	    124	     7c	syscon_8xx.o (ex liblpc_chip_82x.a)
+    108	      0	      0	    108	     6c	sysinit_8xx.o (ex liblpc_chip_82x.a)
+    568	      0	      0	    568	    238	uart_8xx.o (ex liblpc_chip_82x.a)
+     64	      0	      0	     64	     40	wkt_8xx.o (ex liblpc_chip_82x.a)
+    112	      0	      0	    112	     70	wwdt_8xx.o (ex liblpc_chip_82x.a)
+ 
 
-21:01:09 Build Finished (took 80ms)
+13:23:54 Build Finished (took 5s.235ms)
 

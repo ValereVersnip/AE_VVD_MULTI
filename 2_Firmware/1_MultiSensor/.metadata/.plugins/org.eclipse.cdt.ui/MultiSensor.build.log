@@ -1,6 +1,57 @@
-21:03:03 **** Incremental Build of configuration Release for project MultiSensor ****
+13:24:01 **** Incremental Build of configuration Release for project MultiSensor ****
 make -r all 
-make: Nothing to be done for `all'.
+Building file: ../src/userapp/userfunctions/modbusslave.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/userapp/userfunctions/modbusslave.d" -MT"src/userapp/userfunctions/modbusslave.o" -MT"src/userapp/userfunctions/modbusslave.d" -o "src/userapp/userfunctions/modbusslave.o" "../src/userapp/userfunctions/modbusslave.c"
+Finished building: ../src/userapp/userfunctions/modbusslave.c
+ 
+Building file: ../src/userapp/userapp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/userapp/userapp.d" -MT"src/userapp/userapp.o" -MT"src/userapp/userapp.d" -o "src/userapp/userapp.o" "../src/userapp/userapp.c"
+Finished building: ../src/userapp/userapp.c
+ 
+Building file: ../src/MultiSensor.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/MultiSensor.d" -MT"src/MultiSensor.o" -MT"src/MultiSensor.d" -o "src/MultiSensor.o" "../src/MultiSensor.c"
+Finished building: ../src/MultiSensor.c
+ 
+Building file: ../src/cr_startup_lpc82x.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cr_startup_lpc82x.d" -MT"src/cr_startup_lpc82x.o" -MT"src/cr_startup_lpc82x.d" -o "src/cr_startup_lpc82x.o" "../src/cr_startup_lpc82x.c"
+Finished building: ../src/cr_startup_lpc82x.c
+ 
+Building file: ../src/crp.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crp.d" -MT"src/crp.o" -MT"src/crp.d" -o "src/crp.o" "../src/crp.c"
+Finished building: ../src/crp.c
+ 
+Building file: ../src/mtb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/mtb.d" -MT"src/mtb.o" -MT"src/mtb.d" -o "src/mtb.o" "../src/mtb.c"
+Finished building: ../src/mtb.c
+ 
+Building file: ../src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DNDEBUG -D__CODE_RED -DCORE_M0PLUS -D__MTB_BUFFER_SIZE=256 -D__USE_ROMDIVIDE -D__USE_LPCOPEN -D__LPC82X__ -D__REDLIB__ -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\inc" -I"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\inc" -Og -fno-common -g -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit.d" -MT"src/sysinit.o" -MT"src/sysinit.d" -o "src/sysinit.o" "../src/sysinit.c"
+Finished building: ../src/sysinit.c
+ 
+Building target: MultiSensor.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\MultiSensor_bsp\Release" -L"G:\GitHub\AE_VVD_MULTI\2_Firmware\1_MultiSensor\lpc_chip_82x\Release" -Xlinker -Map="MultiSensor.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -mcpu=cortex-m0 -mthumb -T "MultiSensor_Release.ld" -o "MultiSensor.axf"  ./src/userapp/userfunctions/modbusslave.o  ./src/userapp/userapp.o  ./src/MultiSensor.o ./src/aeabi_romdiv_patch.o ./src/cr_startup_lpc82x.o ./src/crp.o ./src/mtb.o ./src/sysinit.o   -lMultiSensor_bsp -llpc_chip_82x
+Memory region         Used Size  Region Size  %age Used
+        MFlash32:       18816 B        32 KB     57.42%
+         RamLoc8:        2992 B         8 KB     36.52%
+Finished building target: MultiSensor.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "MultiSensor.axf" ; arm-none-eabi-objcopy -v -O binary "MultiSensor.axf" "MultiSensor.bin" ; checksum -p LPC824 -d "MultiSensor.bin"
+   text	   data	    bss	    dec	    hex	filename
+  18816	      0	   2992	  21808	   5530	MultiSensor.axf
+copy from `MultiSensor.axf' [elf32-littlearm] to `MultiSensor.bin' [binary]
+Written checksum 0xefffdd25 at offset 0x1c in file MultiSensor.bin
+Previous value 0xefffdd25 at offset 0x1c in file MultiSensor.bin
+ 
 
-21:03:03 Build Finished (took 84ms)
+13:24:02 Build Finished (took 1s.785ms)
 
